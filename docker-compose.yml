@@ -2,7 +2,7 @@ version: '3.8'
 services:
   scooby_api:
     image: scooby_api
-    container_name: scoobyapi
+    container_name: scooby_api
     build:
       context: .
       dockerfile: ScoobyRelationshipAPI/Dockerfile
@@ -16,7 +16,7 @@ services:
 
   scooby_webapp:
     image: scooby_webapp
-    container_name: scoobywebapp
+    container_name: scooby_webapp
     build:
       context: .
       dockerfile: ScoobWebApp/Dockerfile
@@ -57,7 +57,7 @@ services:
 
   scoob_int_test:
     image: scoob_int_test
-    container_name: scoobintegrationtest
+    container_name: scoob_int_test
     build:
       context: .
       dockerfile: ScoobIntegrationTest/Dockerfile
