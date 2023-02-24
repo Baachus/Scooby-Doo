@@ -12,7 +12,7 @@ docker-compose -p "$project" build
 
 mkdir -m 777 -p Reports
 
-docker-compose -p "$project" up -d scooby_api scooby_webapp db selenium-hub firefox chrome edge
+docker-compose -p "$project" up -d scooby_api scooby_webapp scoob_db selenium-hub firefox chrome edge
 docker-compose -p "$project" up --no-deps scoob_test
 
 docker cp scoob_test:/src/ScoobTestBDD/LivingDoc.html ./Reports

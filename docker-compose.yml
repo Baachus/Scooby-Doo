@@ -33,7 +33,7 @@ services:
     environment:
       SA_PASSWORD: "Password123"
       ACCEPT_EULA: "Y"
-    container_name: scoobsqlserver
+    container_name: scoob_db
     hostname: scoobsqlserver
     ports:
       - "1443:1433"
