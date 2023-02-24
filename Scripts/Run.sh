@@ -7,22 +7,23 @@ project="e2etest"
 
 cd "$(dirname "$0")/.."
 
-docker-compose -p "$project" -f path/to/docker-compose.yml build
+docker-compose -p "$project" build
 
-mkdir -m 777 -p "$(pwd)/Reports"
 
-docker-compose -p "$project" -f path/to/docker-compose.yml up -d scooby_api scooby_webapp scoob_db selenium-hub firefox chrome edge
-docker-compose -p "$project" -f path/to/docker-compose.yml up --no-deps scoob_test
+mkdir -m 777 -p Reports
 
-container_id=$(docker ps -aqf "name=scoob_test")
-docker cp "$container_id:/src/ScoobTestBDD/LivingDoc.html" "$(pwd)/Reports"
-echo "SpecFlow LivingDoc report is copied to ./Reports"
-ls -l "$(pwd)/Reports"
+docker-compose -p "$project" up -d scooby_api scooby_webapp scoob_db selenium-hub firefox chrome edge
+docker-compose -p "$project" up --no-deps scoob_test
 
-exit_code=$(docker inspect "$container_id" -f '{{.State.ExitCode}}')
+docker ps
+docker cp scoob_test:/src/ScoobTestBDD/LivingDoc.html ./Reports
+echo "Specflow living document report is copied to ./Reports"
+ls -l ./Reports
 
-if [ "$exit_code" -eq 0 ]; then
-    exit "$exit_code"
+exit_code=$(docker inspect scoob_test -f '{{.State.ExitCode}}')
+
+if [ $exit_code -eq 0 ]; then
+    exit $exit_code
 else
     echo "Test failed"
 fi
