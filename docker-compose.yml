@@ -42,7 +42,7 @@ services:
 
   scoob_test:
     image: scoob_test
-    container_name: scoobtest
+    container_name: scoob_test
     build:
       context: .
       dockerfile: ScoobTestBDD/Dockerfile
@@ -64,11 +64,9 @@ services:
     networks:
       - scoob_network
 
-  node-docker:
-    image: selenium/node-docker:4.8.0-20230210
-    volumes:
-      - ./assets:/opt/selenium/assets
-      - ./GridConfig/config.toml:/opt/bin/config.toml
+  chrome:
+    image: selenium/node-chrome:4.8.1-20230221
+    shm_size: 2gb
     depends_on:
       - selenium-hub
     environment:
@@ -78,8 +76,68 @@ services:
     networks:
       - scoob_network
 
+  edge:
+    image: selenium/node-edge:4.8.1-20230221
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - scoob_network
+
+  firefox:
+    image: selenium/node-firefox:4.8.1-20230221
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - scoob_network
+
+  chrome_video:
+    image: selenium/video:ffmpeg-4.3.1-20230221
+    volumes:
+      - /tmp/videos:/videos
+    depends_on:
+      - chrome
+    environment:
+      - DISPLAY_CONTAINER_NAME=chrome
+      - FILE_NAME=chrome_video.mp4
+    networks:
+      - scoob_network
+
+  edge_video:
+    image: selenium/video:ffmpeg-4.3.1-20230221
+    volumes:
+      - /tmp/videos:/videos
+    depends_on:
+      - edge
+    environment:
+      - DISPLAY_CONTAINER_NAME=edge
+      - FILE_NAME=edge_video.mp4
+    networks:
+      - scoob_network
+
+  firefox_video:
+    image: selenium/video:ffmpeg-4.3.1-20230221
+    volumes:
+      - /tmp/videos:/videos
+    depends_on:
+      - firefox
+    environment:
+      - DISPLAY_CONTAINER_NAME=firefox
+      - FILE_NAME=firefox_video.mp4
+    networks:
+      - scoob_network
+
   selenium-hub:
-    image: selenium/hub:4.8.0-20230210
+    image: selenium/hub:4.8.1-20230221
     container_name: selenium-hub
     ports:
       - "4442:4442"
@@ -90,3 +148,28 @@ services:
 
 networks: 
    scoob_network:
+   
+# Dynamic selenium grid - not usable in CI/CD with GitHub yet
+#  node-docker:
+#    image: selenium/node-docker:4.8.0-20230210
+#    volumes:
+#      - ./assets:/opt/selenium/assets
+#      - ./GridConfig/config.toml:/opt/bin/config.toml
+#    depends_on:
+#      - selenium-hub
+#    environment:
+#      - SE_EVENT_BUS_HOST=selenium-hub
+#      - SE_EVENT_BUS_PUBLISH_PORT=4442
+#      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+#    networks:
+#      - scoob_network
+#
+#  selenium-hub:
+#    image: selenium/hub:4.8.0-20230210
+#    container_name: selenium-hub
+#    ports:
+#      - "4442:4442"
+#      - "4443:4443"
+#      - "4444:4444"
+#    networks:
+#      - scoob_network
