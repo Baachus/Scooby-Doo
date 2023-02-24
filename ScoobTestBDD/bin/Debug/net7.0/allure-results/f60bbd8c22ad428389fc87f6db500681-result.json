@@ -1,0 +1,76 @@
+{
+  "uuid": "2999ee42744045b286d4ec2a4ee6320d",
+  "historyId": "Test",
+  "fullName": "Test",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Relationship"
+    }
+  ],
+  "links": [],
+  "name": "Test",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I cleanup the following data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "df8abd4f8c0b4ae992d0ef067f2f6965-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677174909539,
+      "stop": 1677174910467
+    },
+    {
+      "name": "Given  I get the following relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "f3c4f3a5f0fd4fb6be96d6f47626c651-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677174910469,
+      "stop": 1677174949008
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677174909528,
+  "stop": 1677174949013
+}
