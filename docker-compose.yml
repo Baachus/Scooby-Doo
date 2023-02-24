@@ -1,4 +1,4 @@
-version: '1.0'
+version: '3.8'
 services:
   scooby_api:
     image: scooby_api
@@ -148,7 +148,7 @@ services:
 
 networks: 
    scoob_network:
-   
+
 # Dynamic selenium grid - not usable in CI/CD with GitHub yet
 #  node-docker:
 #    image: selenium/node-docker:4.8.0-20230210
