@@ -33,7 +33,10 @@ public class DriverFixture : IDriverFixture, IDisposable
             driver.Manage().Window.Size = new System.Drawing.Size(1800, 1500);
         }
         else
+        {
             driver = new RemoteWebDriver(testSettings.SeleniumGridUrl, GetBrowserOptions());
+            driver.Manage().Window.Size = new System.Drawing.Size(1800, 1500);
+        }
         
         driver.Navigate().GoToUrl(testSettings.ApplicationUrl);
     }
