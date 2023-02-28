@@ -15,4 +15,5 @@ RUN dotnet build "ScoobTestBDD.csproj" -c Release -o /app/build
 
 FROM build AS ScoobTestBDD
 WORKDIR /src/ScoobTestBDD
+RUN ["chmod", "+x", "../Scripts/WaitAndRun.sh"]
 CMD ["dotnet", "test"]
