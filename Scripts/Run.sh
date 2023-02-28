@@ -16,11 +16,11 @@ docker-compose -p "$project" up -d scooby_api scooby_webapp scooby_db selenium-h
 docker-compose -p "$project" up --no-deps scooby_test
 
 docker ps
-docker cp scoob_test:/src/ScoobTestBDD/LivingDoc.html ./Reports
+docker cp scooby_test:/src/ScoobTestBDD/LivingDoc.html ./Reports
 echo "Specflow living document report is copied to ./Reports"
 ls -l ./Reports
 
-exit_code=$(docker inspect scoob_test -f '{{.State.ExitCode}}')
+exit_code=$(docker inspect scooby_test -f '{{.State.ExitCode}}')
 
 if [ $exit_code -eq 0 ]; then
     exit $exit_code
