@@ -15,6 +15,12 @@ mkdir -m 777 -p Reports
 docker-compose -p "$project" up -d scooby_api scooby_webapp scooby_db selenium-hub firefox chrome edge
 docker-compose -p "$project" up --no-deps scooby_test
 
+search_dir=/src/ScoobTestBDD
+for entry in "$search_dir"/*
+do
+  echo "$entry"
+done
+
 docker cp scooby_test:/src/ScoobTestBDD/LivingDoc.html ./Reports
 echo "Specflow living document report is copied to ./Reports"
 ls -l ./Reports
