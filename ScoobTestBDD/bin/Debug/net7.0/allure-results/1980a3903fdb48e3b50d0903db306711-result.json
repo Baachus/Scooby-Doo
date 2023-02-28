@@ -1,0 +1,171 @@
+{
+  "uuid": "652d74cd581b466686b60eca2e7c9802",
+  "historyId": "Relationship links bring the user to the home page from any page.",
+  "fullName": "Relationship links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "Relationship links bring the user to the home page from any page.",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Privacy\"}\n  (Session info: chrome=110.0.5481.177)",
+    "trace": "OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Privacy\"}\n  (Session info: chrome=110.0.5481.177)\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at ScoobTestBDD.Pages.HomePage.get_lnkPrivacy() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 31\r\n   at ScoobTestBDD.Pages.HomePage.ClickPrivacy() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 59\r\n   at ScoobTestBDD.StepDefinitions.ReuseableSteps.WhenIClickTheRelationshipLink(String linkName) in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\StepDefinitions\\ReuseableSteps.cs:line 68\r\n   at InvokeStub_Action`2.Invoke(Object, Object, IntPtr*)\r\n   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446849142,
+      "stop": 1677446850590
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446850590,
+      "stop": 1677446893697
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893697,
+      "stop": 1677446893700
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893700,
+      "stop": 1677446893711
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893711,
+      "stop": 1677446893711
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893711,
+      "stop": 1677446893711
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893711,
+      "stop": 1677446893711
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893711,
+      "stop": 1677446893711
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446893711,
+      "stop": 1677446893711
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677446849142,
+  "stop": 1677446893711
+}

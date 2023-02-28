@@ -1,0 +1,169 @@
+{
+  "uuid": "24335bbf473a48cfa80428827adb50b8",
+  "historyId": "Privacy footer links bring the user to the home page from any page.",
+  "fullName": "Privacy footer links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "Privacy footer links bring the user to the home page from any page.",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606382109,
+      "stop": 1677606383682
+    },
+    {
+      "name": "When  I click the Privacy menu in the footer",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606383682,
+      "stop": 1677606383804
+    },
+    {
+      "name": "Then  I verify I am on the Privacy page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606383804,
+      "stop": 1677606383816
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606383816,
+      "stop": 1677606383986
+    },
+    {
+      "name": "When  I click the Privacy menu in the footer",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606383986,
+      "stop": 1677606384116
+    },
+    {
+      "name": "Then  I verify I am on the Privacy page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384116,
+      "stop": 1677606384120
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384120,
+      "stop": 1677606384195
+    },
+    {
+      "name": "When  I click the Privacy menu in the footer",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384195,
+      "stop": 1677606384247
+    },
+    {
+      "name": "Then  I verify I am on the Privacy page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384247,
+      "stop": 1677606384250
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606382109,
+  "stop": 1677606384250
+}

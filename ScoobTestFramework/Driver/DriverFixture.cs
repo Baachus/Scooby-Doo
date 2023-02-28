@@ -23,7 +23,7 @@ public class DriverFixture : IDriverFixture, IDisposable
     {
         this.testSettings = testSettings;
         this.browserDriver = browserDriver;
-        
+
         //Changes between local and remote based upon ExecutionType in test.runsettings.
         if (testSettings.ExecutionType == ExecutionType.Local)
         {
@@ -37,7 +37,7 @@ public class DriverFixture : IDriverFixture, IDisposable
             driver = new RemoteWebDriver(testSettings.SeleniumGridUrl, GetBrowserOptions());
             driver.Manage().Window.Size = new System.Drawing.Size(1800, 1500);
         }
-        
+
         driver.Navigate().GoToUrl(testSettings.ApplicationUrl);
     }
 

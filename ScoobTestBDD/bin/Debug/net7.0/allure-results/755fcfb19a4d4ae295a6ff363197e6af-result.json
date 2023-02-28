@@ -1,0 +1,169 @@
+{
+  "uuid": "18beb28236cd4056bd50600215b13352",
+  "historyId": "Home links bring the user to the home page from any page.",
+  "fullName": "Home links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "Home links bring the user to the home page from any page.",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606341994,
+      "stop": 1677606381298
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381299,
+      "stop": 1677606381379
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381379,
+      "stop": 1677606381437
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381437,
+      "stop": 1677606381559
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381559,
+      "stop": 1677606381683
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381683,
+      "stop": 1677606381710
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381710,
+      "stop": 1677606381838
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381838,
+      "stop": 1677606381934
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381934,
+      "stop": 1677606381957
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606341989,
+  "stop": 1677606381963
+}

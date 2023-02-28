@@ -1,0 +1,169 @@
+{
+  "uuid": "80a1cab0d3064b219444f0c1f95de242",
+  "historyId": "Relationship links bring the user to the home page from any page.",
+  "fullName": "Relationship links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "Relationship links bring the user to the home page from any page.",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390488,
+      "stop": 1677606391994
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606391994,
+      "stop": 1677606392098
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392098,
+      "stop": 1677606392101
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392102,
+      "stop": 1677606392197
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392197,
+      "stop": 1677606392304
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392304,
+      "stop": 1677606392312
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392312,
+      "stop": 1677606392392
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392392,
+      "stop": 1677606392460
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606392460,
+      "stop": 1677606392464
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606390488,
+  "stop": 1677606392464
+}

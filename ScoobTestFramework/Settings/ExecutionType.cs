@@ -2,6 +2,6 @@
 
 public enum ExecutionType
 {
-    Local, 
+    Local,
     Remote
 }

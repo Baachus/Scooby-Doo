@@ -4,6 +4,11 @@ namespace ScoobyRelationshipAPI.Data
 {
     public static class SeedData
     {
+        /// <summary>
+        /// This seeds the database with pre-populated data for the scooby gang
+        /// relationships.
+        /// </summary>
+        /// <param name="context"></param>
         public static void Seed(this ScoobRelationDbContext context)
         {
             ArgumentNullException.ThrowIfNull(context, nameof(context));

@@ -1,0 +1,305 @@
+{
+  "uuid": "5d174139f6d24d22baef90ec3810fc4b",
+  "historyId": "Verify Back to List works on every modify page, i.e. Edit, Details, and Delete",
+  "fullName": "Verify Back to List works on every modify page, i.e. Edit, Details, and Delete",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Relationship"
+    },
+    {
+      "name": "tag",
+      "value": "retry(1)"
+    }
+  ],
+  "links": [],
+  "name": "Verify Back to List works on every modify page, i.e. Edit, Details, and Delete",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I cleanup the following data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "fcb6ca6bf4fe435a9e0dc0950a03dd69-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606385950,
+      "stop": 1677606387427
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606387427,
+      "stop": 1677606387610
+    },
+    {
+      "name": "When  I click the \"Create New\" link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606387610,
+      "stop": 1677606387792
+    },
+    {
+      "name": "And  I create a relationship with the following details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "d1c3e6de7bba497d894299657733067b-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606387792,
+      "stop": 1677606388293
+    },
+    {
+      "name": "And  I click the Details link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606388293,
+      "stop": 1677606389931
+    },
+    {
+      "name": "And  I click the Back to List link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606389931,
+      "stop": 1677606390097
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390097,
+      "stop": 1677606390108
+    },
+    {
+      "name": "When  I click the Edit link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390108,
+      "stop": 1677606391843
+    },
+    {
+      "name": "And  I click the Back to List link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606391843,
+      "stop": 1677606391959
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606391959,
+      "stop": 1677606391964
+    },
+    {
+      "name": "When  I click the Delete link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606391964,
+      "stop": 1677606393467
+    },
+    {
+      "name": "And  I click the Back to List link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393467,
+      "stop": 1677606393550
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393550,
+      "stop": 1677606393557
+    },
+    {
+      "name": "And  I delete the AutomationGuyBackToList relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393557,
+      "stop": 1677606393577
+    },
+    {
+      "name": "When  I click the \"Create New\" link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393577,
+      "stop": 1677606393664
+    },
+    {
+      "name": "And  I click the Back to List link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393664,
+      "stop": 1677606393729
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606393729,
+      "stop": 1677606393731
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606385950,
+  "stop": 1677606393732
+}

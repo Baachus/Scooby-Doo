@@ -26,7 +26,6 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\ScoobTestBDD.pdb
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Allure.Commons.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\AngleSharp.dll
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Autofac.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\BoDi.dll

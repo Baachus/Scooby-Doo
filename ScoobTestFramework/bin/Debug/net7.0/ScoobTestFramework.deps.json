@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v7.0": {
       "ScoobTestFramework/1.0.0": {
         "dependencies": {
-          "Autofac": "6.5.0",
           "Microsoft.NET.Test.Sdk": "17.5.0",
           "Selenium.Support": "4.8.1",
           "Selenium.WebDriver": "4.8.1",
@@ -31,17 +30,6 @@
           "lib/netstandard2.0/AngleSharp.dll": {
             "assemblyVersion": "0.17.1.0",
             "fileVersion": "0.17.1.0"
-          }
-        }
-      },
-      "Autofac/6.5.0": {
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "6.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/Autofac.dll": {
-            "assemblyVersion": "6.5.0.0",
-            "fileVersion": "6.5.0.0"
           }
         }
       },
@@ -1505,13 +1493,6 @@
       "sha512": "sha512-5MPI4bbixlwxb0W/smOMeIR+QlxMy5/5jD+WnIAw4pBC+7AhLPe5bS3cLgQMJyvd6q0A48sG+uYOt/ep406GLA==",
       "path": "anglesharp/0.17.1",
       "hashPath": "anglesharp.0.17.1.nupkg.sha512"
-    },
-    "Autofac/6.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sm6HWWBDEoTPGXeyOchMygJ/7L89VxmVH72BFxakG88J34AVjA8RMi5jbv3PdpUtXI/d9ZLKOaxCmOSIo2K4aA==",
-      "path": "autofac/6.5.0",
-      "hashPath": "autofac.6.5.0.nupkg.sha512"
     },
     "coverlet.collector/3.2.0": {
       "type": "package",

@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ScoobTestFramework.Settings;
-
-namespace ScoobTestBDD.Pages;
+﻿namespace ScoobTestBDD.Pages;
 
 public interface IHomePage
 {

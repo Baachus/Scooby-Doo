@@ -2,7 +2,7 @@ version: '3.8'
 services:
   scooby_api:
     image: scooby_api
-    container_name: scooby_api
+    container_name: scoobyapi
     build:
       context: .
       dockerfile: ScoobyRelationshipAPI/Dockerfile
@@ -10,13 +10,13 @@ services:
     ports:
       - 5003:8003
     depends_on:
-      - scoob_db
+      - scooby_db
     networks:
-      - scoob_network
+      - scooby_network
 
   scooby_webapp:
     image: scooby_webapp
-    container_name: scooby_webapp
+    container_name: scoobywebapp
     build:
       context: .
       dockerfile: ScoobWebApp/Dockerfile
@@ -26,23 +26,23 @@ services:
     depends_on: 
       - scooby_api
     networks: 
-      - scoob_network
+      - scooby_network
       
-  scoob_db:
+  scooby_db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
       SA_PASSWORD: "Password123"
       ACCEPT_EULA: "Y"
-    container_name: scoob_db
-    hostname: scoobsqlserver
+    container_name: scoobydb
+    hostname: scoobysqlserver
     ports:
-      - "1443:1433"
+      - "1433:1433"
     networks: 
-      - scoob_network
+      - scooby_network
 
-  scoob_test:
-    image: scoob_test
-    container_name: scoob_test
+  scooby_test:
+    image: scooby_test
+    container_name: scoobytest
     build:
       context: .
       dockerfile: ScoobTestBDD/Dockerfile
@@ -53,16 +53,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=remote
     networks:
-      - scoob_network
+      - scooby_network
 
-  scoob_int_test:
-    image: scoob_int_test
-    container_name: scoob_int_test
+  scooby_int_test:
+    image: scooby_int_test
+    container_name: scoobyinttest
     build:
       context: .
       dockerfile: ScoobIntegrationTest/Dockerfile
     networks:
-      - scoob_network
+      - scooby_network
 
   chrome:
     image: selenium/node-chrome:4.8.1-20230221
@@ -74,7 +74,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks:
-      - scoob_network
+      - scooby_network
 
   edge:
     image: selenium/node-edge:4.8.1-20230221
@@ -86,7 +86,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks:
-      - scoob_network
+      - scooby_network
 
   firefox:
     image: selenium/node-firefox:4.8.1-20230221
@@ -98,7 +98,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     networks:
-      - scoob_network
+      - scooby_network
 
   chrome_video:
     image: selenium/video:ffmpeg-4.3.1-20230221
@@ -110,7 +110,7 @@ services:
       - DISPLAY_CONTAINER_NAME=chrome
       - FILE_NAME=chrome_video.mp4
     networks:
-      - scoob_network
+      - scooby_network
 
   edge_video:
     image: selenium/video:ffmpeg-4.3.1-20230221
@@ -122,7 +122,7 @@ services:
       - DISPLAY_CONTAINER_NAME=edge
       - FILE_NAME=edge_video.mp4
     networks:
-      - scoob_network
+      - scooby_network
 
   firefox_video:
     image: selenium/video:ffmpeg-4.3.1-20230221
@@ -134,7 +134,7 @@ services:
       - DISPLAY_CONTAINER_NAME=firefox
       - FILE_NAME=firefox_video.mp4
     networks:
-      - scoob_network
+      - scooby_network
 
   selenium-hub:
     image: selenium/hub:4.8.1-20230221
@@ -144,10 +144,10 @@ services:
       - "4443:4443"
       - "4444:4444"
     networks:
-      - scoob_network
+      - scooby_network
 
 networks: 
-   scoob_network:
+   scooby_network:
 
 # Dynamic selenium grid - not usable in CI/CD with GitHub yet
 #  node-docker:
@@ -162,7 +162,7 @@ networks:
 #      - SE_EVENT_BUS_PUBLISH_PORT=4442
 #      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
 #    networks:
-#      - scoob_network
+#      - scooby_network
 #
 #  selenium-hub:
 #    image: selenium/hub:4.8.0-20230210
@@ -172,4 +172,4 @@ networks:
 #      - "4443:4443"
 #      - "4444:4444"
 #    networks:
-#      - scoob_network
+#      - scooby_network

@@ -1,0 +1,161 @@
+{
+  "uuid": "9b2553fd6887402ea88813c61fca7330",
+  "historyId": "Create a relationship, verify the details, and remove the new relationship",
+  "fullName": "Create a relationship, verify the details, and remove the new relationship",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Relationship"
+    },
+    {
+      "name": "tag",
+      "value": "Smoke_Test"
+    },
+    {
+      "name": "tag",
+      "value": "retry(1)"
+    }
+  ],
+  "links": [],
+  "name": "Create a relationship, verify the details, and remove the new relationship",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Create New\"}\n  (Session info: chrome=110.0.5481.178)",
+    "trace": "OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Create New\"}\n  (Session info: chrome=110.0.5481.178)\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at ScoobTestBDD.Pages.HomePage.get_lnkCreate() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 25\r\n   at ScoobTestBDD.Pages.HomePage.ClickCreateNew() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 44\r\n   at ScoobTestBDD.StepDefinitions.RelationshipSteps.WhenIClickTheLink(String linkName) in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\StepDefinitions\\RelationshipSteps.cs:line 27\r\n   at InvokeStub_Action`2.Invoke(Object, Object, IntPtr*)\r\n   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I cleanup the following data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "77a3828084314504954c94e7419f2c61-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677550190283,
+      "stop": 1677550191667
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677550191667,
+      "stop": 1677550234882
+    },
+    {
+      "name": "When  I click the \"Create New\" link",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677550234882,
+      "stop": 1677550234924
+    },
+    {
+      "name": "And  I create a relationship with the following details",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "3ddbb254af7b4b228a2ea8e6e8393906-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677550234924,
+      "stop": 1677550234927
+    },
+    {
+      "name": "And  I click the Details link of the newly created relationship",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677550234928,
+      "stop": 1677550234928
+    },
+    {
+      "name": "Then  I see all the relationship details are created as expected",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677550234928,
+      "stop": 1677550234928
+    },
+    {
+      "name": "And  I delete the AutomationGuy relationship",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677550234928,
+      "stop": 1677550234928
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677550190283,
+  "stop": 1677550234929
+}

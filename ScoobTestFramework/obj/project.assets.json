@@ -19,22 +19,6 @@
           }
         }
       },
-      "Autofac/6.5.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "4.7.1"
-        },
-        "compile": {
-          "lib/net6.0/Autofac.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Autofac.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "coverlet.collector/3.2.0": {
         "type": "package",
         "build": {
@@ -2526,27 +2510,6 @@
         "lib/netstandard2.0/AngleSharp.dll",
         "lib/netstandard2.0/AngleSharp.xml",
         "logo.png"
-      ]
-    },
-    "Autofac/6.5.0": {
-      "sha512": "sm6HWWBDEoTPGXeyOchMygJ/7L89VxmVH72BFxakG88J34AVjA8RMi5jbv3PdpUtXI/d9ZLKOaxCmOSIo2K4aA==",
-      "type": "package",
-      "path": "autofac/6.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "autofac.6.5.0.nupkg.sha512",
-        "autofac.nuspec",
-        "icon.png",
-        "lib/net5.0/Autofac.dll",
-        "lib/net5.0/Autofac.xml",
-        "lib/net6.0/Autofac.dll",
-        "lib/net6.0/Autofac.xml",
-        "lib/netstandard2.0/Autofac.dll",
-        "lib/netstandard2.0/Autofac.xml",
-        "lib/netstandard2.1/Autofac.dll",
-        "lib/netstandard2.1/Autofac.xml"
       ]
     },
     "coverlet.collector/3.2.0": {
@@ -7381,7 +7344,6 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Autofac >= 6.5.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Selenium.Support >= 4.8.1",
       "Selenium.WebDriver >= 4.8.1",
@@ -7432,10 +7394,6 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
-          "Autofac": {
-            "target": "Package",
-            "version": "[6.5.0, )"
-          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.5.0, )"

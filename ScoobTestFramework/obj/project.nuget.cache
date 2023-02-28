@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ekZoA3Hv3SStG+Yj/mZmmpEl0vC4f22UK7ORy92WuY9ZYdWDyjewhpcb/+xke31s7B1Htu7inAGnV5uFQW+2+A==",
+  "dgSpecHash": "lNHWfltr83cRugH/Xb+IwH6C5G5cnITSq7IULtHHKwzpfMinEworWSbv++hXt2qNnQ7G+L+mIEj6Sc8gl2r8bg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestFramework\\ScoobTestFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Baachus\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
-    "C:\\Users\\Baachus\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",
     "C:\\Users\\Baachus\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Baachus\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Baachus\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

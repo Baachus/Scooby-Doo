@@ -10,7 +10,7 @@
   "profiles": {
     "ScoobWebApp": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
+      "dotnetRunMessages": "true",
       "launchBrowser": true,
       "applicationUrl": "http://*:8002",
       "environmentVariables": {

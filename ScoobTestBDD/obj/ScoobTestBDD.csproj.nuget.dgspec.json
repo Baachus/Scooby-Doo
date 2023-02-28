@@ -156,10 +156,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Autofac": {
-              "target": "Package",
-              "version": "[6.5.0, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.5.0, )"

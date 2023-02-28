@@ -1,0 +1,169 @@
+{
+  "uuid": "8fe573cbc59643808dfb0b7927be7b8e",
+  "historyId": "ScoobWebApp links bring the user to the home page from any page.",
+  "fullName": "ScoobWebApp links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "ScoobWebApp links bring the user to the home page from any page.",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384329,
+      "stop": 1677606385805
+    },
+    {
+      "name": "When  I click the ScoobWebApp menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606385805,
+      "stop": 1677606385940
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606385940,
+      "stop": 1677606385968
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606385968,
+      "stop": 1677606386037
+    },
+    {
+      "name": "When  I click the ScoobWebApp menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606386037,
+      "stop": 1677606386101
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606386101,
+      "stop": 1677606386123
+    },
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606386123,
+      "stop": 1677606386175
+    },
+    {
+      "name": "When  I click the ScoobWebApp menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606386175,
+      "stop": 1677606386225
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606386225,
+      "stop": 1677606386245
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606384329,
+  "stop": 1677606386245
+}

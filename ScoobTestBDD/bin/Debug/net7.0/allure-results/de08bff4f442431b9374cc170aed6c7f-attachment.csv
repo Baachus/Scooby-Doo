@@ -1,0 +1,4 @@
+Name,Relationship,Appearance,Gang
+AutomationGuy,Child,"{""Test"":""test_data""}",Shaggy
+AutomationTest,Uncle,"{""Test"":""test_data""}",Fred
+AutomationGuyBackToList,Child,"{""Test"":""test_data""}",Shaggy

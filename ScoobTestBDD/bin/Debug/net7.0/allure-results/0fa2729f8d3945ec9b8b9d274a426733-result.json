@@ -1,0 +1,171 @@
+{
+  "uuid": "6d315c0579b84f54a27767802681ec38",
+  "historyId": "Home links bring the user to the home page from any page.",
+  "fullName": "Home links bring the user to the home page from any page.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    }
+  ],
+  "links": [],
+  "name": "Home links bring the user to the home page from any page.",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Home\"}\n  (Session info: chrome=110.0.5481.177)",
+    "trace": "OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"link text\",\"selector\":\"Home\"}\n  (Session info: chrome=110.0.5481.177)\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at ScoobTestBDD.Pages.HomePage.get_lnkHome() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 30\r\n   at ScoobTestBDD.Pages.HomePage.ClickHome() in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\Pages\\HomePage.cs:line 53\r\n   at ScoobTestBDD.StepDefinitions.ReuseableSteps.WhenIClickTheRelationshipLink(String linkName) in C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobTestBDD\\StepDefinitions\\ReuseableSteps.cs:line 72\r\n   at InvokeStub_Action`2.Invoke(Object, Object, IntPtr*)\r\n   at System.Reflection.MethodInvoker.Invoke(Object obj, IntPtr* args, BindingFlags invokeAttr)\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)\r\n   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446592916,
+      "stop": 1677446595829
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446595831,
+      "stop": 1677446595886
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446595886,
+      "stop": 1677446595920
+    },
+    {
+      "name": "Given  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446595920,
+      "stop": 1677446596008
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446596008,
+      "stop": 1677446596073
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446596074,
+      "stop": 1677446596093
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446596093,
+      "stop": 1677446639459
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446639460,
+      "stop": 1677446639492
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "skipped",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677446639493,
+      "stop": 1677446639494
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677446592911,
+  "stop": 1677446639501
+}

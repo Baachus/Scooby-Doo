@@ -1,0 +1,159 @@
+{
+  "uuid": "96bbb85566e74c748a9bb198f9d4c322",
+  "historyId": "Create a relationship, verify the details, and remove the new relationship",
+  "fullName": "Create a relationship, verify the details, and remove the new relationship",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Relationship"
+    },
+    {
+      "name": "tag",
+      "value": "Smoke_Test"
+    },
+    {
+      "name": "tag",
+      "value": "retry(1)"
+    }
+  ],
+  "links": [],
+  "name": "Create a relationship, verify the details, and remove the new relationship",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I cleanup the following data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "5280a45443b44d349eaabdf833d39640-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606393828,
+      "stop": 1677606395170
+    },
+    {
+      "name": "Given  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606395170,
+      "stop": 1677606395271
+    },
+    {
+      "name": "When  I click the \"Create New\" link",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606395271,
+      "stop": 1677606395374
+    },
+    {
+      "name": "And  I create a relationship with the following details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "55c8b0841e6c456585b215742e290f3d-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606395374,
+      "stop": 1677606395748
+    },
+    {
+      "name": "And  I click the Details link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606395748,
+      "stop": 1677606396972
+    },
+    {
+      "name": "Then  I see all the relationship details are created as expected",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606396972,
+      "stop": 1677606397047
+    },
+    {
+      "name": "And  I delete the AutomationGuy relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606397047,
+      "stop": 1677606397061
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606393828,
+  "stop": 1677606397061
+}

@@ -1,0 +1,158 @@
+{
+  "uuid": "dd496f536b304a0e8ea4d3f31713e43c",
+  "historyId": "Header links bring the user to the correct pages.",
+  "fullName": "Header links bring the user to the correct pages.",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Header and Footer"
+    },
+    {
+      "name": "tag",
+      "value": "Smoke_Test"
+    }
+  ],
+  "links": [],
+  "name": "Header links bring the user to the correct pages.",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606388575,
+      "stop": 1677606390078
+    },
+    {
+      "name": "Then  I verify I am on the Relationship page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390078,
+      "stop": 1677606390085
+    },
+    {
+      "name": "When  I click the Privacy menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390085,
+      "stop": 1677606390199
+    },
+    {
+      "name": "Then  I verify I am on the Privacy page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390199,
+      "stop": 1677606390203
+    },
+    {
+      "name": "When  I click the Home menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390203,
+      "stop": 1677606390299
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390299,
+      "stop": 1677606390327
+    },
+    {
+      "name": "When  I click the ScoobWebApp menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390327,
+      "stop": 1677606390384
+    },
+    {
+      "name": "Then  I verify I am on the Home page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606390384,
+      "stop": 1677606390409
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606388575,
+  "stop": 1677606390409
+}

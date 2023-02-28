@@ -1,5 +1,4 @@
-﻿using ScoobTestBDD.Pages;
-using ScoobyRelationship.Repository;
+﻿using ScoobyRelationship.Repository;
 
 namespace ScoobTestBDD.StepDefinitions
 {
@@ -10,7 +9,7 @@ namespace ScoobTestBDD.StepDefinitions
         private readonly IRelationshipRepository relationshipRepository;
         private readonly IHomePage homePage;
 
-        public ReuseableSteps(ScenarioContext scenarioContext, 
+        public ReuseableSteps(ScenarioContext scenarioContext,
             IRelationshipRepository relationshipRepository,
             IHomePage homePage)
         {
@@ -57,7 +56,7 @@ namespace ScoobTestBDD.StepDefinitions
         [When(@"I click the (.*) menu")]
         public void WhenIClickTheRelationshipLink(string linkName)
         {
-            switch(linkName.ToLower())
+            switch (linkName.ToLower())
             {
                 case "relationship":
                 case "relationship page":

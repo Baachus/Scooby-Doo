@@ -1,0 +1,180 @@
+{
+  "uuid": "c23bcaaf8903490398488eb1fa1f194d",
+  "historyId": "Edit the relationship, verify the details, and remove the new relationship",
+  "fullName": "Edit the relationship, verify the details, and remove the new relationship",
+  "labels": [
+    {
+      "name": "thread",
+      "value": ".NET Long Running Task"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3HHOLVA"
+    },
+    {
+      "name": "feature",
+      "value": "Relationship"
+    },
+    {
+      "name": "tag",
+      "value": "Smoke_Test"
+    },
+    {
+      "name": "tag",
+      "value": "retry(1)"
+    }
+  ],
+  "links": [],
+  "name": "Edit the relationship, verify the details, and remove the new relationship",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I cleanup the following data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "a3f7433646824e93be44afac609fb4ee-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606341998,
+      "stop": 1677606377257
+    },
+    {
+      "name": "Given  I ensure the following relationship is created",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "5641cde59fec4b47b3ab6acd023f1b65-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606377260,
+      "stop": 1677606379564
+    },
+    {
+      "name": "When  I click the Relationship menu",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606379564,
+      "stop": 1677606381185
+    },
+    {
+      "name": "And  I click the Edit link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606381186,
+      "stop": 1677606383292
+    },
+    {
+      "name": "And  I edit the relationship with the following details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "table",
+          "source": "77aed5c0edc54c3a90f6e7940a22085c-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1677606383294,
+      "stop": 1677606384056
+    },
+    {
+      "name": "And  I click the Details link of the newly created relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606384056,
+      "stop": 1677606385632
+    },
+    {
+      "name": "Then  I see all the relationship details are created as expected",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606385632,
+      "stop": 1677606385786
+    },
+    {
+      "name": "And  I delete the AutomationTest relationship",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677606385786,
+      "stop": 1677606385821
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1677606341989,
+  "stop": 1677606385822
+}

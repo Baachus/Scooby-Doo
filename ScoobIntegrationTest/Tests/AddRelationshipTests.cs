@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using ScoobIntegrationTest.Library;
-using System.Security.Policy;
 
 namespace ScoobIntegrationTest.Tests;
 
@@ -32,7 +31,7 @@ public class AddRelationshipTests : IClassFixture<CustomWebApplicationFactory<Pr
         var result = await relationship.GetScoobyRelationByNameAsync("Automation Test");
 
         result.Should().NotBeNull();
-        
+
         await relationship.DeleteScoobyRelationAsync(result.Id);
     }
 
@@ -42,7 +41,7 @@ public class AddRelationshipTests : IClassFixture<CustomWebApplicationFactory<Pr
         var webClient = customWebApplicationFactory.CreateDefaultClient();
         var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var result = await relationship.AddScoobyRelationAsync(new ScoobRelation{});
+        var result = await relationship.AddScoobyRelationAsync(new ScoobRelation { });
 
         result.Name.Should().BeNull();
         result.Relationship.Should().BeNull();
