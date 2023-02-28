@@ -42,7 +42,7 @@ services:
 
   scooby_test:
     image: scooby_test
-    container_name: scoobytest
+    container_name: scooby_test
     build:
       context: .
       dockerfile: ScoobTestBDD/Dockerfile
