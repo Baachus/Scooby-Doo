@@ -1,3 +1,5 @@
+using ScoobTestBDD.Pages;
+
 namespace ScoobTestBDD.StepDefinitions;
 
 [Binding]
@@ -78,11 +80,19 @@ public sealed class RelationshipSteps
         scenarioContext.Set<ScoobRelation>(relationship);
     }
 
-
     [When(@"I click the Back to List link")]
     [Then(@"I click the Back to List link")]
     public void WhenIClickTheBackToListLink()
     {
         relationshipPage.ClickBackToList();
+    }
+
+    [Then(@"I can verify the Gang dropdown has the following option for (.*)")]
+    public void ThenICanVerifyTheGangDropdownHasTheFollowingOptionFor(string gangName)
+    {
+        IList<IWebElement> availableNames = relationshipPage.GetGangMemberOptions();
+
+        availableNames.Should().ContainSingle(x => x.Text == gangName.ToString())
+            .And.OnlyHaveUniqueItems();
     }
 }

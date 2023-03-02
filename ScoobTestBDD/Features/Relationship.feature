@@ -1,5 +1,7 @@
 ﻿Feature: Relationship
 
+This feature verifies the Relationship pages
+
 Background: 
 	Given I cleanup the following data
 		| Name                    | Relationship | Appearance           | Gang   |

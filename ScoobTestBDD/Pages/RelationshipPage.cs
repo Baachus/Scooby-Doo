@@ -7,6 +7,7 @@ public interface IRelationshipPage
     void ClickBackToList();
     ScoobRelation GetRelationshipDetails();
     void ClickDelete();
+    public IList<IWebElement> GetGangMemberOptions();
 }
 
 public class RelationshipPage : IRelationshipPage
@@ -25,7 +26,6 @@ public class RelationshipPage : IRelationshipPage
     IWebElement btnDelete => driver.FindElement(By.Id("Delete"));
     IWebElement lnkBackToList => driver.FindElement(By.Id("Return_List"));
 
-
     /// <summary>
     /// This method enters details for a newly created relationship based upon
     /// the ScoobRelation sent in.  It enters all values in their respective 
@@ -43,6 +43,7 @@ public class RelationshipPage : IRelationshipPage
     }
 
     /// <summary>
+    /// TODO: Move to Edit Page
     /// This method edits the details for a relationship based upon
     /// the ScoobRelation sent in.  It enters all values in their respective 
     /// fields then clicks the save button to successfully edit the
@@ -84,4 +85,10 @@ public class RelationshipPage : IRelationshipPage
     }
 
     public void ClickDelete() => btnDelete.Click();
+
+    public IList<IWebElement> GetGangMemberOptions()
+    {
+        SelectElement select = new SelectElement(ddlGang);
+        return select.Options;
+    }
 }
