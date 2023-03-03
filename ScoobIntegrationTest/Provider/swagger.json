@@ -262,15 +262,19 @@
             "format": "int32"
           },
           "name": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "relationship": {
+            "maxLength": 100,
+            "minLength": 0,
             "type": "string",
             "nullable": true
           },
           "gang": {
             "$ref": "#/components/schemas/GangMember"
-          },
-          "relationship": {
-            "type": "string",
-            "nullable": true
           },
           "appearance": {
             "type": "string",

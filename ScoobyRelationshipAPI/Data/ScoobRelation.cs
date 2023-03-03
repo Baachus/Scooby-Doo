@@ -1,3 +1,6 @@
+using Newtonsoft.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
+
 namespace ScoobyRelationship.Data
 {
     /***
@@ -8,9 +11,14 @@ namespace ScoobyRelationship.Data
     public class ScoobRelation
     {
         public int Id { get; init; }
+
+        [StringLength(60, ErrorMessage = "Too many characters, Name must be less than 60 characters.")]
         public string? Name { get; set; }
-        public GangMember Gang { get; set; }
+        
+        [StringLength(100, ErrorMessage = "Too many characters, Relationship must be less than 100 characters.")]
         public string? Relationship { get; set; }
+
+        public GangMember Gang { get; set; }
         public string? Appearance { get; set; }     //TODO: Modify to JSON Format
     }
 

@@ -21,6 +21,8 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
 
         var results = await product.GetScoobyRelationsAsync();
 
+        results.Should().NotBeEmpty();
+
         foreach (var result in results)
         {
             result.Id.Should().BeGreaterThan(0);
@@ -38,7 +40,7 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
         var product = new ScoobyRelationshipAPI(url, webClient);
 
         var results = await product.GetScoobyRelationsAsync();
-
+        
         results.Select(x => x.Name == name).Should().NotBeEmpty();
     }
 
@@ -49,6 +51,8 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
         var product = new ScoobyRelationshipAPI(url, webClient);
 
         var results = await product.GetScoobyRelationsAsync();
+
+        results.Should().NotBeEmpty();
 
         foreach (var result in results)
         {
@@ -69,6 +73,8 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
 
         var results = await product.GetScoobyRelationsAsync();
 
+        results.Should().NotBeEmpty();
+
         foreach (var result in results)
         {
             result.Relationship.Should().BeOneOf(
@@ -85,6 +91,8 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
         var product = new ScoobyRelationshipAPI(url, webClient);
 
         var results = await product.GetScoobyRelationsAsync();
+
+        results.Should().NotBeEmpty();
 
         foreach (var result in results)
         {

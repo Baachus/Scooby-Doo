@@ -95,4 +95,17 @@ public sealed class RelationshipSteps
         availableNames.Should().ContainSingle(x => x.Text == gangName.ToString())
             .And.OnlyHaveUniqueItems();
     }
+
+    [When(@"I enter a random sentence into the (.*) field that is (.*) characters long")]
+    public void WhenIEnterARandomSentenceIntoTheRelationshipFieldThatIsCharactersLong(string fieldName, int characterLength)
+    {
+        relationshipPage.EnterSpecificRelationshipDetail(fieldName, "",characterLength);
+    }
+
+    [Then(@"I can verify only (.*) characters are allowed in the (.*) field")]
+    public void ThenICanVerifyOnlyCharactersAreAllowedInTheRelationshipField(int characterLength, string fieldName)
+    {
+        relationshipPage.VerifyEnteredFieldLength(fieldName, characterLength);
+    }
+
 }

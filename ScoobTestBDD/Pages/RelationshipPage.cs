@@ -1,4 +1,8 @@
-﻿namespace ScoobTestBDD.Pages;
+﻿using Bogus;
+using CsvHelper.Configuration.Attributes;
+using Microsoft.IdentityModel.Tokens;
+
+namespace ScoobTestBDD.Pages;
 
 public interface IRelationshipPage
 {
@@ -7,7 +11,9 @@ public interface IRelationshipPage
     void ClickBackToList();
     ScoobRelation GetRelationshipDetails();
     void ClickDelete();
-    public IList<IWebElement> GetGangMemberOptions();
+    IList<IWebElement> GetGangMemberOptions();
+    void EnterSpecificRelationshipDetail(string fieldName, [Optional] string? newText = null, [Optional] int characterLength = -1);
+    void VerifyEnteredFieldLength(string fieldName, int characterLength);
 }
 
 public class RelationshipPage : IRelationshipPage
@@ -84,11 +90,74 @@ public class RelationshipPage : IRelationshipPage
         };
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void ClickDelete() => btnDelete.Click();
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
     public IList<IWebElement> GetGangMemberOptions()
     {
         SelectElement select = new SelectElement(ddlGang);
         return select.Options;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="fieldName"></param>
+    /// <param name="newText"></param>
+    /// <param name="characterLength"></param>
+    public void EnterSpecificRelationshipDetail(string fieldName,
+                                                [Optional] string newText = null,
+                                                [Optional] int characterLength = -1)
+    {
+        if (characterLength > 0 || newText.IsNullOrEmpty())
+        {
+            var fake = new Faker("en");
+            newText = fake.Random.String(characterLength);
+        }
+
+        switch (fieldName.ToLower())
+        { 
+            case "name":
+                txtName.ClearAndEnterText(newText);
+                break;
+            case "relationship":
+                txtRelationship.ClearAndEnterText(newText);
+                break;
+            case "appearance":
+                txtApperance.ClearAndEnterText(newText);
+                break;
+        }
+        
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="fieldName"></param>
+    /// <param name="characterLength"></param>
+    public void VerifyEnteredFieldLength(string fieldName, int characterLength)
+    {
+        string result="";
+
+        switch (fieldName.ToLower())
+        {
+            case "name":
+                result = txtName.GetAttribute("value");
+                break;
+            case "relationship":
+                result = txtRelationship.GetAttribute("value");
+                break;
+            case "appearance":
+                result = txtApperance.GetAttribute("value");
+                break;
+        }
+
+        result.Should().HaveLength(characterLength);
     }
 }
