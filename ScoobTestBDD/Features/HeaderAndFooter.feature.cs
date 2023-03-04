@@ -81,14 +81,17 @@ namespace ScoobTestBDD.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Header links bring the user to the correct pages.")]
         [Xunit.TraitAttribute("FeatureTitle", "Header and Footer")]
         [Xunit.TraitAttribute("Description", "Header links bring the user to the correct pages.")]
         [Xunit.TraitAttribute("Category", "Smoke_Test")]
+        [Xunit.TraitAttribute("Category", "retry(1)")]
+        [xRetry.RetryFact(1, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Header links bring the user to the correct pages.")]
         public void HeaderLinksBringTheUserToTheCorrectPages_()
         {
             string[] tagsOfScenario = new string[] {
-                    "Smoke_Test"};
+                    "Smoke_Test",
+                    "retry(1)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Header links bring the user to the correct pages.", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7

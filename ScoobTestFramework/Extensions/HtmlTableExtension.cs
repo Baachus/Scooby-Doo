@@ -5,7 +5,7 @@ namespace ScoobTestFramework.Extensions;
 public static class HtmlTableExtension
 {
     //Read of Table
-    private static List<TableDatacolleciton> ReadTable(IWebElement table)
+    public static List<TableDatacolleciton> ReadTable(IWebElement table)
     {
         //Initalize the table
         var tableDataCollection = new List<TableDatacolleciton>();
@@ -118,7 +118,7 @@ public static class HtmlTableExtension
         }
     }
 
-    private static IEnumerable GetDynamicRowNumber
+    public static IEnumerable GetDynamicRowNumber
         (List<TableDatacolleciton> tableCollection,
         string columnName,
         string columnValue)

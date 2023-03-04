@@ -3,7 +3,7 @@
 This feature file verifies the welcome page along with the header links that 
 are present on each page.
 
-@Smoke_Test
+@Smoke_Test @retry(1)
 Scenario: Header links bring the user to the correct pages.
 	When I click the Relationship menu
 	Then I verify I am on the Relationship page

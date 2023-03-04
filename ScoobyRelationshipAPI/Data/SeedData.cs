@@ -46,6 +46,20 @@ namespace ScoobyRelationshipAPI.Data
                         Gang = GangMember.Daphne,
                         Relationship = "Aunt"
                     },
+                    new ScoobRelation()
+                    {
+                        Name = "Skip Jones",
+                        Appearance = "{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"APPEARED\":true}",
+                        Gang = GangMember.Fred,
+                        Relationship = "Father"
+                    },
+                    new ScoobRelation()
+                    {
+                        Name = "Margaret 'Maggie' Rogers",
+                        Appearance = "{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RELEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}",
+                        Gang = GangMember.Shaggy,
+                        Relationship = "Younger Sister"
+                    },
                 };
 
                 context.ScoobRelations.AddRange(relationships);

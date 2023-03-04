@@ -8,6 +8,7 @@ public interface IRelationshipPage
 {
     void EnterRelationshipDetails(ScoobRelation relation);
     void EditRelationshipDetails(ScoobRelation relation);
+    void EditRelationshipDetailsButDontSave(ScoobRelation relation);
     void ClickBackToList();
     ScoobRelation GetRelationshipDetails();
     void ClickDelete();
@@ -49,7 +50,6 @@ public class RelationshipPage : IRelationshipPage
     }
 
     /// <summary>
-    /// TODO: Move to Edit Page
     /// This method edits the details for a relationship based upon
     /// the ScoobRelation sent in.  It enters all values in their respective 
     /// fields then clicks the save button to successfully edit the
@@ -63,6 +63,21 @@ public class RelationshipPage : IRelationshipPage
         txtRelationship.ClearAndEnterText(relation.Relationship);
         txtApperance.ClearAndEnterText(relation.Appearance);
         btnSave.Click();
+    }
+
+    /// <summary>
+    /// This method edits the details for a relationship based upon
+    /// the ScoobRelation sent in.  It enters all values in their respective 
+    /// fields but doesn't clicks the save button to successfully edit the
+    /// relationship.
+    /// </summary>
+    /// <param name="relation">ScoobRelation to be entered</param>
+    public void EditRelationshipDetailsButDontSave(ScoobRelation relation)
+    {
+        txtName.ClearAndEnterText(relation.Name);
+        ddlGang.SelectDropDownByText(relation.Gang.ToString());
+        txtRelationship.ClearAndEnterText(relation.Relationship);
+        txtApperance.ClearAndEnterText(relation.Appearance);
     }
 
     /// <summary>

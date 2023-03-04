@@ -19,7 +19,7 @@ namespace ScoobTestBDD.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class RelationshipFeature : object, Xunit.IClassFixture<RelationshipFeature.FixtureData>, System.IDisposable
+    public partial class DetailRelationshipFeature : object, Xunit.IClassFixture<DetailRelationshipFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace ScoobTestBDD.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Relationship.feature"
+#line 1 "DetailRelationship.feature"
 #line hidden
         
-        public RelationshipFeature(RelationshipFeature.FixtureData fixtureData, ScoobTestBDD_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public DetailRelationshipFeature(DetailRelationshipFeature.FixtureData fixtureData, ScoobTestBDD_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,8 @@ namespace ScoobTestBDD.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Relationship", "This feature verifies the Relationship pages", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "DetailRelationship", "This feature tests the Detail page for viewing a Relationship \r\nand subsequent op" +
+                    "tions around that page.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -77,20 +78,20 @@ namespace ScoobTestBDD.Features
         
         public virtual void FeatureBackground()
         {
-#line 5
+#line 6
 #line hidden
-            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table15.AddRow(new string[] {
-                        "AutomationGuyBackToList",
+            table5.AddRow(new string[] {
+                        "AutomationGuy",
                         "Child",
                         "{\"Test\":\"test_data\"}",
                         "Shaggy"});
-#line 6
- testRunner.Given("I cleanup the following data", ((string)(null)), table15, "Given ");
+#line 7
+ testRunner.Given("I cleanup the following data", ((string)(null)), table5, "Given ");
 #line hidden
         }
         
@@ -99,15 +100,23 @@ namespace ScoobTestBDD.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify Back to List works on every modify page, i.e. Edit, Details, and Delete")]
-        [Xunit.TraitAttribute("FeatureTitle", "Relationship")]
-        [Xunit.TraitAttribute("Description", "Verify Back to List works on every modify page, i.e. Edit, Details, and Delete")]
-        public void VerifyBackToListWorksOnEveryModifyPageI_E_EditDetailsAndDelete()
+        [Xunit.TraitAttribute("FeatureTitle", "DetailRelationship")]
+        [Xunit.TraitAttribute("Description", "Create a relationship, verify the details on the details page, and remove the new" +
+            " relationship")]
+        [Xunit.TraitAttribute("Category", "Smoke_Test")]
+        [Xunit.TraitAttribute("Category", "retry(1)")]
+        [xRetry.RetryFact(1, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Create a relationship, verify the details on the details page, and remove the new" +
+            " relationship")]
+        public void CreateARelationshipVerifyTheDetailsOnTheDetailsPageAndRemoveTheNewRelationship()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Smoke_Test",
+                    "retry(1)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Back to List works on every modify page, i.e. Edit, Details, and Delete", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a relationship, verify the details on the details page, and remove the new" +
+                    " relationship", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -117,66 +126,36 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 6
 this.FeatureBackground();
 #line hidden
-#line 11
+#line 13
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
+#line 14
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table16.AddRow(new string[] {
-                            "AutomationGuyBackToList",
+                table6.AddRow(new string[] {
+                            "AutomationGuy",
                             "Child",
                             "{\"Test\":\"test_data\"}",
                             "Shaggy"});
-#line 13
- testRunner.And("I create a relationship with the following details", ((string)(null)), table16, "And ");
-#line hidden
-#line 16
- testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 17
- testRunner.And("I click the Back to List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table6, "And ");
 #line hidden
 #line 18
- testRunner.Then("I verify I am on the Relationship page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.When("I click the Edit link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 20
- testRunner.And("I click the Back to List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.Then("I verify I am on the Relationship page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 22
- testRunner.When("I click the Delete link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 23
- testRunner.And("I click the Back to List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 24
- testRunner.Then("I verify I am on the Relationship page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 25
- testRunner.And("I delete the AutomationGuyBackToList relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 26
- testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 27
- testRunner.And("I click the Back to List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
- testRunner.Then("I verify I am on the Relationship page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I delete the AutomationGuy relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -189,12 +168,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                RelationshipFeature.FeatureSetup();
+                DetailRelationshipFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                RelationshipFeature.FeatureTearDown();
+                DetailRelationshipFeature.FeatureTearDown();
             }
         }
     }

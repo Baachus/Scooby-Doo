@@ -9,6 +9,7 @@ public interface IHomePage
     void ClickPrivacy();
     void ClickFooterPrivacy();
     void PerformClickOnSpecialValue(string name, string operation = "Details");
+    void VerifyDataOnTable(ScoobRelation relation);
     void VerifyPrivacyPage();
     void VerifyRelationshipPage();
     IWebElement GetWelcomeBanner();
@@ -80,17 +81,38 @@ public class HomePage : IHomePage
         tblList.PerformActionOnCell("5", "Name", name, operation);
     }
 
-    public void VerifyPrivacyPage()
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="relation"></param>
+    public void VerifyDataOnTable(ScoobRelation relation)
     {
-        driver.Url.Should().EndWith("/Home/Privacy");
-    }
-    public void VerifyRelationshipPage()
-    {
-        driver.Url.Should().EndWith("/Relationship/List");
+        List<TableDatacolleciton> table = HtmlTableExtension.ReadTable(tblList);
+        
+        //TODO: Validate each record is on the same row
+        //var rowNumber = HtmlTableExtension.GetDynamicRowNumber(table, "Name", relation.Name);
+        
+        table.Should().NotBeEmpty();
+        table.Select(x => x.ColumnValue == relation.Id.ToString()).Should().NotBeEmpty();
+        table.Select(x => x.ColumnValue == relation.Name).Should().NotBeEmpty();
+        table.Select(x => x.ColumnValue == relation.Relationship).Should().NotBeEmpty();
+        table.Select(x => x.ColumnValue == relation.Gang.ToString()).Should().NotBeEmpty();
+        table.Select(x => x.ColumnValue == relation.Appearance).Should().NotBeEmpty();
     }
 
-    public IWebElement GetWelcomeBanner()
-    {
-        return lblWelcome;
-    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public void VerifyPrivacyPage() => driver.Url.Should().EndWith("/Home/Privacy");
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void VerifyRelationshipPage() => driver.Url.Should().EndWith("/Relationship/List");
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public IWebElement GetWelcomeBanner() => lblWelcome;
 }

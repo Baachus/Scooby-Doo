@@ -17,9 +17,9 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     public async Task VerifyIDForSeedDataFromGetAllRelationships()
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
-        var product = new ScoobyRelationshipAPI(url, webClient);
+        var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var results = await product.GetScoobyRelationsAsync();
+        var results = await relationship.GetScoobyRelationsAsync();
 
         results.Should().NotBeEmpty();
 
@@ -34,12 +34,14 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     [InlineData("Scrappy-Doo")]
     [InlineData("John Maxwell")]
     [InlineData("Olivia Dervy")]
+    [InlineData("Skip Jones")]
+    [InlineData("Margaret 'Maggie' Rogers")]
     public async Task VerifyNamesInSeedDataFromGetAllRelationships(string name)
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
-        var product = new ScoobyRelationshipAPI(url, webClient);
+        var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var results = await product.GetScoobyRelationsAsync();
+        var results = await relationship.GetScoobyRelationsAsync();
         
         results.Select(x => x.Name == name).Should().NotBeEmpty();
     }
@@ -48,9 +50,9 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     public async Task VerifyGangInSeedDataFromGetAllRelationships()
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
-        var product = new ScoobyRelationshipAPI(url, webClient);
+        var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var results = await product.GetScoobyRelationsAsync();
+        var results = await relationship.GetScoobyRelationsAsync();
 
         results.Should().NotBeEmpty();
 
@@ -69,9 +71,9 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     public async Task VerifyRelationshipInSeedDataFromGetAllRelationships()
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
-        var product = new ScoobyRelationshipAPI(url, webClient);
+        var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var results = await product.GetScoobyRelationsAsync();
+        var results = await relationship.GetScoobyRelationsAsync();
 
         results.Should().NotBeEmpty();
 
@@ -80,6 +82,8 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
             result.Relationship.Should().BeOneOf(
                 "Uncle",
                 "Aunt",
+                "Father",
+                "Younger Sister",
                 null);
         }
     }
@@ -88,9 +92,9 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     public async Task VerifyApperanceInSeedDataFromGetAllRelationships()
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
-        var product = new ScoobyRelationshipAPI(url, webClient);
+        var relationship = new ScoobyRelationshipAPI(url, webClient);
 
-        var results = await product.GetScoobyRelationsAsync();
+        var results = await relationship.GetScoobyRelationsAsync();
 
         results.Should().NotBeEmpty();
 

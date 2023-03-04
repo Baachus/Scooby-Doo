@@ -1,5 +1,3 @@
-using ScoobTestBDD.Pages;
-
 namespace ScoobTestBDD.StepDefinitions;
 
 [Binding]
@@ -64,6 +62,15 @@ public sealed class RelationshipSteps
             options => options.Excluding(x => x.Id));
     }
 
+    [Then(@"I see the new relationship on the relationship table")]
+    public void ThenISeeTheNewRelationshipOnTheRelationshipTable()
+    {
+        var relation = scenarioContext.Get<ScoobRelation>();
+
+        homePage.VerifyDataOnTable(relation);
+    }
+
+
     [When(@"I click to return to the Relationship List")]
     public void WhenIClickToReturnToTheRelationshipList()
     {
@@ -108,4 +115,10 @@ public sealed class RelationshipSteps
         relationshipPage.VerifyEnteredFieldLength(fieldName, characterLength);
     }
 
+    [When(@"I edit the relationship with the following details but do not save")]
+    public void WhenIEditTheRelationshipWithTheFollowingDetailsButDoNotSave(Table table)
+    {
+        var relationship = table.CreateInstance<ScoobRelation>();
+        relationshipPage.EditRelationshipDetailsButDontSave(relationship);
+    }
 }

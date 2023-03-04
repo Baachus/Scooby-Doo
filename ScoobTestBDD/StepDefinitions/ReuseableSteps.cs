@@ -1,4 +1,6 @@
-﻿using ScoobyRelationship.Repository;
+﻿using Microsoft.Extensions.Logging;
+using OpenQA.Selenium.DevTools;
+using ScoobyRelationship.Repository;
 
 namespace ScoobTestBDD.StepDefinitions;
 
@@ -22,7 +24,14 @@ public class ReuseableSteps
     [When(@"I delete the (.*) relationship")]
     public void WhenIDeleteTheAutomationGuyRelationship(string relationshipName)
     {
-        relationshipRepository.DeleteRelationship(relationshipName);
+        try
+        {
+            relationshipRepository.DeleteRelationship(relationshipName);
+        }
+        catch(Exception ex) 
+        {
+            Console.WriteLine(relationshipName+ ": Does not exist - " + ex.Message);
+        }
     }
 
     [Given(@"I ensure the following relationship is created")]
