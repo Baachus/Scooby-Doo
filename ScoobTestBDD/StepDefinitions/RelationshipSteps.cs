@@ -106,7 +106,7 @@ public sealed class RelationshipSteps
     [When(@"I enter a random sentence into the (.*) field that is (.*) characters long")]
     public void WhenIEnterARandomSentenceIntoTheRelationshipFieldThatIsCharactersLong(string fieldName, int characterLength)
     {
-        relationshipPage.EnterSpecificRelationshipDetail(fieldName, "",characterLength);
+        relationshipPage.EnterSpecificRelationshipDetail(fieldName, "", characterLength);
     }
 
     [Then(@"I can verify only (.*) characters are allowed in the (.*) field")]

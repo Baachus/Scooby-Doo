@@ -1,8 +1,3 @@
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.csproj.AssemblyReference.cache
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.AssemblyInfoInputs.cache
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.AssemblyInfo.cs
-C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.csproj.CoreCompileInputs.cache
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\testhost.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\TechTalk.SpecFlow.xUnit.SpecFlowPlugin.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\LivingDoc.Dtos.dll
@@ -73,6 +68,7 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\NuGet.Frameworks.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\RestSharp.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\WebDriver.Support.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\WebDriver.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll
@@ -188,6 +184,11 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\ScoobyRelationshipAPI.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\ScoobTestFramework.pdb
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\bin\Debug\net7.0\ScoobyRelationshipAPI.pdb
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.csproj.AssemblyReference.cache
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.AssemblyInfoInputs.cache
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.AssemblyInfo.cs
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.csproj.CoreCompileInputs.cache
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.csproj.CopyComplete
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\ScoobTestBDD.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestBDD\obj\Debug\net7.0\refint\ScoobTestBDD.dll

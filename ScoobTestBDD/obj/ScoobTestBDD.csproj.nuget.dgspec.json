@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[17.5.0, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[4.8.1, )"
@@ -163,6 +167,10 @@
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.5.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             },
             "Selenium.Support": {
               "target": "Package",

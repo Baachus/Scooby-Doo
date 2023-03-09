@@ -333,15 +333,18 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify max characters allowed to enter in Name is 60")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateRelationship")]
         [Xunit.TraitAttribute("Description", "Verify max characters allowed to enter in Name is 60")]
+        [Xunit.TraitAttribute("Category", "retry(2)")]
+        [xRetry.RetryFact(2, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Verify max characters allowed to enter in Name is 60")]
         public void VerifyMaxCharactersAllowedToEnterInNameIs60()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "retry(2)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify max characters allowed to enter in Name is 60", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 47
+#line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -354,31 +357,34 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 48
+#line 49
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 49
+#line 50
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 50
+#line 51
  testRunner.And("I enter a random sentence into the name field that is 60 characters long", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 52
  testRunner.Then("I can verify only 60 characters are allowed in the name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify max characters allowed to enter in Relationship is 100")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateRelationship")]
         [Xunit.TraitAttribute("Description", "Verify max characters allowed to enter in Relationship is 100")]
+        [Xunit.TraitAttribute("Category", "retry(2)")]
+        [xRetry.RetryFact(2, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Verify max characters allowed to enter in Relationship is 100")]
         public void VerifyMaxCharactersAllowedToEnterInRelationshipIs100()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "retry(2)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify max characters allowed to enter in Relationship is 100", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 53
+#line 55
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -391,32 +397,35 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 54
+#line 56
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 55
+#line 57
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 56
+#line 58
  testRunner.And("I enter a random sentence into the relationship field that is 100 characters long" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 57
+#line 59
  testRunner.Then("I can verify only 100 characters are allowed in the relationship field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify Name is trimmed to 60 characters when creating a new relationship")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateRelationship")]
         [Xunit.TraitAttribute("Description", "Verify Name is trimmed to 60 characters when creating a new relationship")]
+        [Xunit.TraitAttribute("Category", "retry(2)")]
+        [xRetry.RetryFact(2, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Verify Name is trimmed to 60 characters when creating a new relationship")]
         public void VerifyNameIsTrimmedTo60CharactersWhenCreatingANewRelationship()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "retry(2)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Name is trimmed to 60 characters when creating a new relationship", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 59
+#line 62
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -429,34 +438,37 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 60
+#line 63
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 61
+#line 64
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 62
+#line 65
  testRunner.And("I enter a random sentence into the name field that is 61 characters long", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 66
  testRunner.Then("I can verify only 60 characters are allowed in the name field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify relationship is trimmed to 100 characters when creating a new relationship" +
-            "")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateRelationship")]
         [Xunit.TraitAttribute("Description", "Verify relationship is trimmed to 100 characters when creating a new relationship" +
             "")]
+        [Xunit.TraitAttribute("Category", "retry(2)")]
+        [xRetry.RetryFact(2, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Verify relationship is trimmed to 100 characters when creating a new relationship" +
+            "")]
         public void VerifyRelationshipIsTrimmedTo100CharactersWhenCreatingANewRelationship()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "retry(2)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify relationship is trimmed to 100 characters when creating a new relationship" +
                     "", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 65
+#line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -469,17 +481,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 66
+#line 70
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 67
+#line 71
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 68
+#line 72
  testRunner.And("I enter a random sentence into the relationship field that is 101 characters long" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 73
  testRunner.Then("I can verify only 100 characters are allowed in the relationship field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

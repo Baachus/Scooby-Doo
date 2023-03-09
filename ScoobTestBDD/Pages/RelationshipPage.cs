@@ -137,7 +137,7 @@ public class RelationshipPage : IRelationshipPage
         }
 
         switch (fieldName.ToLower())
-        { 
+        {
             case "name":
                 txtName.ClearAndEnterText(newText);
                 break;
@@ -148,7 +148,7 @@ public class RelationshipPage : IRelationshipPage
                 txtApperance.ClearAndEnterText(newText);
                 break;
         }
-        
+
     }
 
     /// <summary>
@@ -158,7 +158,7 @@ public class RelationshipPage : IRelationshipPage
     /// <param name="characterLength"></param>
     public void VerifyEnteredFieldLength(string fieldName, int characterLength)
     {
-        string result="";
+        string result = "";
 
         switch (fieldName.ToLower())
         {

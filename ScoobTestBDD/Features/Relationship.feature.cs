@@ -79,18 +79,18 @@ namespace ScoobTestBDD.Features
         {
 #line 5
 #line hidden
-            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table15.AddRow(new string[] {
+            table28.AddRow(new string[] {
                         "AutomationGuyBackToList",
                         "Child",
                         "{\"Test\":\"test_data\"}",
                         "Shaggy"});
 #line 6
- testRunner.Given("I cleanup the following data", ((string)(null)), table15, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table28, "Given ");
 #line hidden
         }
         
@@ -126,18 +126,18 @@ this.FeatureBackground();
 #line 12
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table16.AddRow(new string[] {
+                table29.AddRow(new string[] {
                             "AutomationGuyBackToList",
                             "Child",
                             "{\"Test\":\"test_data\"}",
                             "Shaggy"});
 #line 13
- testRunner.And("I create a relationship with the following details", ((string)(null)), table16, "And ");
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table29, "And ");
 #line hidden
 #line 16
  testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

@@ -26,7 +26,7 @@ public class GetRelationshipTests : IClassFixture<CustomWebApplicationFactory<Pr
         var relationship = new ScoobyRelationshipAPI(url, webClient);
 
         var result = await relationship.GetScoobyRelationByNameAsync(name);
-        
+
         result.Should().NotBeNull();
 
         result.Id.Should().BeGreaterThan(0);

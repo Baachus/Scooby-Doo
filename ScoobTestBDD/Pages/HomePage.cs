@@ -88,10 +88,10 @@ public class HomePage : IHomePage
     public void VerifyDataOnTable(ScoobRelation relation)
     {
         List<TableDatacolleciton> table = HtmlTableExtension.ReadTable(tblList);
-        
+
         //TODO: Validate each record is on the same row
         //var rowNumber = HtmlTableExtension.GetDynamicRowNumber(table, "Name", relation.Name);
-        
+
         table.Should().NotBeEmpty();
         table.Select(x => x.ColumnValue == relation.Id.ToString()).Should().NotBeEmpty();
         table.Select(x => x.ColumnValue == relation.Name).Should().NotBeEmpty();

@@ -42,7 +42,7 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
         var relationship = new ScoobyRelationshipAPI(url, webClient);
 
         var results = await relationship.GetScoobyRelationsAsync();
-        
+
         results.Select(x => x.Name == name).Should().NotBeEmpty();
     }
 
@@ -84,6 +84,7 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
                 "Aunt",
                 "Father",
                 "Younger Sister",
+                "Nephew",
                 null);
         }
     }

@@ -47,6 +47,7 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debu
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\NuGet.Frameworks.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\RestSharp.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\WebDriver.Support.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\WebDriver.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobTestFramework\bin\Debug\net7.0\ICSharpCode.SharpZipLib.dll

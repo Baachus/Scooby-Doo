@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using OpenQA.Selenium.DevTools;
-using ScoobyRelationship.Repository;
+﻿using ScoobyRelationship.Repository;
 
 namespace ScoobTestBDD.StepDefinitions;
 
@@ -28,9 +26,9 @@ public class ReuseableSteps
         {
             relationshipRepository.DeleteRelationship(relationshipName);
         }
-        catch(Exception ex) 
+        catch (Exception ex)
         {
-            Console.WriteLine(relationshipName+ ": Does not exist - " + ex.Message);
+            Console.WriteLine(relationshipName + ": Does not exist - " + ex.Message);
         }
     }
 

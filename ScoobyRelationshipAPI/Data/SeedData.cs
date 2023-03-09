@@ -30,7 +30,7 @@ namespace ScoobyRelationshipAPI.Data
                         Name = "Scrappy-Doo",
                         Appearance = "{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}",
                         Gang = GangMember.Scooby,
-                        Relationship = "Uncle"
+                        Relationship = "Nephew"
                     },
                     new ScoobRelation()
                     {
