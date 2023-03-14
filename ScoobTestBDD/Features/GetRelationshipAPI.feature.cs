@@ -85,12 +85,14 @@ namespace ScoobTestBDD.Features
         [Xunit.SkippableFactAttribute(DisplayName="Gets all relationships utilizing the API and verify seed data is accurate")]
         [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
         [Xunit.TraitAttribute("Description", "Gets all relationships utilizing the API and verify seed data is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
         public void GetsAllRelationshipsUtilizingTheAPIAndVerifySeedDataIsAccurate()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets all relationships utilizing the API and verify seed data is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 7
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -100,301 +102,71 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("I get all relationships through the API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Relationship",
-                            "Apperance",
-                            "Gang"});
-                table15.AddRow(new string[] {
-                            "Dave Walton",
-                            "Uncle",
-                            "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
-                                ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Velma"});
-                table15.AddRow(new string[] {
-                            "Scrappy-Doo",
-                            "Nephew",
-                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
-                                "\"",
-                            "Scooby"});
-                table15.AddRow(new string[] {
-                            "John Maxwell",
-                            "Uncle",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
-                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-                table15.AddRow(new string[] {
-                            "Olivia Dervy",
-                            "Aunt",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
-                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-                table15.AddRow(new string[] {
-                            "Skip Jones",
-                            "Uncle",
-                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
-                                "PPEARED\":true}\"",
-                            "Fred"});
-                table15.AddRow(new string[] {
-                            "Margaret \'Maggie\' Rogers",
-                            "Younger Sister",
-                            "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
-                                "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Shaggy"});
-#line 9
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table15, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Dave Walton is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Dave Walton is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForDaveWaltonIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " Dave Walton is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 19
- testRunner.Given("I get a relationship through the API with the name Dave Walton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Relationship",
-                            "Apperance",
-                            "Gang"});
-                table16.AddRow(new string[] {
-                            "Dave Walton",
-                            "Uncle",
-                            "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
-                                ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Velma"});
-#line 20
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table16, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Scrappy-Doo is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Scrappy-Doo is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForScrappy_DooIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " Scrappy-Doo is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 24
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 25
- testRunner.Given("I get a relationship through the API with the name Scrappy-Doo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Name",
-                            "Relationship",
-                            "Apperance",
-                            "Gang"});
-                table17.AddRow(new string[] {
-                            "Scrappy-Doo",
-                            "Nephew",
-                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
-                                "\"",
-                            "Scooby"});
-#line 26
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table17, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " John Maxwell is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " John Maxwell is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForJohnMaxwellIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " John Maxwell is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 30
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 31
- testRunner.Given("I get a relationship through the API with the name John Maxwell", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
-                            "John Maxwell",
-                            "Uncle",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
-                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-#line 32
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table18, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Olivia Dervy is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Olivia Dervy is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForOliviaDervyIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " Olivia Dervy is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 36
- testRunner.Given("I get a relationship through the API with the name Olivia Dervy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Olivia Dervy",
-                            "Aunt",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
-                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-#line 37
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table19, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Skip Jones is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Skip Jones is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForSkipJonesIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " Skip Jones is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 40
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 41
- testRunner.Given("I get a relationship through the API with the name Skip Jones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Skip Jones",
-                            "Uncle",
-                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
-                                "PPEARED\":true}\"",
-                            "Fred"});
-#line 42
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table20, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Margaret \'Maggie\' Rogers is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
-            " Margaret \'Maggie\' Rogers is accurate")]
-        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForMargaretMaggieRogersIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
-                    " Margaret \'Maggie\' Rogers is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 45
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 46
- testRunner.Given("I get a relationship through the API with the name Margaret \'Maggie\' Rogers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
                 TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Apperance",
+                            "Gang"});
+                table21.AddRow(new string[] {
+                            "Dave Walton",
+                            "Uncle",
+                            "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
+                                ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Velma"});
+                table21.AddRow(new string[] {
+                            "Scrappy-Doo",
+                            "Nephew",
+                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
+                                "\"",
+                            "Scooby"});
+                table21.AddRow(new string[] {
+                            "John Maxwell",
+                            "Uncle",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
+                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+                table21.AddRow(new string[] {
+                            "Olivia Dervy",
+                            "Aunt",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
+                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+                table21.AddRow(new string[] {
+                            "Skip Jones",
+                            "Uncle",
+                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
+                                "PPEARED\":true}\"",
+                            "Fred"});
+                table21.AddRow(new string[] {
                             "Margaret \'Maggie\' Rogers",
                             "Younger Sister",
                             "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
                                 "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Shaggy"});
-#line 47
+#line 10
  testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table21, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for D" +
-            "ave Walton is accurate")]
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Dave Walton is accurate")]
         [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for D" +
-            "ave Walton is accurate")]
-        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForDaveWaltonIsAccurate()
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Dave Walton is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForDaveWaltonIsAccurate()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for D" +
-                    "ave Walton is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 50
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " Dave Walton is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -404,8 +176,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 51
- testRunner.Given("I get a relationship through the API with the id 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.Given("I get a relationship through the API with the name Dave Walton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
@@ -418,25 +190,27 @@ this.ScenarioInitialize(scenarioInfo);
                             "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
                                 ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Velma"});
-#line 52
+#line 22
  testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table22, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for S" +
-            "crappy-Doo is accurate")]
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Scrappy-Doo is accurate")]
         [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for S" +
-            "crappy-Doo is accurate")]
-        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForScrappy_DooIsAccurate()
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Scrappy-Doo is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForScrappy_DooIsAccurate()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for S" +
-                    "crappy-Doo is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 56
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " Scrappy-Doo is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -446,8 +220,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 57
- testRunner.Given("I get a relationship through the API with the id 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+ testRunner.Given("I get a relationship through the API with the name Scrappy-Doo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
@@ -460,8 +234,252 @@ this.ScenarioInitialize(scenarioInfo);
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
                                 "\"",
                             "Scooby"});
-#line 58
+#line 29
  testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table23, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " John Maxwell is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " John Maxwell is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForJohnMaxwellIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " John Maxwell is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 35
+ testRunner.Given("I get a relationship through the API with the name John Maxwell", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                            "John Maxwell",
+                            "Uncle",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
+                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+#line 36
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table24, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Olivia Dervy is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Olivia Dervy is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForOliviaDervyIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " Olivia Dervy is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 40
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 41
+ testRunner.Given("I get a relationship through the API with the name Olivia Dervy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Olivia Dervy",
+                            "Aunt",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
+                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+#line 42
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table25, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Skip Jones is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Skip Jones is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForSkipJonesIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " Skip Jones is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 46
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 47
+ testRunner.Given("I get a relationship through the API with the name Skip Jones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Skip Jones",
+                            "Uncle",
+                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
+                                "PPEARED\":true}\"",
+                            "Fred"});
+#line 48
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table26, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Margaret \'Maggie\' Rogers is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by Name through the API and verify the seed data for" +
+            " Margaret \'Maggie\' Rogers is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByNameThroughTheAPIAndVerifyTheSeedDataForMargaretMaggieRogersIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by Name through the API and verify the seed data for" +
+                    " Margaret \'Maggie\' Rogers is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 52
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 53
+ testRunner.Given("I get a relationship through the API with the name Margaret \'Maggie\' Rogers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Margaret \'Maggie\' Rogers",
+                            "Younger Sister",
+                            "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
+                                "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Shaggy"});
+#line 54
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table27, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for D" +
+            "ave Walton is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for D" +
+            "ave Walton is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForDaveWaltonIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for D" +
+                    "ave Walton is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 58
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 59
+ testRunner.Given("I get a relationship through the API with the id 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Apperance",
+                            "Gang"});
+                table28.AddRow(new string[] {
+                            "Dave Walton",
+                            "Uncle",
+                            "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
+                                ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Velma"});
+#line 60
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table28, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for S" +
+            "crappy-Doo is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for S" +
+            "crappy-Doo is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForScrappy_DooIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for S" +
+                    "crappy-Doo is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 65
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 66
+ testRunner.Given("I get a relationship through the API with the id 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Apperance",
+                            "Gang"});
+                table29.AddRow(new string[] {
+                            "Scrappy-Doo",
+                            "Nephew",
+                            "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
+                                "\"",
+                            "Scooby"});
+#line 67
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table29, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -472,86 +490,14 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
         [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for J" +
             "ohn Maxwell is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
         public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForJohnMaxwellIsAccurate()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for J" +
                     "ohn Maxwell is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 62
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 63
- testRunner.Given("I get a relationship through the API with the id 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
-                            "John Maxwell",
-                            "Uncle",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
-                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-#line 64
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table24, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for O" +
-            "livia Dervy is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for O" +
-            "livia Dervy is accurate")]
-        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForOliviaDervyIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for O" +
-                    "livia Dervy is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 67
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 68
- testRunner.Given("I get a relationship through the API with the id 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Olivia Dervy",
-                            "Aunt",
-                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
-                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
-                            "Daphne"});
-#line 69
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table25, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for S" +
-            "kip Jones is accurate")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for S" +
-            "kip Jones is accurate")]
-        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForSkipJonesIsAccurate()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for S" +
-                    "kip Jones is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 72
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -563,16 +509,94 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 73
+ testRunner.Given("I get a relationship through the API with the id 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                            "John Maxwell",
+                            "Uncle",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
+                                "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+#line 74
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table30, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for O" +
+            "livia Dervy is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for O" +
+            "livia Dervy is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForOliviaDervyIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for O" +
+                    "livia Dervy is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 78
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 79
+ testRunner.Given("I get a relationship through the API with the id 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Olivia Dervy",
+                            "Aunt",
+                            "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
+                                "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
+                            "Daphne"});
+#line 80
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table31, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Gets a specific relationship by ID through the API and verify the seed data for S" +
+            "kip Jones is accurate")]
+        [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for S" +
+            "kip Jones is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForSkipJonesIsAccurate()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for S" +
+                    "kip Jones is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 84
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 85
  testRunner.Given("I get a relationship through the API with the id 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
                             "Skip Jones",
                             "Uncle",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
                                 "PPEARED\":true}\"",
                             "Fred"});
-#line 74
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table26, "Then ");
+#line 86
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table32, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -583,13 +607,15 @@ this.ScenarioInitialize(scenarioInfo);
         [Xunit.TraitAttribute("FeatureTitle", "GetRelationshipAPI")]
         [Xunit.TraitAttribute("Description", "Gets a specific relationship by ID through the API and verify the seed data for M" +
             "argaret \'Maggie\' Rogers is accurate")]
+        [Xunit.TraitAttribute("Category", "API")]
         public void GetsASpecificRelationshipByIDThroughTheAPIAndVerifyTheSeedDataForMargaretMaggieRogersIsAccurate()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gets a specific relationship by ID through the API and verify the seed data for M" +
                     "argaret \'Maggie\' Rogers is accurate", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 77
+#line 90
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -599,17 +625,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 78
+#line 91
  testRunner.Given("I get a relationship through the API with the id 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
                             "Margaret \'Maggie\' Rogers",
                             "Younger Sister",
                             "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
                                 "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Shaggy"});
-#line 79
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table27, "Then ");
+#line 92
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table33, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

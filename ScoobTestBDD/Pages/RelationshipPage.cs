@@ -10,6 +10,7 @@ public interface IRelationshipPage
     void EditRelationshipDetails(ScoobRelation relation);
     void EditRelationshipDetailsButDontSave(ScoobRelation relation);
     void ClickBackToList();
+    void ClickEdit();
     ScoobRelation GetRelationshipDetails();
     void ClickDelete();
     IList<IWebElement> GetGangMemberOptions();
@@ -32,6 +33,7 @@ public class RelationshipPage : IRelationshipPage
     IWebElement btnSave => driver.FindElement(By.Id("Save"));
     IWebElement btnDelete => driver.FindElement(By.Id("Delete"));
     IWebElement lnkBackToList => driver.FindElement(By.Id("Return_List"));
+    IWebElement lnkEdit => driver.FindElement(By.LinkText("Edit"));
 
     /// <summary>
     /// This method enters details for a newly created relationship based upon
@@ -85,6 +87,7 @@ public class RelationshipPage : IRelationshipPage
     /// the seperation of duties from the test files.
     /// </summary>
     public void ClickBackToList() => lnkBackToList.Click();
+    public void ClickEdit() => lnkEdit.Click();
 
     /// <summary>
     /// This method retrieves all the relationship details on the page, 

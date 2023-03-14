@@ -10,6 +10,7 @@ public interface IHomePage
     void ClickFooterPrivacy();
     void PerformClickOnSpecialValue(string name, string operation = "Details");
     void VerifyDataOnTable(ScoobRelation relation);
+    void VerifyDataIsNotOnTable(ScoobRelation relation);
     void VerifyPrivacyPage();
     void VerifyRelationshipPage();
     IWebElement GetWelcomeBanner();
@@ -68,6 +69,7 @@ public class HomePage : IHomePage
     /// </summary>
     public void ClickScoobWebApp() => lnkScoobWebApp.Click();
 
+
     /// <summary>
     /// This method clicks on the fifth column for a specific operation.  The
     /// row selected is based upon the name passed in and the link selected
@@ -98,6 +100,35 @@ public class HomePage : IHomePage
         table.Select(x => x.ColumnValue == relation.Relationship).Should().NotBeEmpty();
         table.Select(x => x.ColumnValue == relation.Gang.ToString()).Should().NotBeEmpty();
         table.Select(x => x.ColumnValue == relation.Appearance).Should().NotBeEmpty();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="relation"></param>
+    public void VerifyDataIsNotOnTable(ScoobRelation relation)
+    {
+        List<TableDatacolleciton> table = HtmlTableExtension.ReadTable(tblList);
+
+        //TODO: Validate each record is on the same row
+        //var rowNumber = HtmlTableExtension.GetDynamicRowNumber(table, "Name", relation.Name);
+
+        table.Should().NotBeEmpty();
+
+        checkInTable(table, relation.Id.ToString(), false);
+        checkInTable(table, relation.Name.ToString(), false);
+        //TODO: Validate when getting the whole row as currently it would check if a gang or relationship exists
+        //which isn't always present
+        //checkInTable(table, relation.Relationship.ToString(), false);
+        //checkInTable(table, relation.Gang.ToString(), false);
+        checkInTable(table, relation.Appearance.ToString(), false);
+    }
+
+    private void checkInTable(List<TableDatacolleciton> table, string itemToCheck, bool shouldBePresent)
+    {
+        var test = table.Select(x => x.ColumnValue == itemToCheck);
+        foreach (var item in test)
+            item.Should().Be(shouldBePresent);
     }
 
     /// <summary>

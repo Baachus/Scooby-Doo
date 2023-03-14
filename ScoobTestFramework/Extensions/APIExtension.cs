@@ -1,13 +1,8 @@
-﻿using OpenQA.Selenium.Remote;
+﻿using Newtonsoft.Json;
 using RestSharp;
-using ScoobTestFramework.Driver;
 using ScoobTestFramework.Settings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using ScoobyRelationship.Data;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ScoobTestFramework.Extensions
 {
@@ -20,19 +15,27 @@ namespace ScoobTestFramework.Extensions
             testSettings = TestSettings.ReadConfig();
         }
 
-        public RestResponse? SendRequest(string path, Method method)
+        public RestResponse? SendRequest(string path, Method method, ScoobRelation scoobRelation=null)
         {
             RestClient client = new RestClient(testSettings.APIUrl);
             RestRequest request;
 
-            if (method == Method.Get)
+            try
             {
                 request = new RestRequest(path, method);
+
+                if (method == Method.Post || method==Method.Put)
+                {
+                    request.AddParameter("application/json", scoobRelation, ParameterType.RequestBody);
+                    request.RequestFormat = DataFormat.Json;
+                }
+                
+                return client.Execute(request);
             }
-            else
-                return null;
-            
-            return client.Execute(request);
+            catch (Exception ex) 
+            { 
+                return null; 
+            }
         }
 
         public string SendRequestGetContent(string path, Method method)

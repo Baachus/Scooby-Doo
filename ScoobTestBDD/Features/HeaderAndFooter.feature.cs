@@ -328,15 +328,18 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Privacy footer links bring the user to the home page from any page.")]
         [Xunit.TraitAttribute("FeatureTitle", "Header and Footer")]
         [Xunit.TraitAttribute("Description", "Privacy footer links bring the user to the home page from any page.")]
+        [Xunit.TraitAttribute("Category", "retry(2)")]
+        [xRetry.RetryFact(2, 0, new System.Type[] {
+                typeof(Xunit.SkipException)}, DisplayName="Privacy footer links bring the user to the home page from any page.")]
         public void PrivacyFooterLinksBringTheUserToTheHomePageFromAnyPage_()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "retry(2)"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Privacy footer links bring the user to the home page from any page.", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 61
+#line 62
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -346,31 +349,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 62
+#line 63
  testRunner.Given("I click the Home menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 63
- testRunner.When("I click the Privacy menu in the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 64
- testRunner.Then("I verify I am on the Privacy page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click the Privacy menu in the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 65
- testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 66
- testRunner.When("I click the Privacy menu in the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 67
  testRunner.Then("I verify I am on the Privacy page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 68
- testRunner.Given("I click the Privacy menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 66
+ testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 69
+#line 67
  testRunner.When("I click the Privacy menu in the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 68
+ testRunner.Then("I verify I am on the Privacy page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 69
+ testRunner.Given("I click the Privacy menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 70
+ testRunner.When("I click the Privacy menu in the footer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 71
  testRunner.Then("I verify I am on the Privacy page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

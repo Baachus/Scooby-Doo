@@ -58,6 +58,7 @@ Scenario: Home links bring the user to the home page from any page.
 	When I click the Home menu
 	Then I verify I am on the Home page
 
+@retry(2)
 Scenario: Privacy footer links bring the user to the home page from any page.
 	Given I click the Home menu
 	When I click the Privacy menu in the footer

@@ -40,8 +40,7 @@ namespace ScoobTestBDD.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateRelationshipAPI", "This feature tests the Create New page for generating a new Relationship \r\nand su" +
-                    "bsequent options around that page.  TODO make scenarios!", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateRelationshipAPI", "This feature tests the API for generating a new Relationship ", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,9 +75,80 @@ namespace ScoobTestBDD.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 5
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Relationship",
+                        "Appearance",
+                        "Gang"});
+            table3.AddRow(new string[] {
+                        "Creation_API",
+                        "Father",
+                        "{\"Test\":\"Creation_API\"}",
+                        "Fred"});
+#line 6
+ testRunner.Given("I cleanup the following data", ((string)(null)), table3, "Given ");
+#line hidden
+        }
+        
         void System.IDisposable.Dispose()
         {
             this.TestTearDown();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Generate a relationship directly through the API")]
+        [Xunit.TraitAttribute("FeatureTitle", "CreateRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Generate a relationship directly through the API")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GenerateARelationshipDirectlyThroughTheAPI()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate a relationship directly through the API", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 11
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table4.AddRow(new string[] {
+                            "Creation_API",
+                            "Father",
+                            "{\"Test\":\"Creation_API\"}",
+                            "Fred"});
+#line 12
+ testRunner.Given("I create a relationship with the following details through the API", ((string)(null)), table4, "Given ");
+#line hidden
+#line 15
+ testRunner.And("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+ testRunner.When("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+ testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 18
+ testRunner.And("I delete the Creation_API relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
         }
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]

@@ -2162,6 +2162,7 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.5.0",
           "RestSharp": "108.0.3",
+          "ScoobyRelationshipAPI": "1.0.0",
           "Selenium.Support": "4.8.1",
           "Selenium.WebDriver": "4.8.1",
           "WebDriverManager": "2.16.2",

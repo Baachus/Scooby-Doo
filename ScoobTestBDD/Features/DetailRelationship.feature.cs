@@ -80,18 +80,28 @@ namespace ScoobTestBDD.Features
         {
 #line 6
 #line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table5.AddRow(new string[] {
-                        "AutomationGuy",
+            table9.AddRow(new string[] {
+                        "Detail",
                         "Child",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Detail\"}",
                         "Shaggy"});
+            table9.AddRow(new string[] {
+                        "Detail_Edit",
+                        "Child",
+                        "{\"Test\":\"Detail_Edit\"}",
+                        "Shaggy"});
+            table9.AddRow(new string[] {
+                        "Detail_Edited",
+                        "Grandmother",
+                        "{\"Test\":\"Detail_Edited\"}",
+                        "Velma"});
 #line 7
- testRunner.Given("I cleanup the following data", ((string)(null)), table5, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table9, "Given ");
 #line hidden
         }
         
@@ -100,23 +110,20 @@ namespace ScoobTestBDD.Features
             this.TestTearDown();
         }
         
+        [Xunit.SkippableFactAttribute(DisplayName="Create a relationship, verify the details on the details page, and remove the new" +
+            " relationship")]
         [Xunit.TraitAttribute("FeatureTitle", "DetailRelationship")]
         [Xunit.TraitAttribute("Description", "Create a relationship, verify the details on the details page, and remove the new" +
             " relationship")]
         [Xunit.TraitAttribute("Category", "Smoke_Test")]
-        [Xunit.TraitAttribute("Category", "retry(1)")]
-        [xRetry.RetryFact(1, 0, new System.Type[] {
-                typeof(Xunit.SkipException)}, DisplayName="Create a relationship, verify the details on the details page, and remove the new" +
-            " relationship")]
         public void CreateARelationshipVerifyTheDetailsOnTheDetailsPageAndRemoveTheNewRelationship()
         {
             string[] tagsOfScenario = new string[] {
-                    "Smoke_Test",
-                    "retry(1)"};
+                    "Smoke_Test"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a relationship, verify the details on the details page, and remove the new" +
                     " relationship", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
+#line 14
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -129,33 +136,111 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 13
+#line 15
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
+#line 16
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table6.AddRow(new string[] {
-                            "AutomationGuy",
+                table10.AddRow(new string[] {
+                            "Detail",
                             "Child",
-                            "{\"Test\":\"test_data\"}",
+                            "{\"Test\":\"Detail\"}",
                             "Shaggy"});
-#line 15
- testRunner.And("I create a relationship with the following details", ((string)(null)), table6, "And ");
-#line hidden
-#line 18
- testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
- testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 17
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table10, "And ");
 #line hidden
 #line 20
- testRunner.And("I delete the AutomationGuy relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+ testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 22
+ testRunner.And("I delete the Detail relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Create a relationship, verify the details on the details page, edit from the deta" +
+            "ils page and remove the new relationship")]
+        [Xunit.TraitAttribute("FeatureTitle", "DetailRelationship")]
+        [Xunit.TraitAttribute("Description", "Create a relationship, verify the details on the details page, edit from the deta" +
+            "ils page and remove the new relationship")]
+        public void CreateARelationshipVerifyTheDetailsOnTheDetailsPageEditFromTheDetailsPageAndRemoveTheNewRelationship()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a relationship, verify the details on the details page, edit from the deta" +
+                    "ils page and remove the new relationship", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 25
+ testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 26
+ testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table11.AddRow(new string[] {
+                            "Detail_Edit",
+                            "Child",
+                            "{\"Test\":\"Detail_Edit\"}",
+                            "Shaggy"});
+#line 27
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table11, "And ");
+#line hidden
+#line 30
+ testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+ testRunner.And("I click the Edit link on the details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table12.AddRow(new string[] {
+                            "Detail_Edited",
+                            "Grandmother",
+                            "{\"Test\":\"Detail_Edited\"}",
+                            "Velma"});
+#line 32
+ testRunner.And("I edit the relationship with the following details", ((string)(null)), table12, "And ");
+#line hidden
+#line 35
+ testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 36
+ testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 37
+ testRunner.And("I delete the Detail_Edit relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+ testRunner.And("I delete the Detail_Edited relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

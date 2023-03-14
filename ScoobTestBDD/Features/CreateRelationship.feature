@@ -5,19 +5,18 @@ and subsequent options around that page.
 
 Background: 
 	Given I cleanup the following data
-		| Name               | Relationship | Appearance           | Gang   |
-		| AutomationGuy      | Child        | {"Test":"test_data"} | Shaggy |
-		| AutomationGuyTable | Child        | {"Test":"test_data"} | Shaggy |
+		| Name          | Relationship | Appearance                | Gang   |
+		| CreationTable | Child        | {"Test":"Creation_Table"} | Shaggy |
 
 @Smoke_Test @retry(1)
 Scenario: Create a relationship, verify the details in the relationship table, and remove the new relationship
 	Given I click the Relationship menu
 	When I click the "Create New" link
 	And I create a relationship with the following details
-		| Name               | Relationship | Appearance           | Gang   |
-		| AutomationGuyTable | Child        | {"Test":"test_data"} | Shaggy |
+		| Name          | Relationship | Appearance                | Gang   |
+		| CreationTable | Child        | {"Test":"Creation_Table"} | Shaggy |
 	Then I see the new relationship on the relationship table
-	And I delete the AutomationGuyTable relationship
+	And I delete the CreationTable relationship
 
 Scenario: Verify Shaggy option is available when creating new relationship
 	Given I click the Relationship menu

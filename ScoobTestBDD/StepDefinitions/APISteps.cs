@@ -1,12 +1,5 @@
 ﻿using RestSharp;
-using ScoobTestBDD.Pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using TechTalk.SpecFlow;
+using ScoobTestBDD.Extensions;
 
 namespace ScoobTestBDD.StepDefinitions
 {
@@ -25,14 +18,17 @@ namespace ScoobTestBDD.StepDefinitions
         [Given(@"I create a relationship with the following details through the API")]
         public void GivenICreateARelationshipWithTheFollowingDetailsThroughTheAPI(Table table)
         {
-            //Automatically map all the Specflow table row data to the actual Relationship Type
-            //based upon the property name to table row name.
             ScoobRelation relation = table.CreateInstance<ScoobRelation>();
 
-            RestResponse response = apiExtension.SendRequest("/Relationship/GetScoobyRelations", Method.Put);
+            RestResponse response = apiExtension.SendRequest("/Relationship/AddScoobyRelation", Method.Post, relation);
 
             //Store the response details in the scenario context
             scenarioContext.Set<RestResponse>(response);
+
+            ScoobRelation scoobRelation = ScoobAPIExtension.GetRelationFromResponseContent(response.Content);
+            
+            //Store the relationshpi details in the scenario context
+            scenarioContext.Set<ScoobRelation>(scoobRelation);
         }
 
         [Given(@"I get all relationships through the API")]
@@ -62,7 +58,6 @@ namespace ScoobTestBDD.StepDefinitions
             scenarioContext.Set<RestResponse>(response);
         }
 
-
         [Then(@"I can verify the data exists for the following data")]
         public void ThenICanVerifyTheDataExistsForTheFollowingData(Table table)
         {
@@ -78,6 +73,31 @@ namespace ScoobTestBDD.StepDefinitions
             }
         }
 
+        [When(@"I delete the (.*) relationship through the API")]
+        public void WhenIDeleteTheAutomationDeleteGuyRelationshipThroughTheAPI(string name)
+        {
+            int idFromName = ScoobAPIExtension.GetIdFromName(name);
+
+            RestResponse response = apiExtension.SendRequest($"/Relationship/DeleteScoobyRelation/{idFromName}", Method.Delete);
+            
+            scenarioContext.Set<RestResponse>(response);
+        }
+
+        [When(@"I update a relationship with the following details through the API")]
+        public void WhenIUpdateARelationshipWithTheFollowingDetailsThroughTheAPI(Table table)
+        {
+            ScoobRelation relation = table.CreateInstance<ScoobRelation>();
+
+            RestResponse response = apiExtension.SendRequest("/Relationship/UpdateScoobyRelation", Method.Put, relation);
+
+            //Store the response details in the scenario context
+            scenarioContext.Set<RestResponse>(response);
+
+            ScoobRelation scoobRelation = ScoobAPIExtension.GetRelationFromResponseContent(response.Content);
+
+            //Store the relationshpi details in the scenario context
+            scenarioContext.Set<ScoobRelation>(scoobRelation);
+        }
 
     }
 }

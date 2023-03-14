@@ -151,7 +151,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobyRelationshipAPI\\ScoobyRelationshipAPI.csproj": {
+                "projectPath": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobyRelationshipAPI\\ScoobyRelationshipAPI.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

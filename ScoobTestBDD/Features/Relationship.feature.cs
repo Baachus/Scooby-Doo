@@ -79,18 +79,18 @@ namespace ScoobTestBDD.Features
         {
 #line 5
 #line hidden
-            TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table28.AddRow(new string[] {
-                        "AutomationGuyBackToList",
+            table34.AddRow(new string[] {
+                        "RelationshipTable",
                         "Child",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"RelationshipTable\"}",
                         "Shaggy"});
 #line 6
- testRunner.Given("I cleanup the following data", ((string)(null)), table28, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table34, "Given ");
 #line hidden
         }
         
@@ -126,18 +126,18 @@ this.FeatureBackground();
 #line 12
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table29.AddRow(new string[] {
-                            "AutomationGuyBackToList",
+                table35.AddRow(new string[] {
+                            "RelationshipTable",
                             "Child",
-                            "{\"Test\":\"test_data\"}",
+                            "{\"Test\":\"RelationshipTable\"}",
                             "Shaggy"});
 #line 13
- testRunner.And("I create a relationship with the following details", ((string)(null)), table29, "And ");
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table35, "And ");
 #line hidden
 #line 16
  testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -167,7 +167,7 @@ this.FeatureBackground();
  testRunner.Then("I verify I am on the Relationship page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 25
- testRunner.And("I delete the AutomationGuyBackToList relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the RelationshipTable relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

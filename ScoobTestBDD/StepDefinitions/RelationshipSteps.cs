@@ -62,6 +62,14 @@ public sealed class RelationshipSteps
             options => options.Excluding(x => x.Id));
     }
 
+    [Then(@"I see all the relationship details are not present as expected")]
+    public void ThenISeeAllTheRelationshipDetailsAreNotPresentAsExpected()
+    {
+        var relation = scenarioContext.Get<ScoobRelation>();
+
+        homePage.VerifyDataIsNotOnTable(relation);
+    }
+
     [Then(@"I see the new relationship on the relationship table")]
     public void ThenISeeTheNewRelationshipOnTheRelationshipTable()
     {
@@ -69,7 +77,6 @@ public sealed class RelationshipSteps
 
         homePage.VerifyDataOnTable(relation);
     }
-
 
     [When(@"I click to return to the Relationship List")]
     public void WhenIClickToReturnToTheRelationshipList()
@@ -120,5 +127,11 @@ public sealed class RelationshipSteps
     {
         var relationship = table.CreateInstance<ScoobRelation>();
         relationshipPage.EditRelationshipDetailsButDontSave(relationship);
+    }
+
+    [When(@"I click the Edit link on the details page")]
+    public void WhenIClickTheEditLinkOnTheDetailsPage()
+    {
+        relationshipPage.ClickEdit();
     }
 }

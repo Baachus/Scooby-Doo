@@ -80,43 +80,43 @@ namespace ScoobTestBDD.Features
         {
 #line 6
 #line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table7.AddRow(new string[] {
-                        "AutomationTest",
+            table13.AddRow(new string[] {
+                        "Edit",
                         "Uncle",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edit\"}",
                         "Fred"});
-            table7.AddRow(new string[] {
-                        "AutomationTestEdited",
+            table13.AddRow(new string[] {
+                        "Edited",
                         "Child",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edited\"}",
                         "Velma"});
-            table7.AddRow(new string[] {
-                        "EditRelationship",
+            table13.AddRow(new string[] {
+                        "Edit_Gang",
                         "Uncle",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edit_Gang\"}",
                         "Fred"});
-            table7.AddRow(new string[] {
-                        "MaxLength",
+            table13.AddRow(new string[] {
+                        "Edit_MaxLength",
                         "Uncle",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edit_MaxLength\"}",
                         "Velma"});
-            table7.AddRow(new string[] {
-                        "OverMax",
+            table13.AddRow(new string[] {
+                        "Edit_OverMax",
                         "Uncle",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edit_OverMax\"}",
                         "Daphne"});
-            table7.AddRow(new string[] {
-                        "BackToList",
+            table13.AddRow(new string[] {
+                        "Edit_BackToList",
                         "Mother",
-                        "{\"Test\":\"test_data\"}",
+                        "{\"Test\":\"Edit_BackToList\"}",
                         "Shaggy"});
 #line 7
- testRunner.Given("I cleanup the following data", ((string)(null)), table7, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table13, "Given ");
 #line hidden
         }
         
@@ -151,18 +151,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table8.AddRow(new string[] {
-                            "AutomationTest",
+                table14.AddRow(new string[] {
+                            "Edit",
                             "Uncle",
-                            "{\"Test\":\"test_data\"}",
+                            "{\"Test\":\"Edit\"}",
                             "Fred"});
 #line 19
- testRunner.Given("I ensure the following relationship is created", ((string)(null)), table8, "Given ");
+ testRunner.Given("I ensure the following relationship is created", ((string)(null)), table14, "Given ");
 #line hidden
 #line 22
  testRunner.When("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -170,18 +170,18 @@ this.FeatureBackground();
 #line 23
  testRunner.And("I click the Edit link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table9.AddRow(new string[] {
-                            "AutomationTestEdited",
+                table15.AddRow(new string[] {
+                            "Edited",
                             "Child",
-                            "{\"EditedTest\":\"Editedtest_data\"}",
+                            "{\"Test\":\"Edited\"}",
                             "Velma"});
 #line 24
- testRunner.And("I edit the relationship with the following details", ((string)(null)), table9, "And ");
+ testRunner.And("I edit the relationship with the following details", ((string)(null)), table15, "And ");
 #line hidden
 #line 27
  testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -190,10 +190,10 @@ this.FeatureBackground();
  testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 29
- testRunner.And("I delete the AutomationTestEdited relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edit relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
- testRunner.And("I delete the AutomationTest relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edited relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -220,18 +220,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table10.AddRow(new string[] {
-                            "EditRelationship",
+                table16.AddRow(new string[] {
+                            "Edit_Gang",
                             "Uncle",
-                            "{\"Test\":\"test_data\"}",
+                            "{\"Test\":\"Edit_Gang\"}",
                             "Fred"});
 #line 33
- testRunner.Given("I ensure the following relationship is created", ((string)(null)), table10, "Given ");
+ testRunner.Given("I ensure the following relationship is created", ((string)(null)), table16, "Given ");
 #line hidden
 #line 36
  testRunner.When("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -255,7 +255,7 @@ this.FeatureBackground();
  testRunner.And("I can verify the Gang dropdown has the following option for Fred", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 43
- testRunner.And("I delete the EditRelationship relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edit_Gang relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -288,18 +288,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table11.AddRow(new string[] {
-                            "MaxLength",
+                table17.AddRow(new string[] {
+                            "Edit_MaxLength",
                             "Uncle",
-                            "{\"Test\":\"test_data\"}",
-                            "Fred"});
+                            "{\"Test\":\"Edit_MaxLength\"}",
+                            "Velma"});
 #line 47
- testRunner.Given("I ensure the following relationship is created", ((string)(null)), table11, "Given ");
+ testRunner.Given("I ensure the following relationship is created", ((string)(null)), table17, "Given ");
 #line hidden
 #line 50
  testRunner.When("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -321,7 +321,7 @@ this.FeatureBackground();
  testRunner.Then("I can verify only 100 characters are allowed in the relationship field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 56
- testRunner.And("I delete the MaxLength relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edit_MaxLength relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -354,18 +354,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table12.AddRow(new string[] {
-                            "OverMax",
+                table18.AddRow(new string[] {
+                            "Edit_OverMax",
                             "Uncle",
-                            "{\"Test\":\"test_data\"}",
-                            "Fred"});
+                            "{\"Test\":\"Edit_OverMax\"}",
+                            "Daphne"});
 #line 60
- testRunner.Given("I ensure the following relationship is created", ((string)(null)), table12, "Given ");
+ testRunner.Given("I ensure the following relationship is created", ((string)(null)), table18, "Given ");
 #line hidden
 #line 63
  testRunner.When("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -387,7 +387,7 @@ this.FeatureBackground();
  testRunner.Then("I can verify only 100 characters are allowed in the relationship field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 69
- testRunner.And("I delete the OverMax relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edit_OverMax relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -414,18 +414,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table13.AddRow(new string[] {
-                            "BackToList",
+                table19.AddRow(new string[] {
+                            "Edit_BackToList",
                             "Mother",
-                            "{\"Test\":\"test_data\"}",
+                            "{\"Test\":\"Edit_BackToList\"}",
                             "Shaggy"});
 #line 72
- testRunner.Given("I ensure the following relationship is created", ((string)(null)), table13, "Given ");
+ testRunner.Given("I ensure the following relationship is created", ((string)(null)), table19, "Given ");
 #line hidden
 #line 75
  testRunner.When("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -433,18 +433,18 @@ this.FeatureBackground();
 #line 76
  testRunner.And("I click the Edit link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table14.AddRow(new string[] {
-                            "EditedBackToList",
+                table20.AddRow(new string[] {
+                            "Edit_BackToList_Edited",
                             "Child",
-                            "{\"EditedTest\":\"Editedtest_data\"}",
+                            "{\"EditedTest\":\"Edit_BackToList_Edited\"}",
                             "Velma"});
 #line 77
- testRunner.And("I edit the relationship with the following details but do not save", ((string)(null)), table14, "And ");
+ testRunner.And("I edit the relationship with the following details but do not save", ((string)(null)), table20, "And ");
 #line hidden
 #line 80
  testRunner.And("I click the Back to List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -456,7 +456,10 @@ this.FeatureBackground();
  testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 83
- testRunner.And("I delete the BackToList relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I delete the Edit_BackToList relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 84
+ testRunner.And("I delete the Edit_BackToList_Edited relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
