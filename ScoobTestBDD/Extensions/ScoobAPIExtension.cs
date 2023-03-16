@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using ScoobTestFramework.Extensions;
 
 namespace ScoobTestBDD.Extensions;
 

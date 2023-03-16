@@ -218,7 +218,7 @@
         }
       }
     },
-    "/Relationship/DeleteScoobyRelation/{id}": {
+    "/Relationship/DeleteScoobyRelationById/{id}": {
       "delete": {
         "tags": [
           "Relationship"
@@ -231,6 +231,28 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Relationship/DeleteScoobyRelationByName/{name}": {
+      "delete": {
+        "tags": [
+          "Relationship"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],

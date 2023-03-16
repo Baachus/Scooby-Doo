@@ -24,7 +24,7 @@ public class ReuseableSteps
     {
         try
         {
-            relationshipRepository.DeleteRelationship(relationshipName);
+            relationshipRepository.DeleteRelationshipByName(relationshipName);
         }
         catch (Exception ex)
         {
@@ -55,7 +55,7 @@ public class ReuseableSteps
 
             //TODO: Repeat until all clear incase multiple 
             if (relat != null)
-                relationshipRepository.DeleteRelationship(relationship.Name);
+                relationshipRepository.DeleteRelationshipByName(relationship.Name);
         }
     }
 

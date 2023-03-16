@@ -2,11 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ScoobyRelationship.Data
 {
-    /***
-    * Created: 1/10/2023
-    * Author: Robert Chapin
-    * This is a simple class to represent the relationships of Scooby-Doo.  It includes the Id, Name, Gang, Relationship, and Appearance.
-    ***/
+    /// <summary>
+    /// This is a simple class to represent the relationships of Scooby-Doo.  It includes the Id, Name, Gang, Relationship, and Appearance.
+    /// </summary>
     public class ScoobRelation
     {
         public int Id { get; init; }
@@ -21,11 +19,9 @@ namespace ScoobyRelationship.Data
         public string? Appearance { get; set; }     //TODO: Modify to JSON Format
     }
 
-    /***
-    * Created: 1/10/2023
-    * Author: Robert Chapin
-    * This is a simple enum to represent the gang members of Scooby-Doo.
-    ***/
+    /// <summary>
+    /// This is a simple enum to represent the gang members of Scooby-Doo.
+    /// </summary>
     public enum GangMember
     {
         Scooby,

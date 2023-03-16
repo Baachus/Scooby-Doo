@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using RestSharp;
+﻿using RestSharp;
 using ScoobTestFramework.Settings;
 using ScoobyRelationship.Data;
 using System.Net;
@@ -15,7 +14,7 @@ namespace ScoobTestFramework.Extensions
             testSettings = TestSettings.ReadConfig();
         }
 
-        public RestResponse? SendRequest(string path, Method method, ScoobRelation scoobRelation=null)
+        public RestResponse? SendRequest(string path, Method method, ScoobRelation scoobRelation = null)
         {
             RestClient client = new RestClient(testSettings.APIUrl);
             RestRequest request;
@@ -24,17 +23,17 @@ namespace ScoobTestFramework.Extensions
             {
                 request = new RestRequest(path, method);
 
-                if (method == Method.Post || method==Method.Put)
+                if (method == Method.Post || method == Method.Put)
                 {
                     request.AddParameter("application/json", scoobRelation, ParameterType.RequestBody);
                     request.RequestFormat = DataFormat.Json;
                 }
-                
+
                 return client.Execute(request);
             }
-            catch (Exception ex) 
-            { 
-                return null; 
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 
@@ -45,7 +44,7 @@ namespace ScoobTestFramework.Extensions
 
             RestRequest request = new RestRequest(path, method);
 
-            RestResponse response  =  client.Execute(request);
+            RestResponse response = client.Execute(request);
 
             return response.Content;
         }

@@ -6,7 +6,7 @@ namespace ScoobIntegrationTest.Tests;
 public class DeleteRelationshipTests : IClassFixture<CustomWebApplicationFactory<Program>>
 {
     private readonly CustomWebApplicationFactory<Program> customWebApplicationFactory;
-    private string url = "https://localhost:44334";
+    private readonly string url = "https://localhost:44334";
 
     public DeleteRelationshipTests(CustomWebApplicationFactory<Program> customWebApplicationFactory)
     {
@@ -31,6 +31,6 @@ public class DeleteRelationshipTests : IClassFixture<CustomWebApplicationFactory
 
         result.Should().NotBeNull();
 
-        await relationship.DeleteScoobyRelationAsync(result.Id);
+        await relationship.DeleteScoobyRelationByIdAsync(result.Id);
     }
 }

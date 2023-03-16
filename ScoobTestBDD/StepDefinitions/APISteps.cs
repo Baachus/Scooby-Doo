@@ -26,7 +26,7 @@ namespace ScoobTestBDD.StepDefinitions
             scenarioContext.Set<RestResponse>(response);
 
             ScoobRelation scoobRelation = ScoobAPIExtension.GetRelationFromResponseContent(response.Content);
-            
+
             //Store the relationshpi details in the scenario context
             scenarioContext.Set<ScoobRelation>(scoobRelation);
         }
@@ -78,8 +78,8 @@ namespace ScoobTestBDD.StepDefinitions
         {
             int idFromName = ScoobAPIExtension.GetIdFromName(name);
 
-            RestResponse response = apiExtension.SendRequest($"/Relationship/DeleteScoobyRelation/{idFromName}", Method.Delete);
-            
+            RestResponse response = apiExtension.SendRequest($"/Relationship/DeleteScoobyRelationById/{idFromName}", Method.Delete);
+
             scenarioContext.Set<RestResponse>(response);
         }
 

@@ -1,27 +1,26 @@
 ﻿using ScoobyRelationship.Data;
 using ScoobyRelationshipAPI.Data;
 
-namespace ScoobyRelationshipAPI.Extensions
+namespace ScoobyRelationshipAPI.Extensions;
+
+public static class DbInitalizerExtension
 {
-    internal static class DbInitalizerExtension
+    public static IApplicationBuilder UseItToSeedSqlServer(this IApplicationBuilder app)
     {
-        public static IApplicationBuilder UseItToSeedSqlServer(this IApplicationBuilder app)
+        ArgumentNullException.ThrowIfNull(app, nameof(app));
+
+        using var scope = app.ApplicationServices.CreateScope();
+        var services = scope.ServiceProvider;
+        try
         {
-            ArgumentNullException.ThrowIfNull(app, nameof(app));
-
-            using var scope = app.ApplicationServices.CreateScope();
-            var services = scope.ServiceProvider;
-            try
-            {
-                var context = services.GetRequiredService<ScoobRelationDbContext>();
-                SeedData.Seed(context);
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-            return app;
+            var context = services.GetRequiredService<ScoobRelationDbContext>();
+            SeedData.Seed(context);
         }
+        catch (Exception ex)
+        {
+
+        }
+
+        return app;
     }
 }

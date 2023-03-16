@@ -6,7 +6,7 @@ namespace ScoobIntegrationTest.Tests;
 public class AddRelationshipTests : IClassFixture<CustomWebApplicationFactory<Program>>
 {
     private readonly CustomWebApplicationFactory<Program> customWebApplicationFactory;
-    private string url = "https://localhost:44334";
+    private readonly string url = "https://localhost:44334";
 
     public AddRelationshipTests(CustomWebApplicationFactory<Program> customWebApplicationFactory)
     {
@@ -32,7 +32,7 @@ public class AddRelationshipTests : IClassFixture<CustomWebApplicationFactory<Pr
 
         result.Should().NotBeNull();
 
-        await relationship.DeleteScoobyRelationAsync(result.Id);
+        await relationship.DeleteScoobyRelationByIdAsync(result.Id);
     }
 
     [Fact]
@@ -49,6 +49,6 @@ public class AddRelationshipTests : IClassFixture<CustomWebApplicationFactory<Pr
         result.Id.Should().BeGreaterThan(0);
         result.Gang.Should().Be(GangMember.Scooby);
 
-        await relationship.DeleteScoobyRelationAsync(result.Id);
+        await relationship.DeleteScoobyRelationByIdAsync(result.Id);
     }
 }

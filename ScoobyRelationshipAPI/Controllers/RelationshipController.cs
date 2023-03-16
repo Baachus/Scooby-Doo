@@ -15,11 +15,10 @@ namespace ScoobyRelationship.Controllers
             this.relationshipRepository = relationshipRepository;
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to return all of the relationships of Scooby-Doo and the Gang.
-        ***/
+        /// <summary>
+        /// This is a method to return all of the relationships of Scooby-Doo and the Gang.
+        /// </summary>
+        /// <returns>All ScoobRelations in the database as a list of ScoobRelations</returns>
         [HttpGet]
         [Route("/[controller]/[action]")]
         public ActionResult<List<ScoobRelation>> GetScoobyRelations()
@@ -27,11 +26,11 @@ namespace ScoobyRelationship.Controllers
             return relationshipRepository.GetAllRelationships();
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to return a relationship of Scooby-Doo and the Gang by their ID.
-        ***/
+        /// <summary>
+        /// This is a method to return a relationship of Scooby-Doo and the Gang by their ID.
+        /// </summary>
+        /// <param name="id">ID to identify which relationship to retrieve</param>
+        /// <returns>ScoobRelation that matches the ID provided</returns>
         [HttpGet]
         [Route("/[controller]/[action]/{id}")]
         public ScoobRelation GetScoobyRelationById(int id)
@@ -39,11 +38,11 @@ namespace ScoobyRelationship.Controllers
             return relationshipRepository.GetRelationshipById(id);
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to return a relationship of Scooby-Doo and the Gang by their Name.
-        ***/
+        /// <summary>
+        /// This is a method to return a relationship of Scooby-Doo and the Gang by their Name.
+        /// </summary>
+        /// <param name="name">Name to identify which relationship to retrieve</param>
+        /// <returns>ScoobRelation that matches the name provided</returns>
         [HttpGet]
         [Route("/[controller]/[action]/{name}")]
         public ScoobRelation GetScoobyRelationByName(string name)
@@ -51,11 +50,11 @@ namespace ScoobyRelationship.Controllers
             return relationshipRepository.GetRelationshipByName(name);
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to add a relationship of Scooby-Doo and the Gang.
-        ***/
+        /// <summary>
+        /// This is a method to add a relationship of Scooby-Doo and the Gang.
+        /// </summary>
+        /// <param name="relationship">ScoobRelation that is to be added to the database</param>
+        /// <returns>ScoobRelation that was added</returns>
         [HttpPost]
         [Route("/[controller]/[action]")]
         public ScoobRelation AddScoobyRelation(ScoobRelation relationship)
@@ -63,11 +62,11 @@ namespace ScoobyRelationship.Controllers
             return relationshipRepository.AddRelationship(relationship);
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to update a relationship of Scooby-Doo and the Gang.
-        ***/
+        /// <summary>
+        /// This is a method to update a relationship of Scooby-Doo and the Gang.
+        /// </summary>
+        /// <param name="relationship">ScoobRelation that is to be updated</param>
+        /// <returns>ScoobRelation that was updated</returns>
         [HttpPut]
         [Route("/[controller]/[action]")]
         public ScoobRelation UpdateScoobyRelation(ScoobRelation relationship)
@@ -75,16 +74,26 @@ namespace ScoobyRelationship.Controllers
             return relationshipRepository.UpdateRelationship(relationship);
         }
 
-        /***
-        * Created: 1/10/2023
-        * Author: Robert Chapin
-        * This is a simple method to delete a relationship of Scooby-Doo and the Gang.
-        ***/
+        /// <summary>
+        /// This is a method to delete a relationship of Scooby-Doo and the Gang.
+        /// </summary>
+        /// <param name="id">ID of the relationship to be deleted</param>
         [HttpDelete]
         [Route("/[controller]/[action]/{id}")]
-        public void DeleteScoobyRelation(int id)
+        public void DeleteScoobyRelationById(int id)
         {
-            relationshipRepository.DeleteRelationship(id);
+            relationshipRepository.DeleteScoobyRelationById(id);
+        }
+
+        /// <summary>
+        /// This is a method to delete a relationship of Scooby-Doo and the Gang.
+        /// </summary>
+        /// <param name="name">Name of the relationship to be deleted</param>
+        [HttpDelete]
+        [Route("/[controller]/[action]/{name}")]
+        public void DeleteScoobyRelationByName(string name)
+        {
+            relationshipRepository.DeleteRelationshipByName(name);
         }
     }
 }
