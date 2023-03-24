@@ -22,6 +22,7 @@ namespace ScoobWebApp.Controllers
         {
             return View();
         }
+
         public async Task<IActionResult> Relationship()
         {
             var relationshipClient = new ScoobyRelationshipAPI("http://scoobyapi:8003", new HttpClient());

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DSrOKAxlwnx5+PkgAN6XxiznI4g4qVXx+w7HXnpsnPA=",
+  "Hash": "mKYxijpJ2aFTgqXYl0tkORzvGexWP/pqYTl7/RUifIQ=",
   "Source": "ScoobWebApp",
   "BasePath": "_content/ScoobWebApp",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobWebApp\\wwwroot\\css\\superherocsstheme.css",
+      "SourceId": "ScoobWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobWebApp\\wwwroot\\",
+      "BasePath": "_content/ScoobWebApp",
+      "RelativePath": "css/superherocsstheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\superherocsstheme.css"
     },
     {
       "Identity": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobWebApp\\wwwroot\\favicon.ico",

@@ -8,12 +8,12 @@ Background:
 		| Name            | Relationship | Appearance                 | Gang   |
 		| Edit            | Uncle        | {"Test":"Edit"}            | Fred   |
 		| Edited          | Child        | {"Test":"Edited"}          | Velma  |
+		| Edit_Details    | Cousin       | {"Test":"Edit_Details"}    | Daphne |
 		| Edit_Gang       | Uncle        | {"Test":"Edit_Gang"}       | Fred   |
 		| Edit_MaxLength  | Uncle        | {"Test":"Edit_MaxLength"}  | Velma  |
 		| Edit_OverMax    | Uncle        | {"Test":"Edit_OverMax"}    | Daphne |
 		| Edit_BackToList | Mother       | {"Test":"Edit_BackToList"} | Shaggy |
 		
-
 @Smoke_Test @retry(1)
 Scenario: Edit the relationship, verify the details, and remove the new relationship
 	Given I ensure the following relationship is created
@@ -25,9 +25,18 @@ Scenario: Edit the relationship, verify the details, and remove the new relation
 		| Name   | Relationship | Appearance        | Gang  |
 		| Edited | Child        | {"Test":"Edited"} | Velma |
 	And I click the Details link of the newly created relationship
-	Then I see all the relationship details are created as expected
+	Then I see all the relationship details are created as expected on the details page
 	And I delete the Edit relationship
 	And I delete the Edited relationship
+
+Scenario: Edit the relationship displays the correct information
+	Given I ensure the following relationship is created
+		| Name         | Relationship | Appearance              | Gang   |
+		| Edit_Details | Cousin       | {"Test":"Edit_Details"} | Daphne |
+	When I click the Relationship menu
+	And I click the Edit link of the newly created relationship
+	Then I see all the relationship details are created as expected on the edit page
+	And I delete the Edit_Details relationship
 
 Scenario: Verify the Gang options are available when editing new relationship
 	Given I ensure the following relationship is created
@@ -49,10 +58,10 @@ Scenario: Verify the max length when editing a relationship for a Name is 60 cha
 		| Edit_MaxLength | Uncle        | {"Test":"Edit_MaxLength"} | Velma |
 	When I click the Relationship menu
 	And I click the Edit link of the newly created relationship
-	And I enter a random sentence into the name field that is 60 characters long
-	Then I can verify only 60 characters are allowed in the name field
-	When I enter a random sentence into the relationship field that is 100 characters long
-	Then I can verify only 100 characters are allowed in the relationship field
+	And I enter random characters into the name field that is 60 characters long on the edit page
+	Then I can verify only 60 characters are allowed in the name field on the edit page
+	When I enter random characters into the relationship field that is 100 characters long on the edit page
+	Then I can verify only 100 characters are allowed in the relationship field on the edit page
 	And I delete the Edit_MaxLength relationship
 
 @retry(2)
@@ -62,10 +71,10 @@ Scenario: Verify the Name is trimmed to 60 characters and Relationship is 100 ch
 		| Edit_OverMax | Uncle        | {"Test":"Edit_OverMax"} | Daphne |
 	When I click the Relationship menu
 	And I click the Edit link of the newly created relationship
-	And I enter a random sentence into the name field that is 61 characters long
-	Then I can verify only 60 characters are allowed in the name field
-	When I enter a random sentence into the relationship field that is 101 characters long
-	Then I can verify only 100 characters are allowed in the relationship field
+	And I enter random characters into the name field that is 61 characters long on the edit page
+	Then I can verify only 60 characters are allowed in the name field on the edit page
+	When I enter random characters into the relationship field that is 101 characters long on the edit page
+	Then I can verify only 100 characters are allowed in the relationship field on the edit page
 	And I delete the Edit_OverMax relationship
 
 Scenario: Back to list does not save changes when editing
@@ -79,6 +88,6 @@ Scenario: Back to list does not save changes when editing
 		| Edit_BackToList_Edited | Child        | {"EditedTest":"Edit_BackToList_Edited"} | Velma |
 	And I click the Back to List link
 	And I click the Details link of the newly created relationship
-	Then I see all the relationship details are created as expected
+	Then I see all the relationship details are created as expected on the details page
 	And I delete the Edit_BackToList relationship
 	And I delete the Edit_BackToList_Edited relationship

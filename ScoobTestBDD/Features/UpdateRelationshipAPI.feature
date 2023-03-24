@@ -19,6 +19,6 @@ Scenario: Generate a relationship and update it directly through the API
 		| Update_API_Edited | Daughter     | {"Test":"Update_API_Edited"} | Scooby |
 	And I click the Relationship menu
 	And I click the Details link of the newly created relationship
-	Then I see all the relationship details are created as expected
+	Then I see all the relationship details are created as expected on the details page
 	And I delete the Update_API relationship
 	And I delete the Update_API_Edited relationship

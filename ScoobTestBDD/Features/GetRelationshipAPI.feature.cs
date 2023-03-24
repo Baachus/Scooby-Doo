@@ -105,49 +105,49 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.Given("I get all relationships through the API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Apperance",
                             "Gang"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Dave Walton",
                             "Uncle",
                             "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
                                 ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Velma"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Scrappy-Doo",
                             "Nephew",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
                                 "\"",
                             "Scooby"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "John Maxwell",
                             "Uncle",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
                                 "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Olivia Dervy",
                             "Aunt",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
                                 "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Skip Jones",
                             "Uncle",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
                                 "PPEARED\":true}\"",
                             "Fred"});
-                table21.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Margaret \'Maggie\' Rogers",
                             "Younger Sister",
                             "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
                                 "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Shaggy"});
 #line 10
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table21, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table25, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -179,19 +179,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.Given("I get a relationship through the API with the name Dave Walton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Apperance",
                             "Gang"});
-                table22.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "Dave Walton",
                             "Uncle",
                             "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
                                 ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Velma"});
 #line 22
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table22, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table26, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -223,19 +223,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 28
  testRunner.Given("I get a relationship through the API with the name Scrappy-Doo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Apperance",
                             "Gang"});
-                table23.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "Scrappy-Doo",
                             "Nephew",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
                                 "\"",
                             "Scooby"});
 #line 29
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table23, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table27, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -267,14 +267,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 35
  testRunner.Given("I get a relationship through the API with the name John Maxwell", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                             "John Maxwell",
                             "Uncle",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
                                 "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
 #line 36
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table24, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table28, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -306,14 +306,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 41
  testRunner.Given("I get a relationship through the API with the name Olivia Dervy", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                             "Olivia Dervy",
                             "Aunt",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
                                 "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
 #line 42
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table25, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table29, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -345,14 +345,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 47
  testRunner.Given("I get a relationship through the API with the name Skip Jones", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                             "Skip Jones",
                             "Uncle",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
                                 "PPEARED\":true}\"",
                             "Fred"});
 #line 48
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table26, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table30, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -384,14 +384,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 53
  testRunner.Given("I get a relationship through the API with the name Margaret \'Maggie\' Rogers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
                             "Margaret \'Maggie\' Rogers",
                             "Younger Sister",
                             "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
                                 "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Shaggy"});
 #line 54
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table27, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table31, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -423,19 +423,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 59
  testRunner.Given("I get a relationship through the API with the id 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Apperance",
                             "Gang"});
-                table28.AddRow(new string[] {
+                table32.AddRow(new string[] {
                             "Dave Walton",
                             "Uncle",
                             "{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":1,\"RELEASE_YEAR\"" +
                                 ":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Velma"});
 #line 60
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table28, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table32, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -467,19 +467,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 66
  testRunner.Given("I get a relationship through the API with the id 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Apperance",
                             "Gang"});
-                table29.AddRow(new string[] {
+                table33.AddRow(new string[] {
                             "Scrappy-Doo",
                             "Nephew",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scooby-Doo\", \"RELEASE_YEAR\":2002}],\"APPEARED\":true}" +
                                 "\"",
                             "Scooby"});
 #line 67
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table29, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table33, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -511,14 +511,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 73
  testRunner.Given("I get a relationship through the API with the id 3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
                             "John Maxwell",
                             "Uncle",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR" +
                                 "\":1969}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
 #line 74
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table30, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table34, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -550,14 +550,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 79
  testRunner.Given("I get a relationship through the API with the id 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
                             "Olivia Dervy",
                             "Aunt",
                             "\"{\"TV\":[{\"SHOW\":\"Scooby-Doo, Where Are You!\",\"SEASON\":3,\"EPISODE\":9,\"RELEASE_YEAR" +
                                 "\":1978}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Daphne"});
 #line 80
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table31, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table35, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -589,14 +589,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 85
  testRunner.Given("I get a relationship through the API with the id 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
                             "Skip Jones",
                             "Uncle",
                             "\"{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! Pirates Ahoy!\", \"RELEASE_YEAR\":2006}],\"A" +
                                 "PPEARED\":true}\"",
                             "Fred"});
 #line 86
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table32, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table36, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -628,14 +628,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 91
  testRunner.Given("I get a relationship through the API with the id 6", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                             "Margaret \'Maggie\' Rogers",
                             "Younger Sister",
                             "\"{\"TV\":[{\"SHOW\":\"The New Scooby and Scrappy Doo Show\",\"SEASON\":1,\"EPISODE\":13,\"RE" +
                                 "LEASE_YEAR\":1983}],\"Movie\":[{}],\"APPEARED\":true}\"",
                             "Shaggy"});
 #line 92
- testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table33, "Then ");
+ testRunner.Then("I can verify the data exists for the following data", ((string)(null)), table37, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

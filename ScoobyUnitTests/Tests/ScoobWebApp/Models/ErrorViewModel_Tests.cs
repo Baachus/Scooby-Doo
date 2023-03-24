@@ -1,5 +1,4 @@
-﻿using ScoobWebApp.Models;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace ScoobWebApp.Models;
 

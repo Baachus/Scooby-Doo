@@ -52,16 +52,6 @@ public sealed class RelationshipSteps
         homePage.PerformClickOnSpecialValue(relation.Name, operation);
     }
 
-    [Then(@"I see all the relationship details are created as expected")]
-    public void ThenISeeAllTheRelationshipDetailsAreCreatedAsExpected()
-    {
-        var relation = scenarioContext.Get<ScoobRelation>();
-
-        ScoobRelation actualProduct = relationshipPage.GetRelationshipDetails();
-        actualProduct.Should().BeEquivalentTo(relation,
-            options => options.Excluding(x => x.Id));
-    }
-
     [Then(@"I see all the relationship details are not present as expected")]
     public void ThenISeeAllTheRelationshipDetailsAreNotPresentAsExpected()
     {
@@ -84,16 +74,6 @@ public sealed class RelationshipSteps
         relationshipPage.ClickBackToList();
     }
 
-    [When(@"I edit the relationship with the following details")]
-    public void WhenIEditTheRelationshipWithTheFollowingDetails(Table table)
-    {
-        var relationship = table.CreateInstance<ScoobRelation>();
-        relationshipPage.EditRelationshipDetails(relationship);
-
-        //Store the relationship details in the scenario context
-        scenarioContext.Set<ScoobRelation>(relationship);
-    }
-
     [When(@"I click the Back to List link")]
     [Then(@"I click the Back to List link")]
     public void WhenIClickTheBackToListLink()
@@ -110,28 +90,22 @@ public sealed class RelationshipSteps
             .And.OnlyHaveUniqueItems();
     }
 
-    [When(@"I enter a random sentence into the (.*) field that is (.*) characters long")]
-    public void WhenIEnterARandomSentenceIntoTheRelationshipFieldThatIsCharactersLong(string fieldName, int characterLength)
+    [When(@"I click the (.*) sort")]
+    public void WhenIClickTheSort(string columnToSort)
     {
-        relationshipPage.EnterSpecificRelationshipDetail(fieldName, "", characterLength);
+        relationshipPage.SortByHeader(columnToSort);
     }
 
-    [Then(@"I can verify only (.*) characters are allowed in the (.*) field")]
-    public void ThenICanVerifyOnlyCharactersAreAllowedInTheRelationshipField(int characterLength, string fieldName)
+    [Then(@"all records are sorted by (.*) in (.*) order")]
+    public void ThenAllRecordsAreSortedByIDInAscendingOrder(string columnSort, string order)
     {
-        relationshipPage.VerifyEnteredFieldLength(fieldName, characterLength);
+        relationshipPage.VerifySort(columnSort, order);
     }
 
-    [When(@"I edit the relationship with the following details but do not save")]
-    public void WhenIEditTheRelationshipWithTheFollowingDetailsButDoNotSave(Table table)
+    [Then(@"I can verify a record with the name (.*) exists on the table")]
+    public void ThenICanVerifyARecordWithTheNameOnTheTable(string name)
     {
-        var relationship = table.CreateInstance<ScoobRelation>();
-        relationshipPage.EditRelationshipDetailsButDontSave(relationship);
+        relationshipPage.VerifyNameOnTable(name);
     }
 
-    [When(@"I click the Edit link on the details page")]
-    public void WhenIClickTheEditLinkOnTheDetailsPage()
-    {
-        relationshipPage.ClickEdit();
-    }
 }

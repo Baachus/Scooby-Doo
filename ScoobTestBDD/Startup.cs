@@ -35,6 +35,10 @@ public class Startup
         //Pages
         services.AddScoped<IHomePage, HomePage>();
         services.AddScoped<IRelationshipPage, RelationshipPage>();
+        services.AddScoped<IDetailPage, DetailPage>();
+        services.AddScoped<IDeletePage, DeletePage>();
+        services.AddScoped<IEditPage, EditPage>();
+        services.AddScoped<ICreatePage, CreatePage>();
         return services;
     }
 }

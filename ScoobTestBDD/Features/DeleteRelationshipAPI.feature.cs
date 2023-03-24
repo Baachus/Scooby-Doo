@@ -79,18 +79,38 @@ namespace ScoobTestBDD.Features
         {
 #line 5
 #line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table7.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "Delete_API",
                         "Father",
                         "{\"Test\":\"Delete_API\"}",
                         "Fred"});
+            table8.AddRow(new string[] {
+                        "Delete_API_Name",
+                        "Father",
+                        "{\"Test\":\"Delete_API_Name\"}",
+                        "Velma"});
+            table8.AddRow(new string[] {
+                        "Delete_API_Name",
+                        "Son",
+                        "{\"Test\":\"Delete_API_Name_Son\"}",
+                        "Fred"});
+            table8.AddRow(new string[] {
+                        "Delete_API_Id",
+                        "Father",
+                        "{\"Test\":\"Delete_API_Id\"}",
+                        "Velma"});
+            table8.AddRow(new string[] {
+                        "Delete_API_Id",
+                        "Son",
+                        "{\"Test\":\"Delete_API_Id_Son\"}",
+                        "Fred"});
 #line 6
- testRunner.Given("I cleanup the following data", ((string)(null)), table7, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table8, "Given ");
 #line hidden
         }
         
@@ -99,17 +119,17 @@ namespace ScoobTestBDD.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Generate a relationship directly through the API")]
+        [Xunit.SkippableFactAttribute(DisplayName="Generate a relationship directly through the API and delete through the API")]
         [Xunit.TraitAttribute("FeatureTitle", "DeleteRelationshipAPI")]
-        [Xunit.TraitAttribute("Description", "Generate a relationship directly through the API")]
+        [Xunit.TraitAttribute("Description", "Generate a relationship directly through the API and delete through the API")]
         [Xunit.TraitAttribute("Category", "API")]
-        public void GenerateARelationshipDirectlyThroughTheAPI()
+        public void GenerateARelationshipDirectlyThroughTheAPIAndDeleteThroughTheAPI()
         {
             string[] tagsOfScenario = new string[] {
                     "API"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate a relationship directly through the API", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate a relationship directly through the API and delete through the API", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -122,27 +142,147 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table8.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "Delete_API",
                             "Father",
                             "{\"Test\":\"Delete_API\"}",
                             "Fred"});
-#line 12
- testRunner.Given("I create a relationship with the following details through the API", ((string)(null)), table8, "Given ");
+#line 16
+ testRunner.Given("I create a relationship with the following details through the API", ((string)(null)), table9, "Given ");
 #line hidden
-#line 15
+#line 19
  testRunner.When("I delete the Delete_API relationship through the API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 16
+#line 20
  testRunner.And("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 21
  testRunner.Then("I see all the relationship details are not present as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Generate two relationsips with the same name and delete with the name through the" +
+            " API")]
+        [Xunit.TraitAttribute("FeatureTitle", "DeleteRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Generate two relationsips with the same name and delete with the name through the" +
+            " API")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GenerateTwoRelationsipsWithTheSameNameAndDeleteWithTheNameThroughTheAPI()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate two relationsips with the same name and delete with the name through the" +
+                    " API", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table10.AddRow(new string[] {
+                            "Delete_API_Name",
+                            "Father",
+                            "{\"Test\":\"Delete_API_Name\"}",
+                            "Velma"});
+                table10.AddRow(new string[] {
+                            "Delete_API_Name",
+                            "Son",
+                            "{\"Test\":\"Delete_API_Name_Son\"}",
+                            "Fred"});
+#line 25
+ testRunner.Given("I create multiple relationships with the following details through the API", ((string)(null)), table10, "Given ");
+#line hidden
+#line 29
+ testRunner.When("I delete the Delete_API_Name relationship through the API by name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 30
+ testRunner.And("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+ testRunner.Then("I can verify a record with the name Delete_API_Name exists on the table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 32
+ testRunner.And("I delete the Delete_API_Name relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Generate two relationsips with the same name and delete with the id through the A" +
+            "PI")]
+        [Xunit.TraitAttribute("FeatureTitle", "DeleteRelationshipAPI")]
+        [Xunit.TraitAttribute("Description", "Generate two relationsips with the same name and delete with the id through the A" +
+            "PI")]
+        [Xunit.TraitAttribute("Category", "API")]
+        public void GenerateTwoRelationsipsWithTheSameNameAndDeleteWithTheIdThroughTheAPI()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "API"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Generate two relationsips with the same name and delete with the id through the A" +
+                    "PI", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 35
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table11.AddRow(new string[] {
+                            "Delete_API_Id",
+                            "Father",
+                            "{\"Test\":\"Delete_API_Id\"}",
+                            "Velma"});
+                table11.AddRow(new string[] {
+                            "Delete_API_Id",
+                            "Son",
+                            "{\"Test\":\"Delete_API_Id_Son\"}",
+                            "Fred"});
+#line 36
+ testRunner.Given("I create multiple relationships with the following details through the API", ((string)(null)), table11, "Given ");
+#line hidden
+#line 40
+ testRunner.When("I delete the Delete_API_Id relationship through the API", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 41
+ testRunner.And("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
+ testRunner.Then("I can verify a record with the name Delete_API_Id exists on the table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 43
+ testRunner.And("I delete the Delete_API_Id relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

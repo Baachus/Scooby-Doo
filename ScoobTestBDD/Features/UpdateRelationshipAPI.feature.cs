@@ -79,23 +79,23 @@ namespace ScoobTestBDD.Features
         {
 #line 5
 #line hidden
-            TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
                         "Relationship",
                         "Appearance",
                         "Gang"});
-            table36.AddRow(new string[] {
+            table40.AddRow(new string[] {
                         "Update_API",
                         "Son",
                         "{\"Test\":\"Update_API\"}",
                         "Velma"});
-            table36.AddRow(new string[] {
+            table40.AddRow(new string[] {
                         "Update_API_Edited",
                         "Daughter",
                         "{\"Test\":\"Update_API_Edited\"}",
                         "Scooby"});
 #line 6
- testRunner.Given("I cleanup the following data", ((string)(null)), table36, "Given ");
+ testRunner.Given("I cleanup the following data", ((string)(null)), table40, "Given ");
 #line hidden
         }
         
@@ -127,31 +127,31 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table41 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table37.AddRow(new string[] {
+                table41.AddRow(new string[] {
                             "Update_API",
                             "Son",
                             "{\"Test\":\"Update_API\"}",
                             "Velma"});
 #line 14
- testRunner.Given("I create a relationship with the following details through the API", ((string)(null)), table37, "Given ");
+ testRunner.Given("I create a relationship with the following details through the API", ((string)(null)), table41, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Relationship",
                             "Appearance",
                             "Gang"});
-                table38.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "Update_API_Edited",
                             "Daughter",
                             "{\"Test\":\"Update_API_Edited\"}",
                             "Scooby"});
 #line 17
- testRunner.When("I update a relationship with the following details through the API", ((string)(null)), table38, "When ");
+ testRunner.When("I update a relationship with the following details through the API", ((string)(null)), table42, "When ");
 #line hidden
 #line 20
  testRunner.And("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -160,7 +160,7 @@ this.FeatureBackground();
  testRunner.And("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
- testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see all the relationship details are created as expected on the details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 23
  testRunner.And("I delete the Update_API relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

@@ -9,52 +9,54 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gang)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Relationship)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Appearance)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Gang)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Relationship)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Appearance)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                </td>
+                <th id="Id_Header">
+                    @Html.ActionLink("Id", "List", new {sortOrder = ViewBag.IdSortParam})
+                </th>
+                <th id="Name_Header">
+                    @Html.ActionLink("Name", "List", new {sortOrder = ViewBag.NameSortParam})
+                </th>
+                <th id="Gang_Header">
+                    @Html.ActionLink("Gang", "List", new {sortOrder = ViewBag.GangSortParam})
+                </th>
+                <th id="Relationship_Header">
+                    @Html.ActionLink("Relationship", "List", new {sortOrder = ViewBag.RelationshipSortParam})
+                </th>
+                <th id="Apperance_Header">
+                    @Html.DisplayNameFor(model => model.Appearance)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gang)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Relationship)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Appearance)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

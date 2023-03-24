@@ -14,5 +14,5 @@ Scenario: Generate a relationship directly through the API
 		| Creation_API | Father       | {"Test":"Creation_API"} | Fred |
 	And I click the Relationship menu
 	When I click the Details link of the newly created relationship
-	Then I see all the relationship details are created as expected
+	Then I see all the relationship details are created as expected on the details page
 	And I delete the Creation_API relationship

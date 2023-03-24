@@ -1,7 +1,4 @@
-﻿using ScoobWebApp;
-using ScoobWebApp.Producer;
-
-namespace ScoobWebApp.Producer;
+﻿namespace ScoobWebApp.Producer;
 
 public class RelationshipUtil_Tests
 {

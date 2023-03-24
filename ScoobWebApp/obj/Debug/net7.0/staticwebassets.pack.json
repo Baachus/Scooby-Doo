@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobWebApp\\wwwroot\\css\\superherocsstheme.css",
+      "PackagePath": "staticwebassets\\css\\superherocsstheme.css"
+    },
+    {
       "Id": "C:\\Users\\Baachus\\Desktop\\Files\\Automation\\Scooby-Doo\\ScoobWebApp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

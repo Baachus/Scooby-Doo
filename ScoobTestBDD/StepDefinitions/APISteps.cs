@@ -31,6 +31,26 @@ namespace ScoobTestBDD.StepDefinitions
             scenarioContext.Set<ScoobRelation>(scoobRelation);
         }
 
+        [Given(@"I create multiple relationships with the following details through the API")]
+        public void GivenICreateMultipleRelationshipsWithTheFollowingDetailsThroughTheAPI(Table table)
+        {
+            IEnumerable<ScoobRelation> relations = table.CreateSet<ScoobRelation>();
+
+            RestResponse response = null;
+
+            foreach(var relation in relations)
+                response = apiExtension.SendRequest("/Relationship/AddScoobyRelation", Method.Post, relation);
+
+            //Store the response details in the scenario context
+            scenarioContext.Set<RestResponse>(response);
+
+            ScoobRelation scoobRelation = ScoobAPIExtension.GetRelationFromResponseContent(response.Content);
+
+            //Store the relationshpi details in the scenario context
+            scenarioContext.Set<ScoobRelation>(scoobRelation);
+        }
+
+
         [Given(@"I get all relationships through the API")]
         public void GivenIGetAllRelationshipsThroughTheAPI()
         {
@@ -71,6 +91,14 @@ namespace ScoobTestBDD.StepDefinitions
                 response.Content.Should().Contain(relationship.Gang.ToString());
                 response.Content.Should().Contain(relationship.Relationship);
             }
+        }
+
+        [When(@"I delete the (.*) relationship through the API by name")]
+        public void WhenIDeleteTheAutomationDeleteGuyRelationshipThroughTheAPIByName(string name)
+        {
+            RestResponse response = apiExtension.SendRequest($"/Relationship/DeleteScoobyRelationByName/{name}", Method.Delete);
+
+            scenarioContext.Set<RestResponse>(response);
         }
 
         [When(@"I delete the (.*) relationship through the API")]

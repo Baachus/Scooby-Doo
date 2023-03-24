@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using ScoobyRelationship.Data;
-using ScoobyRelationshipAPI.Data;
 
 namespace ScoobyRelationshipAPI.Extensions;
 

@@ -28,6 +28,94 @@ public class RelationshipController_Tests
 
     [Fact]
     [Category("Unit_Positive")]
+    public async Task List_ShouldReturnViewWithSortedRelationsByName()
+    {
+        // Arrange
+        var mockRepo = new Mock<IRelationshipUtil>();
+        var sortOrder = "Name";
+        mockRepo.Setup(repo => repo.GetRelationship())
+            .ReturnsAsync(GetTestRelationships());
+        var controller = new RelationshipController(mockRepo.Object);
+
+        // Act
+        var result = await controller.List(sortOrder);
+
+        // Assert
+        var viewResult = Assert.IsType<ViewResult>(result);
+        viewResult.ViewData["IdSortParam"].Should().Be("Id");
+        viewResult.ViewData["NameSortParam"].Should().Be("Name_desc");
+        viewResult.ViewData["GangSortParam"].Should().Be("Gang");
+        viewResult.ViewData["RelationshipSortParam"].Should().Be("Relationship");
+    }
+
+    [Fact]
+    [Category("Unit_Positive")]
+    public async Task List_ShouldReturnViewWithSortedRelationsById()
+    {
+        // Arrange
+        var mockRepo = new Mock<IRelationshipUtil>();
+        var sortOrder = "Id";
+        mockRepo.Setup(repo => repo.GetRelationship())
+            .ReturnsAsync(GetTestRelationships());
+        var controller = new RelationshipController(mockRepo.Object);
+
+        // Act
+        var result = await controller.List(sortOrder);
+
+        // Assert
+        var viewResult = Assert.IsType<ViewResult>(result);
+        viewResult.ViewData["IdSortParam"].Should().Be("Id_desc");
+        viewResult.ViewData["NameSortParam"].Should().Be("Name");
+        viewResult.ViewData["GangSortParam"].Should().Be("Gang");
+        viewResult.ViewData["RelationshipSortParam"].Should().Be("Relationship");
+    }
+
+    [Fact]
+    [Category("Unit_Positive")]
+    public async Task List_ShouldReturnViewWithSortedRelationsByGang()
+    {
+        // Arrange
+        var mockRepo = new Mock<IRelationshipUtil>();
+        var sortOrder = "Gang";
+        mockRepo.Setup(repo => repo.GetRelationship())
+            .ReturnsAsync(GetTestRelationships());
+        var controller = new RelationshipController(mockRepo.Object);
+
+        // Act
+        var result = await controller.List(sortOrder);
+
+        // Assert
+        var viewResult = Assert.IsType<ViewResult>(result);
+        viewResult.ViewData["IdSortParam"].Should().Be("Id");
+        viewResult.ViewData["NameSortParam"].Should().Be("Name");
+        viewResult.ViewData["GangSortParam"].Should().Be("Gang_desc");
+        viewResult.ViewData["RelationshipSortParam"].Should().Be("Relationship");
+    }
+
+    [Fact]
+    [Category("Unit_Positive")]
+    public async Task List_ShouldReturnViewWithSortedRelationsByRelationship()
+    {
+        // Arrange
+        var mockRepo = new Mock<IRelationshipUtil>();
+        var sortOrder = "Relationship";
+        mockRepo.Setup(repo => repo.GetRelationship())
+            .ReturnsAsync(GetTestRelationships());
+        var controller = new RelationshipController(mockRepo.Object);
+
+        // Act
+        var result = await controller.List(sortOrder);
+
+        // Assert
+        var viewResult = Assert.IsType<ViewResult>(result);
+        viewResult.ViewData["IdSortParam"].Should().Be("Id");
+        viewResult.ViewData["NameSortParam"].Should().Be("Name");
+        viewResult.ViewData["GangSortParam"].Should().Be("Gang");
+        viewResult.ViewData["RelationshipSortParam"].Should().Be("Relationship_desc");
+    }
+
+    [Fact]
+    [Category("Unit_Positive")]
     public async Task Delete_ReturnsAViewResult_WithARelationship()
     {
         // Arrange

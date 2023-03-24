@@ -90,6 +90,11 @@ namespace ScoobTestBDD.Features
                         "Father",
                         "{\"Test\":\"Delete\"}",
                         "Fred"});
+            table5.AddRow(new string[] {
+                        "Delete_Details",
+                        "Mother",
+                        "{\"Test\":\"Delete_Details\"}",
+                        "Fred"});
 #line 7
  testRunner.Given("I cleanup the following data", ((string)(null)), table5, "Given ");
 #line hidden
@@ -100,15 +105,15 @@ namespace ScoobTestBDD.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Verify the Delete page has the correct data displayed")]
+        [Xunit.SkippableFactAttribute(DisplayName="Verify the Delete page can delete a record")]
         [Xunit.TraitAttribute("FeatureTitle", "DeleteRelationship")]
-        [Xunit.TraitAttribute("Description", "Verify the Delete page has the correct data displayed")]
-        public void VerifyTheDeletePageHasTheCorrectDataDisplayed()
+        [Xunit.TraitAttribute("Description", "Verify the Delete page can delete a record")]
+        public void VerifyTheDeletePageCanDeleteARecord()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the Delete page has the correct data displayed", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the Delete page can delete a record", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -121,10 +126,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 12
+#line 13
  testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
+#line 14
  testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
@@ -137,17 +142,70 @@ this.FeatureBackground();
                             "Father",
                             "{\"Test\":\"Delete\"}",
                             "Fred"});
-#line 14
+#line 15
  testRunner.And("I create a relationship with the following details", ((string)(null)), table6, "And ");
 #line hidden
-#line 17
+#line 18
  testRunner.And("I click the Delete link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
- testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
 #line 19
- testRunner.And("I delete the Delete relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click the Delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+ testRunner.Then("I see all the relationship details are not present as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Verify the Delete page has the correct data displayed")]
+        [Xunit.TraitAttribute("FeatureTitle", "DeleteRelationship")]
+        [Xunit.TraitAttribute("Description", "Verify the Delete page has the correct data displayed")]
+        public void VerifyTheDeletePageHasTheCorrectDataDisplayed()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the Delete page has the correct data displayed", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 22
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 23
+ testRunner.Given("I click the Relationship menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 24
+ testRunner.When("I click the \"Create New\" link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Name",
+                            "Relationship",
+                            "Appearance",
+                            "Gang"});
+                table7.AddRow(new string[] {
+                            "Delete_Details",
+                            "Mother",
+                            "{\"Test\":\"Delete_Details\"}",
+                            "Fred"});
+#line 25
+ testRunner.And("I create a relationship with the following details", ((string)(null)), table7, "And ");
+#line hidden
+#line 28
+ testRunner.And("I click the Delete link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 29
+ testRunner.Then("I see all the relationship details are created as expected on the delete page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 30
+ testRunner.And("I delete the Delete_Details relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

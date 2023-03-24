@@ -142,7 +142,7 @@ this.FeatureBackground();
  testRunner.When("I click the Details link of the newly created relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 17
- testRunner.Then("I see all the relationship details are created as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see all the relationship details are created as expected on the details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
  testRunner.And("I delete the Creation_API relationship", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
