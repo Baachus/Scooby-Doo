@@ -108,4 +108,10 @@ public sealed class RelationshipSteps
         relationshipPage.VerifyNameOnTable(name);
     }
 
+    [When(@"I search for (.*) on the relationship page")]
+    public void WhenISearchForOnTheRelationshipPage(string name)
+    {
+        relationshipPage.SearchForRelationship(name);
+    }
+
 }

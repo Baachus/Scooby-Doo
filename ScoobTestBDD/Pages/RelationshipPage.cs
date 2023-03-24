@@ -20,6 +20,7 @@ public interface IRelationshipPage
     void SortByHeader(string columnToSort);
     void VerifySort(string columnSort, string order);
     void VerifyNameOnTable(string name);
+    void SearchForRelationship(string name);
 }
 
 public class RelationshipPage : IRelationshipPage
@@ -44,6 +45,8 @@ public class RelationshipPage : IRelationshipPage
     IWebElement lnkGangHeader => driver.FindElement(By.CssSelector("#Gang_Header>a"));
     IWebElement lnkRelationshipHeader => driver.FindElement(By.CssSelector("#Relationship_Header>a"));
     IWebElement lnkApperanceHeader => driver.FindElement(By.CssSelector("#Apperance_Header>a"));
+    IWebElement txtSearch => driver.FindElement(By.Id("SearchString"));
+    IWebElement btnSearch => driver.FindElement(By.Id("Name_Search"));
 
     /// <summary>
     /// This method enters details for a newly created relationship based upon
@@ -271,5 +274,11 @@ public class RelationshipPage : IRelationshipPage
         }
         
         found.Should().BeTrue();
+    }
+
+    public void SearchForRelationship(string name)
+    {
+        txtSearch.ClearAndEnterText(name);
+        btnSearch.Click();
     }
 }

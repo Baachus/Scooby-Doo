@@ -9,6 +9,13 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+@using(Html.BeginForm())
+{
+    <p>
+        Find Relationship: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" id="Name_Search" />
+    </p>
+}
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>

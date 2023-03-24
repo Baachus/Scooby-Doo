@@ -23,17 +23,28 @@ public class RelationshipController : Controller
     /// <param name="sortOrder">the column that should be sorted by in the relationship table.
     /// This defaults to ID in Ascending order</param>
     /// <returns></returns>
-    public async Task<IActionResult> List(string sortOrder="Id")
+    public async Task<IActionResult> List(string sortOrder="Id", string searchString = "")
     {
         ViewBag.IdSortParam = sortOrder == "Id" ? "Id_desc" : "Id";
         ViewBag.NameSortParam = sortOrder == "Name" ? "Name_desc" : "Name";
         ViewBag.GangSortParam = sortOrder == "Gang" ? "Gang_desc" : "Gang";
         ViewBag.RelationshipSortParam = sortOrder == "Relationship" ? "Relationship_desc" : "Relationship";
 
-        var relationships = await relationshipUtil.GetRelationship();
+        IEnumerable<ScoobRelation> relationships = await relationshipUtil.GetRelationship();
+        
+        searchString = searchString.ToLower();
+
+        if (!String.IsNullOrEmpty(searchString))
+        {
+            relationships = relationships.Where(s =>
+                s.Name.IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0
+                || s.Gang.ToString().IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0
+                || s.Relationship.IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0);
+        }
 
         IOrderedEnumerable<ScoobRelation> orderedRelation;
-        switch(sortOrder.ToLower())
+
+        switch (sortOrder.ToLower())
         {
             case "name":
                 orderedRelation = relationships.OrderBy(r => r.Name);
