@@ -72,6 +72,20 @@ public static class HtmlTableExtension
         return columnSpecialValue;
     }
 
+    public static bool CheckCellOnTable(this IWebElement element, string nameToFind)
+    {
+        //Check table
+        var table = ReadTable(element);
+
+        //If not present loop through pages
+        foreach (var tableCell in table)
+        {
+            if (tableCell.ColumnValue == nameToFind)
+                return true;
+        }
+        return false;
+    }
+
     public static void PerformActionOnCell
         (this IWebElement element,
         string targetColumnIndex,

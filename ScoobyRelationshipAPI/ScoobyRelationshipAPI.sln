@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoobTestBDD", "..\ScoobTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoobIntegrationTest", "..\ScoobIntegrationTest\ScoobIntegrationTest.csproj", "{86998CAC-B41F-45DF-944C-CE046ED2FF6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoobyUnitTests", "..\ScoobyUnitTests\ScoobyUnitTests.csproj", "{1889D644-24E2-4079-93DA-CE509710490C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoobyUnitTests", "..\ScoobyUnitTests\ScoobyUnitTests.csproj", "{1889D644-24E2-4079-93DA-CE509710490C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScoobTestPlaywright", "..\ScoobTestPlaywright\ScoobTestPlaywright.csproj", "{29F7A91A-1776-479F-9844-AB14A24A52B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1889D644-24E2-4079-93DA-CE509710490C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1889D644-24E2-4079-93DA-CE509710490C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1889D644-24E2-4079-93DA-CE509710490C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F7A91A-1776-479F-9844-AB14A24A52B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F7A91A-1776-479F-9844-AB14A24A52B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29F7A91A-1776-479F-9844-AB14A24A52B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29F7A91A-1776-479F-9844-AB14A24A52B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

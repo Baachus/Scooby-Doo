@@ -16,7 +16,7 @@ public class RelationshipController_Tests
         var controller = new RelationshipController(mockRepo.Object);
 
         // Act
-        var result = await controller.List();
+        var result = await controller.List(1, "");
 
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
@@ -38,7 +38,7 @@ public class RelationshipController_Tests
         var controller = new RelationshipController(mockRepo.Object);
 
         // Act
-        var result = await controller.List(sortOrder);
+        var result = await controller.List(1, "", sortOrder);
 
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
@@ -60,7 +60,7 @@ public class RelationshipController_Tests
         var controller = new RelationshipController(mockRepo.Object);
 
         // Act
-        var result = await controller.List(sortOrder);
+        var result = await controller.List(1, "", sortOrder);
 
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
@@ -82,7 +82,7 @@ public class RelationshipController_Tests
         var controller = new RelationshipController(mockRepo.Object);
 
         // Act
-        var result = await controller.List(sortOrder);
+        var result = await controller.List(1, "", sortOrder);
 
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);
@@ -104,7 +104,7 @@ public class RelationshipController_Tests
         var controller = new RelationshipController(mockRepo.Object);
 
         // Act
-        var result = await controller.List(sortOrder);
+        var result = await controller.List(1, "", sortOrder);
 
         // Assert
         var viewResult = Assert.IsType<ViewResult>(result);

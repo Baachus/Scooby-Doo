@@ -8,6 +8,13 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\ScoobWebApp.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\ScoobWebApp.pdb
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\JetBrains.Annotations.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.Mvc.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.Razor.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.Helpers.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Web.WebPages.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.Build.dll
@@ -37,6 +44,7 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\NuGet.Common.dll
@@ -59,6 +67,10 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\X.PagedList.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\X.PagedList.Mvc.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\X.PagedList.Web.Common.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -223,6 +235,7 @@ C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\bin\Debug\net7.
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.csproj.AssemblyReference.cache
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.csproj.CoreCompileInputs.cache
+C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.RazorAssemblyInfo.cache
 C:\Users\Baachus\Desktop\Files\Automation\Scooby-Doo\ScoobWebApp\obj\Debug\net7.0\ScoobWebApp.RazorAssemblyInfo.cs

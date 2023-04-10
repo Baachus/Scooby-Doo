@@ -62,15 +62,15 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[109.0.1, )"
+              "version": "[110.1.0, )"
             },
             "Selenium.Support": {
               "target": "Package",
-              "version": "[4.8.1, )"
+              "version": "[4.8.2, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.8.1, )"
+              "version": "[4.8.2, )"
             },
             "SolidToken.SpecFlow.DependencyInjection": {
               "target": "Package",
@@ -174,15 +174,15 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[109.0.1, )"
+              "version": "[110.1.0, )"
             },
             "Selenium.Support": {
               "target": "Package",
-              "version": "[4.8.1, )"
+              "version": "[4.8.2, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[4.8.1, )"
+              "version": "[4.8.2, )"
             },
             "WebDriverManager": {
               "target": "Package",

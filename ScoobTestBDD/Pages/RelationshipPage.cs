@@ -1,7 +1,6 @@
 ﻿using Bogus;
 using CsvHelper.Configuration.Attributes;
 using Microsoft.IdentityModel.Tokens;
-using System.Diagnostics;
 
 namespace ScoobTestBDD.Pages;
 
@@ -213,7 +212,7 @@ public class RelationshipPage : IRelationshipPage
     /// <param name="columnToSort">The column name to be sorted by</param>
     public void SortByHeader(string columnToSort)
     {
-        switch(columnToSort.ToLower())
+        switch (columnToSort.ToLower())
         {
             case "id":
                 lnkIdHeader.Click();
@@ -240,7 +239,7 @@ public class RelationshipPage : IRelationshipPage
         table.Should().NotBeEmpty();
 
         var alteredTable = new List<TableDatacolleciton>();
-        
+
         // Iterate over each table row and remove columns not needed
         foreach (var row in table)
         {
@@ -252,7 +251,7 @@ public class RelationshipPage : IRelationshipPage
         {
             case 'a':
             case 'A':
-                alteredTable.Should().BeInAscendingOrder(td=>td.ColumnValue);
+                alteredTable.Should().BeInAscendingOrder(td => td.ColumnValue);
                 break;
             default:
             case 'd':
@@ -264,15 +263,26 @@ public class RelationshipPage : IRelationshipPage
 
     public void VerifyNameOnTable(string name)
     {
+        var pageLnks = driver.FindElements(By.CssSelector("ul[class='pagination']>li>a"));
+        var pageCount = pageLnks.Count();
+        var listPage = driver.Url;
+
+        for (int i = 2; i < pageCount + 1; i++)
+        {
+            if (!tblList.CheckCellOnTable(name))
+                driver.Navigate().GoToUrl(listPage + @"?page=" + i + "&sortOrder=Id");
+            else
+                break;
+        }
         List<TableDatacolleciton> table = HtmlTableExtension.ReadTable(tblList);
 
         bool found = false;
-        foreach(var row in table)
+        foreach (var row in table)
         {
-            if (row.ColumnValue == name) 
+            if (row.ColumnValue == name)
                 found = true;
         }
-        
+
         found.Should().BeTrue();
     }
 

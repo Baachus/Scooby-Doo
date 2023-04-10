@@ -38,7 +38,7 @@ namespace ScoobTestBDD.StepDefinitions
 
             RestResponse response = null;
 
-            foreach(var relation in relations)
+            foreach (var relation in relations)
                 response = apiExtension.SendRequest("/Relationship/AddScoobyRelation", Method.Post, relation);
 
             //Store the response details in the scenario context

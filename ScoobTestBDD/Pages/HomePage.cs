@@ -80,7 +80,26 @@ public class HomePage : IHomePage
     /// the available operations are Delete, Details, or Edit</param>
     public void PerformClickOnSpecialValue(string name, string operation = "Details")
     {
-        tblList.PerformActionOnCell("5", "Name", name, operation);
+        try
+        {
+            var pageLnks = driver.FindElements(By.CssSelector("ul[class='pagination']>li>a"));
+            var pageCount = pageLnks.Count();
+            var listPage = driver.Url;
+
+            for (int i = 2; i < pageCount + 1; i++)
+            {
+                if (!tblList.CheckCellOnTable(name))
+                    driver.Navigate().GoToUrl(listPage + @"?page=" + i + "&sortOrder=Id");
+                else
+                    break;
+            }
+
+            tblList.PerformActionOnCell("5", "Name", name, operation);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
     }
 
     /// <summary>

@@ -1,19 +1,22 @@
-﻿@model IEnumerable<ScoobWebApp.ScoobRelation>
+﻿@model X.PagedList.IPagedList<ScoobWebApp.ScoobRelation>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewData["Title"] = "List";
+    ViewBag.Title = "Relationships";
 }
-
 <h1 id="Banner">List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-@using(Html.BeginForm())
+@using(Html.BeginForm("List", "Relationship", FormMethod.Get))
 {
     <p>
-        Find Relationship: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" id="Name_Search" />
+        Find Relationship: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" data-testid="Name_Search" id="Name_Search" />
     </p>
 }
 <div class="table-responsive">
@@ -21,19 +24,19 @@
         <thead>
             <tr>
                 <th id="Id_Header">
-                    @Html.ActionLink("Id", "List", new {sortOrder = ViewBag.IdSortParam})
+                    @Html.ActionLink("Id", "List", new {sortOrder = ViewBag.IdSortParam, currentFilter=ViewBag.CurrentFilter})
                 </th>
                 <th id="Name_Header">
-                    @Html.ActionLink("Name", "List", new {sortOrder = ViewBag.NameSortParam})
+                    @Html.ActionLink("Name", "List", new {sortOrder = ViewBag.NameSortParam, currentFilter=ViewBag.CurrentFilter})
                 </th>
                 <th id="Gang_Header">
-                    @Html.ActionLink("Gang", "List", new {sortOrder = ViewBag.GangSortParam})
+                    @Html.ActionLink("Gang", "List", new {sortOrder = ViewBag.GangSortParam, currentFilter=ViewBag.CurrentFilter})
                 </th>
                 <th id="Relationship_Header">
-                    @Html.ActionLink("Relationship", "List", new {sortOrder = ViewBag.RelationshipSortParam})
+                    @Html.ActionLink("Relationship", "List", new {sortOrder = ViewBag.RelationshipSortParam, currentFilter=ViewBag.CurrentFilter})
                 </th>
                 <th id="Apperance_Header">
-                    @Html.DisplayNameFor(model => model.Appearance)
+                    @Html.DisplayNameFor(model => model[0].Appearance)
                 </th>
                 <th></th>
             </tr>
@@ -66,4 +69,12 @@
             }
         </tbody>
     </table>
+    <br />
+</div>
+<div>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    <!-- output a paging control that lets the user navigation to the previous page, next page, etc -->
+    @Html.PagedListPager(Model, page => Url.Action("List",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 </div>
