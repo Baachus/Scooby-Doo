@@ -18,6 +18,10 @@ public class RelationshipListPage : IRelationshipListPage
     private readonly ILocator searchTxt;
     private readonly ILocator searchBtn;
     private readonly ILocator relationshipTbl;
+    private ILocator idLnk;
+    private ILocator nameLnk;
+    private ILocator gangLnk;
+    private ILocator relationshipLnk;
 
     public RelationshipListPage(IPage page)
     {
@@ -56,6 +60,31 @@ public class RelationshipListPage : IRelationshipListPage
             await page.GotoAsync(baseUrl + $"?page={pageCount}&sortOrder=Id");
             visible = page.Locator($"tr:has-text('{relationshipName}')");
             await Screenshots.TakeScreenshot(page);
+        }
+    }
+
+    public async Task Sort(string column)
+    {
+        switch(column.ToLower())
+        {
+            case "id":
+            default:
+                idLnk = page.GetByRole(AriaRole.Link, new() { Name = "Id" });
+                await idLnk.ClickAsync();
+                break;
+            case "name":
+                nameLnk = page.GetByRole(AriaRole.Link, new() { Name = "Name" });
+                await nameLnk.ClickAsync();
+                break;
+            case "gang":
+                gangLnk = page.GetByRole(AriaRole.Link, new() { Name = "Gang" });
+                await gangLnk.ClickAsync();
+                break;
+            case "relationship":
+                var table = page.GetByRole(AriaRole.Table);
+                relationshipLnk = table.GetByRole(AriaRole.Link, new() { Name = "Relationship" });
+                await relationshipLnk.ClickAsync();
+                break;
         }
     }
 }

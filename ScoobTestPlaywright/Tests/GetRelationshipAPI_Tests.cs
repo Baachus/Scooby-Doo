@@ -32,7 +32,7 @@ public class GetRelationshipAPI_Tests : PlaywrightTest
         Assert.That(scoobModel.Id, Is.EqualTo(3));
         Assert.That(scoobModel.Name, Is.EqualTo("John Maxwell"));
         Assert.That(scoobModel.Relationship, Is.EqualTo("Uncle"));
-        Assert.That(scoobModel.Gang, Is.EqualTo(GangMember.Daphne));
+        Assert.That(scoobModel.Gang, Is.EqualTo("Daphne"));
         Assert.That(scoobModel.Appearance, Is.EqualTo("{\"TV\":[{\"SHOW\":\"Scooby-Doo, " +
             "Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR\":1969}],\"Movie" +
             "\":[{}],\"APPEARED\":true}"));
@@ -78,7 +78,7 @@ public class GetRelationshipAPI_Tests : PlaywrightTest
         Assert.That(scoobModel.Id, Is.EqualTo(3));
         Assert.That(scoobModel.Name, Is.EqualTo(name));
         Assert.That(scoobModel.Relationship, Is.EqualTo("Uncle"));
-        Assert.That(scoobModel.Gang, Is.EqualTo(GangMember.Daphne));
+        Assert.That(scoobModel.Gang, Is.EqualTo("Daphne"));
         Assert.That(scoobModel.Appearance, Is.EqualTo("{\"TV\":[{\"SHOW\":\"Scooby-Doo, " +
             "Where Are You!\",\"SEASON\":1,\"EPISODE\":7,\"RELEASE_YEAR\":1969}],\"Movie" +
             "\":[{}],\"APPEARED\":true}"));

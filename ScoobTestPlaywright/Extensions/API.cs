@@ -1,4 +1,5 @@
-﻿using Bogus;
+﻿using Azure.Core;
+using Bogus;
 using ScoobTestPlaywright.Model;
 using System.Text.Json;
 
@@ -7,13 +8,18 @@ namespace ScoobTestPlaywright.Extensions;
 public class API : PlaywrightTest
 {
     private const string baseUrl = "http://localhost:5003";
+    private readonly Faker faker;
+
+    public API()
+    {
+        faker = new Faker("en");
+    }
 
     public async Task<ScoobModel> CreateRandomRelationship(IAPIRequestContext Request)
     {
-        Faker fake = new Faker("en");
         var relationship = new ScoobModel
         {
-            Name = fake.Name.FullName(),
+            Name = faker.Name.FullName(),
             Relationship = "Grandparent",
             Gang = "Daphne",//fake.Random.Enum<GangMember>(),
             Appearance = new RandomAppearance().GetRandomAppearance()
