@@ -14,7 +14,7 @@
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)nswag.msbuild\13.18.2\build\NSwag.MSBuild.props" Condition="Exists('$(NuGetPackageRoot)nswag.msbuild\13.18.2\build\NSwag.MSBuild.props')" />
-    <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.client\7.0.4\build\Microsoft.Extensions.ApiDescription.Client.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.client\7.0.4\build\Microsoft.Extensions.ApiDescription.Client.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.client\7.0.5\build\Microsoft.Extensions.ApiDescription.Client.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.client\7.0.5\build\Microsoft.Extensions.ApiDescription.Client.props')" />
     <Import Project="$(NuGetPackageRoot)nswag.apidescription.client\13.18.2\build\NSwag.ApiDescription.Client.props" Condition="Exists('$(NuGetPackageRoot)nswag.apidescription.client\13.18.2\build\NSwag.ApiDescription.Client.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">

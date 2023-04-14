@@ -10,7 +10,7 @@ public class CreateNew_Tests : PageTest
 {
     private SharedPage sharedPage;
     private RelationshipListPage listPage;
-    private CreateNewRelationshipPage createPage;
+    private CreateAndEditPage createPage;
     private IAPIRequestContext? Request = null;
     private const string baseUrl = "http://localhost:5003";
 
@@ -28,7 +28,7 @@ public class CreateNew_Tests : PageTest
         listPage = new RelationshipListPage(Page);
         listPage.ClickCreateNewRelationship();
 
-        createPage = new CreateNewRelationshipPage(Page);
+        createPage = new CreateAndEditPage(Page);
 
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {

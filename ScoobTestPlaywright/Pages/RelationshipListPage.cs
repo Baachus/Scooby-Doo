@@ -1,6 +1,4 @@
-﻿using ScoobTestPlaywright.Extensions;
-
-namespace ScoobTestPlaywright.Pages;
+﻿namespace ScoobTestPlaywright.Pages;
 
 public interface IRelationshipListPage
 {
@@ -41,31 +39,21 @@ public class RelationshipListPage : IRelationshipListPage
 
     public async Task SearchRelationship(string relationshipName)
     {
-        searchTxt.FillAsync(relationshipName);
-        searchBtn.ClickAsync();
+        await searchTxt.FillAsync(relationshipName);
+        await searchBtn.ClickAsync();
     }
 
     public ILocator GetTable() => relationshipTbl;
 
     public async Task ClickLinkForNameAsync(string relationshipName, string action)
     {
-        var pageLnks = page.Locator("ul[class='pagination']>li>a");
-        int pageCount = await pageLnks.CountAsync();
-
-        var visible = page.Locator($"td:has-text('{relationshipName}')");
-
-        var baseUrl = page.Url;
-        if (await visible.CountAsync() == 0)
-        {
-            await page.GotoAsync(baseUrl + $"?page={pageCount}&sortOrder=Id");
-            visible = page.Locator($"tr:has-text('{relationshipName}')");
-            await Screenshots.TakeScreenshot(page);
-        }
+        await SearchRelationship(relationshipName);
+        await page.GetByRole(AriaRole.Link, new() { Name = action }).ClickAsync();
     }
 
     public async Task Sort(string column)
     {
-        switch(column.ToLower())
+        switch (column.ToLower())
         {
             case "id":
             default:

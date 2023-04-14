@@ -1,6 +1,8 @@
 ﻿using Azure.Core;
 using Bogus;
+using Bogus.DataSets;
 using ScoobTestPlaywright.Model;
+using System.Net;
 using System.Text.Json;
 
 namespace ScoobTestPlaywright.Extensions;
@@ -46,5 +48,11 @@ public class API : PlaywrightTest
     {
         IAPIResponse newRequest = await Request.DeleteAsync($"{baseUrl}/Relationship/DeleteScoobyRelationByName/{name}");
         Assert.True(newRequest.Ok);
+    }
+
+    public async Task<bool> CheckIfRelationshipExists(IAPIRequestContext Request, string name)
+    {
+        IAPIResponse newRequest = await Request.GetAsync($"{baseUrl}/Relationship/GetScoobyRelationByName/{name}");
+        return (HttpStatusCode)newRequest.Status==HttpStatusCode.OK;
     }
 }

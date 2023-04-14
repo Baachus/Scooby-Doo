@@ -1,5 +1,4 @@
-﻿using ScoobTestPlaywright.Extensions;
-using ScoobTestPlaywright.Model;
+﻿using ScoobTestPlaywright.Model;
 using System.Text.Json;
 
 namespace ScoobTestPlaywright.Tests;

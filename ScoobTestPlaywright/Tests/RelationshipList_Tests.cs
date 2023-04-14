@@ -38,7 +38,7 @@ public class RelationshipList_Tests : PageTest
     [Test]
     public async Task SearchRelationships()
     {
-        await listPage.SearchRelationship("Skip Jones");
+        listPage.SearchRelationship("Skip Jones");
 
         var table = listPage.GetTable();
         await Expect(table).ToContainTextAsync("Skip Jones");
@@ -73,9 +73,9 @@ public class RelationshipList_Tests : PageTest
         var namesColumn = table.Locator("tbody>tr>td:nth-child(2)");
         var names = await namesColumn.AllInnerTextsAsync();
         names.Should().BeInAscendingOrder();
-        
+
         await listPage.Sort("name");
-        
+
         namesColumn = table.Locator("tbody>tr>td:nth-child(2)");
         names = await namesColumn.AllInnerTextsAsync();
         names.Should().BeInDescendingOrder();

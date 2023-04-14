@@ -62,7 +62,7 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[110.1.0, )"
+              "version": "[110.2.0, )"
             },
             "Selenium.Support": {
               "target": "Package",
@@ -174,7 +174,7 @@
             },
             "RestSharp": {
               "target": "Package",
-              "version": "[110.1.0, )"
+              "version": "[110.2.0, )"
             },
             "Selenium.Support": {
               "target": "Package",
@@ -272,7 +272,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
