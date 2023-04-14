@@ -3,8 +3,8 @@
 public enum GangMember
 {
     Scooby,
-    Fred,
     Shaggy,
-    Velma,
-    Daphne
+    Fred,
+    Daphne,
+    Velma
 }

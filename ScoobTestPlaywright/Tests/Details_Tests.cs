@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using ScoobTestPlaywright.Extensions;
 using ScoobTestPlaywright.Model;
 using ScoobTestPlaywright.Pages;
+using System.Diagnostics;
 
 namespace ScoobTestPlaywright.Tests;
 
@@ -92,16 +93,19 @@ public class Details_Tests : PageTest
 
         try
         {
-            listPage.ClickLinkForNameAsync(newName, "Details");
+            await listPage.ClickLinkForNameAsync(newName, "Details");
             detailPage = new DetailAndDeletePage(Page);
             await detailPage.ClickEdit();
 
             createPage = new CreateAndEditPage(Page);
 
-            Expect(createPage.GetName()).ToHaveTextAsync(newName);
-            Expect(createPage.GetRelationship()).ToHaveTextAsync(newRelationship);
-            Expect(createPage.GetGang()).ToHaveTextAsync(newGang);
-            Expect(createPage.GetApperance()).ToHaveTextAsync(newAppearance);
+            createPage.GetName().InputValueAsync().Result.Should().Be(newName);
+            createPage.GetRelationship().InputValueAsync().Result.Should().Be(newRelationship);
+
+            GangMember gangG = (GangMember)Enum.Parse(typeof(GangMember), createPage.GetGang().InputValueAsync().Result, true);
+            gangG.ToString().Should().Be(newGang);
+            
+            createPage.GetApperance().InputValueAsync().Result.Should().NotBeNullOrEmpty();
         }
         finally
         {

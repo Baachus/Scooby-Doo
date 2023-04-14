@@ -23,7 +23,7 @@ public class CreateAndEditPage : PageTest, ICreateAndEditPage
 
     public CreateAndEditPage(IPage page)
     {
-        nameTxt = page.Locator("#Name");
+        nameTxt = page.GetByLabel("Name");
         gangDD = page.Locator("#Gang");
         relationshipTxt = page.Locator("#Relationship");
         appearanceTxt = page.Locator("#Appearance");

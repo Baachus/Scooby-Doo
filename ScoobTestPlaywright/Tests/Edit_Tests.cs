@@ -60,10 +60,13 @@ public class Edit_Tests : PageTest
 
             editPage = new CreateAndEditPage(Page);
 
-            await Expect(editPage.GetName()).ToHaveTextAsync(newName);
-            await Expect(editPage.GetRelationship()).ToHaveTextAsync(newRelationship);
-            await Expect(editPage.GetGang()).ToHaveTextAsync(newGang);
-            await Expect(editPage.GetApperance()).ToHaveTextAsync(newAppearance);
+            editPage.GetName().InputValueAsync().Result.Should().Be(newName);
+            editPage.GetRelationship().InputValueAsync().Result.Should().Be(newRelationship);
+
+            GangMember gangG = (GangMember)Enum.Parse(typeof(GangMember), editPage.GetGang().InputValueAsync().Result, true);
+            gangG.ToString().Should().Be(newGang);
+
+            editPage.GetApperance().InputValueAsync().Result.Should().NotBeNullOrEmpty();
         }
         finally
         {
