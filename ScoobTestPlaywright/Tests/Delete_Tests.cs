@@ -7,27 +7,24 @@ using ScoobTestPlaywright.Pages;
 
 namespace ScoobTestPlaywright.Tests;
 
-public class Delete_Tests : PageTest
+[Parallelizable(ParallelScope.Self)]
+[TestFixture]
+public class Delete_Tests : TestSetup
 {
-    private SharedPage sharedPage;
     private RelationshipListPage listPage;
-    private CreateAndEditPage createPage;
-    private DetailAndDeletePage deletePage;
+    private CreateAndEditPage? createPage;
+    private DetailAndDeletePage? deletePage;
     private IAPIRequestContext? Request = null;
     private const string baseUrl = "http://localhost:5003";
+    private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        await Page.GotoAsync("http://localhost:5002/");
-
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
-
-        sharedPage = new SharedPage(Page);
-        await sharedPage.ClickRelationshipLink();
+        testName = SetupTestsAsync("Delete Tests");
 
         listPage = new RelationshipListPage(Page);
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
             BaseURL = baseUrl
@@ -95,12 +92,12 @@ public class Delete_Tests : PageTest
         try
         {
             listPage.ClickLinkForNameAsync(newName, "Delete");
-            
+
             deletePage = new DetailAndDeletePage(Page);
             await deletePage.ClickDelete();
 
             listPage.SearchRelationship(newName);
-            
+
             var table = Page.GetByRole(AriaRole.Table);
             Expect(Page.GetByText(newName)).ToHaveCountAsync(0);
         }
@@ -109,5 +106,15 @@ public class Delete_Tests : PageTest
             if (await new API().CheckIfRelationshipExists(Request, newName))
                 await new API().DeletRelationship(Request, newName);
         }
+    }
+
+    [TearDown]
+    public async Task CloseTest()
+    {
+        string name = await testName;
+        await Context.Tracing.StopAsync(new TracingStopOptions
+        {
+            Path = $"../../../Traces/{name}.zip"
+        });
     }
 }

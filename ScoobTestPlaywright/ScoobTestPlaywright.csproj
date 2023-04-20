@@ -28,11 +28,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Traces\" />
     <Folder Include="Screenshots\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ScoobyRelationshipAPI\ScoobyRelationshipAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.local.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test.runsettings">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

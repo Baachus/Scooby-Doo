@@ -15,6 +15,7 @@ public class SharedPage : ISharedPage
     private readonly ILocator relationshipLnk;
     private readonly ILocator homeLnk;
     private readonly ILocator privacyLnk;
+    private readonly ILocator toggleLnk;
 
     //Header Icon
     private readonly ILocator homeIcon;
@@ -28,6 +29,7 @@ public class SharedPage : ISharedPage
         relationshipLnk = page.GetByTestId("lnk_Relationship");
         homeLnk = page.GetByTestId("lnk_Home");
         privacyLnk = page.GetByTestId("lnk_Privacy");
+        toggleLnk = page.GetByRole(AriaRole.Button, new() { Name = "Toggle navigation" });
 
         //Header Icon
         homeIcon = page.GetByRole(AriaRole.Link, new() { Name = "ScoobWebApp" });
@@ -36,6 +38,7 @@ public class SharedPage : ISharedPage
         privacyFooterLnk = page.Locator("#Privacy_Footer");
     }
 
+    public async Task ClickToggle() => await toggleLnk.ClickAsync();
     public async Task ClickRelationshipLink() => await relationshipLnk.ClickAsync();
     public async Task ClickHomeLink() => await homeLnk.ClickAsync();
     public async Task ClickPrivacyLink() => await privacyLnk.ClickAsync();

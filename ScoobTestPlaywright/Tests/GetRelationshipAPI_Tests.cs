@@ -3,6 +3,7 @@ using System.Text.Json;
 
 namespace ScoobTestPlaywright.Tests;
 
+[Parallelizable(ParallelScope.Self)]
 [TestFixture]
 public class GetRelationshipAPI_Tests : PlaywrightTest
 {

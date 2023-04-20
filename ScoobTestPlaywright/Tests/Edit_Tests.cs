@@ -1,5 +1,6 @@
 ﻿using Bogus;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Newtonsoft.Json;
 using ScoobTestPlaywright.Extensions;
 using ScoobTestPlaywright.Model;
@@ -7,7 +8,9 @@ using ScoobTestPlaywright.Pages;
 
 namespace ScoobTestPlaywright.Tests;
 
-public class Edit_Tests : PageTest
+[Parallelizable(ParallelScope.Self)]
+[TestFixture]
+public class Edit_Tests : TestSetup
 {
     private SharedPage sharedPage;
     private RelationshipListPage listPage;
@@ -15,19 +18,15 @@ public class Edit_Tests : PageTest
     private DetailAndDeletePage detailPage;
     private IAPIRequestContext? Request = null;
     private const string baseUrl = "http://localhost:5003";
+    private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        await Page.GotoAsync("http://localhost:5002/");
-
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
-
-        sharedPage = new SharedPage(Page);
-        await sharedPage.ClickRelationshipLink();
+        testName = SetupTestsAsync("Details Tests");
 
         listPage = new RelationshipListPage(Page);
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
             BaseURL = baseUrl
@@ -111,14 +110,11 @@ public class Edit_Tests : PageTest
             await editPage.SetRelationship(updatedRelationship);
             await editPage.SetApperance(updatedAppearance);
 
-            await Screenshots.TakeScreenshot(Page);
-
             await editPage.ClickBackToList();
 
             await listPage.ClickLinkForNameAsync(newName, "Details");
             detailPage = new DetailAndDeletePage(Page);
             ScoobModel details = detailPage.GetDetails();
-            await Screenshots.TakeScreenshot(Page);
 
             details.Name.Should().Be(newName);
             details.Gang.Should().Be(newGang);
@@ -168,14 +164,11 @@ public class Edit_Tests : PageTest
             await editPage.SetRelationship(updatedRelationship);
             await editPage.SetApperance(updatedAppearance);
 
-            await Screenshots.TakeScreenshot(Page);
-
             await editPage.ClickSave();
 
             await listPage.ClickLinkForNameAsync(updatedName, "Details");
             detailPage = new DetailAndDeletePage(Page);
             ScoobModel details = detailPage.GetDetails();
-            await Screenshots.TakeScreenshot(Page);
 
             details.Name.Should().Be(updatedName);
             details.Gang.Should().Be(updatedGang);
@@ -187,5 +180,15 @@ public class Edit_Tests : PageTest
         {
             await new API().DeletRelationship(Request, updatedName);
         }
+    }
+
+    [TearDown]
+    public async Task CloseTest()
+    {
+        string name = await testName;
+        await Context.Tracing.StopAsync(new TracingStopOptions
+        {
+            Path = $"../../../Traces/{name}.zip"
+        });
     }
 }

@@ -5,6 +5,8 @@ using System.Text.Json;
 
 namespace ScoobTestPlaywright.Tests;
 
+[Parallelizable(ParallelScope.Self)]
+[TestFixture]
 public class CreateNewAPI_Tests : PlaywrightTest
 {
     private IAPIRequestContext? Request = null;
@@ -13,6 +15,7 @@ public class CreateNewAPI_Tests : PlaywrightTest
     [SetUp]
     public async Task SetupRequests()
     {
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
             BaseURL = baseUrl

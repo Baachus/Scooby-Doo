@@ -1,0 +1,100 @@
+2023-04-14T16:59:27.147Z pw:api navigating to "http://localhost:5002/", waiting until "load"
+2023-04-14T16:59:27.174Z pw:api   "commit" event fired
+2023-04-14T16:59:27.176Z pw:api   navigated to "http://localhost:5002/"
+2023-04-14T16:59:27.364Z pw:api   "domcontentloaded" event fired
+2023-04-14T16:59:27.485Z pw:api   "load" event fired
+2023-04-14T16:59:27.984Z pw:api   "networkidle" event fired
+2023-04-14T16:59:28.503Z pw:api PageAssertions.ToHaveTitleAsync with timeout 5000ms
+2023-04-14T16:59:28.506Z pw:api waiting for Locator(":root")
+2023-04-14T16:59:28.522Z pw:api   locator resolved to <html lang="en">ΓÇª</html>
+2023-04-14T16:59:29.540Z pw:api waiting for GetByTestId("lnk_Relationship")
+2023-04-14T16:59:29.543Z pw:api   locator resolved to <a class="nav-link" id="lnk_Relationship" href="/ReΓÇª>Relationship</a>
+2023-04-14T16:59:29.545Z pw:api attempting click action
+2023-04-14T16:59:29.545Z pw:api   waiting for element to be visible, enabled and stable
+2023-04-14T16:59:29.550Z pw:api     element is not visible - waiting...
+2023-04-14T16:59:36.986Z pw:api   element is visible, enabled and stable
+2023-04-14T16:59:36.987Z pw:api   scrolling into view if needed
+2023-04-14T16:59:36.987Z pw:api   done scrolling
+2023-04-14T16:59:36.995Z pw:api   performing click action
+2023-04-14T16:59:37.031Z pw:api   click action done
+2023-04-14T16:59:37.032Z pw:api   waiting for scheduled navigations to finish
+2023-04-14T16:59:37.034Z pw:api   "commit" event fired
+2023-04-14T16:59:37.034Z pw:api   navigated to "http://localhost:5002/Relationship/List"
+2023-04-14T16:59:37.034Z pw:api   navigated to "http://localhost:5002/Relationship/List"
+2023-04-14T16:59:37.042Z pw:api   navigations have finished
+2023-04-14T16:59:37.089Z pw:api   "domcontentloaded" event fired
+2023-04-14T16:59:37.125Z pw:api   "load" event fired
+2023-04-14T16:59:37.638Z pw:api   "networkidle" event fired
+2023-04-14T16:59:38.053Z pw:api waiting for GetByRole(AriaRole.Link, new() { Name = "Create New" })
+2023-04-14T16:59:38.068Z pw:api   locator resolved to <a href="/Relationship/Create">Create New</a>
+2023-04-14T16:59:38.069Z pw:api attempting click action
+2023-04-14T16:59:38.069Z pw:api   waiting for element to be visible, enabled and stable
+2023-04-14T16:59:38.102Z pw:api   element is visible, enabled and stable
+2023-04-14T16:59:38.102Z pw:api   scrolling into view if needed
+2023-04-14T16:59:38.103Z pw:api   done scrolling
+2023-04-14T16:59:38.108Z pw:api   performing click action
+2023-04-14T16:59:38.116Z pw:api waiting for GetByLabel("Name")
+2023-04-14T16:59:38.132Z pw:api   click action done
+2023-04-14T16:59:38.132Z pw:api   waiting for scheduled navigations to finish
+2023-04-14T16:59:38.133Z pw:api   "commit" event fired
+2023-04-14T16:59:38.133Z pw:api   navigated to "http://localhost:5002/Relationship/Create"
+2023-04-14T16:59:38.133Z pw:api   navigated to "http://localhost:5002/Relationship/Create"
+2023-04-14T16:59:38.143Z pw:api   navigations have finished
+2023-04-14T16:59:38.196Z pw:api   "load" event fired
+2023-04-14T16:59:38.197Z pw:api   "domcontentloaded" event fired
+2023-04-14T16:59:38.205Z pw:api   locator resolved to <input value="" id="Name" type="text" name="Name" maxleΓÇª/>
+2023-04-14T16:59:38.206Z pw:api elementHandle.fill("Bradly Runolfsdottir")
+2023-04-14T16:59:38.211Z pw:api   waiting for element to be visible, enabled and editable
+2023-04-14T16:59:38.220Z pw:api   element is visible, enabled and editable
+2023-04-14T16:59:38.699Z pw:api   "networkidle" event fired
+2023-04-14T16:59:39.243Z pw:api waiting for Locator("#Gang")
+2023-04-14T16:59:39.245Z pw:api waiting for Locator("#Relationship")
+2023-04-14T16:59:39.250Z pw:api   locator resolved to <select ,="" id="Gang" name="Gang" data-val="true" classΓÇª>ΓÇª</select>
+2023-04-14T16:59:39.250Z pw:api   locator resolved to <input value="" type="text" data-val="true" maxlength="ΓÇª/>
+2023-04-14T16:59:39.252Z pw:api elementHandle.fill("Cousin")
+2023-04-14T16:59:39.256Z pw:api   selecting specified option(s)
+2023-04-14T16:59:39.259Z pw:api   waiting for element to be visible, enabled and editable
+2023-04-14T16:59:39.262Z pw:api     selected specified option(s)
+2023-04-14T16:59:39.273Z pw:api   element is visible, enabled and editable
+2023-04-14T16:59:40.324Z pw:api waiting for Locator("#Appearance")
+2023-04-14T16:59:40.327Z pw:api   locator resolved to <input value="" type="text" id="Appearance" name="AppeaΓÇª/>
+2023-04-14T16:59:40.329Z pw:api elementHandle.fill("{
+  "TV": {
+    "Show": "Jermey Lubowitz",
+    "Season": "1",
+    "Episode": "1"
+  },
+  "Movie": {
+    "Name": "Adrian Schneider",
+    "Release_Year": "4/16/2022 7:26:27 PM"
+  },
+  "Appeared": false
+}")
+2023-04-14T16:59:40.332Z pw:api   waiting for element to be visible, enabled and editable
+2023-04-14T16:59:40.342Z pw:api   element is visible, enabled and editable
+2023-04-14T16:59:41.363Z pw:api waiting for GetByRole(AriaRole.Button, new() { Name = "Create" })
+2023-04-14T16:59:41.366Z pw:api   locator resolved to <input id="Create" type="submit" value="Create" class="ΓÇª/>
+2023-04-14T16:59:41.368Z pw:api attempting click action
+2023-04-14T16:59:41.368Z pw:api   waiting for element to be visible, enabled and stable
+2023-04-14T16:59:41.385Z pw:api   element is visible, enabled and stable
+2023-04-14T16:59:41.385Z pw:api   scrolling into view if needed
+2023-04-14T16:59:41.386Z pw:api   done scrolling
+2023-04-14T16:59:41.390Z pw:api   performing click action
+2023-04-14T16:59:41.491Z pw:api   click action done
+2023-04-14T16:59:41.492Z pw:api   waiting for scheduled navigations to finish
+2023-04-14T16:59:41.492Z pw:api   "commit" event fired
+2023-04-14T16:59:41.492Z pw:api   navigated to "http://localhost:5002/Relationship/List"
+2023-04-14T16:59:41.492Z pw:api   navigated to "http://localhost:5002/Relationship/List"
+2023-04-14T16:59:41.504Z pw:api   navigations have finished
+2023-04-14T16:59:41.532Z pw:api   "load" event fired
+2023-04-14T16:59:41.533Z pw:api   "domcontentloaded" event fired
+2023-04-14T16:59:42.043Z pw:api   "networkidle" event fired
+2023-04-14T16:59:42.534Z pw:api ΓåÆ DELETE http://localhost:5003/Relationship/DeleteScoobyRelationByName/Bradly%20Runolfsdottir
+2023-04-14T16:59:42.534Z pw:api   user-agent: Playwright/1.32.1 (x64; windows 10.0) csharp/7.0
+2023-04-14T16:59:42.534Z pw:api   accept: */*
+2023-04-14T16:59:42.534Z pw:api   accept-encoding: gzip,deflate,br
+2023-04-14T16:59:42.560Z pw:api ΓåÉ 200 OK
+2023-04-14T16:59:42.561Z pw:api   content-length: 0
+2023-04-14T16:59:42.561Z pw:api   connection: close
+2023-04-14T16:59:42.561Z pw:api   date: Fri, 14 Apr 2023 16:59:41 GMT
+2023-04-14T16:59:42.561Z pw:api   server: Kestrel

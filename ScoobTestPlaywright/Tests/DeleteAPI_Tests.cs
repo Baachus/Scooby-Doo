@@ -2,6 +2,8 @@
 
 namespace ScoobTestPlaywright.Tests;
 
+[Parallelizable(ParallelScope.Self)]
+[TestFixture]
 public class DeleteAPI_Tests : PlaywrightTest
 {
     private IAPIRequestContext? Request = null;

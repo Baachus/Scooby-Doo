@@ -1,6 +1,4 @@
-﻿using Azure.Core;
-using Bogus;
-using Bogus.DataSets;
+﻿using Bogus;
 using ScoobTestPlaywright.Model;
 using System.Net;
 using System.Text.Json;
@@ -53,6 +51,6 @@ public class API : PlaywrightTest
     public async Task<bool> CheckIfRelationshipExists(IAPIRequestContext Request, string name)
     {
         IAPIResponse newRequest = await Request.GetAsync($"{baseUrl}/Relationship/GetScoobyRelationByName/{name}");
-        return (HttpStatusCode)newRequest.Status==HttpStatusCode.OK;
+        return (HttpStatusCode)newRequest.Status == HttpStatusCode.OK;
     }
 }

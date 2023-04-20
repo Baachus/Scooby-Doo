@@ -6,27 +6,21 @@ namespace ScoobTestPlaywright.Tests;
 
 [Parallelizable(ParallelScope.Self)]
 [TestFixture]
-public class CreateNew_Tests : PageTest
+public class CreateNew_Tests : TestSetup
 {
-    private SharedPage sharedPage;
     private RelationshipListPage listPage;
     private CreateAndEditPage createPage;
     private IAPIRequestContext? Request = null;
     private const string baseUrl = "http://localhost:5003";
+    private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        await Page.GotoAsync("http://localhost:5002/");
-
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
-
-        sharedPage = new SharedPage(Page);
-        await sharedPage.ClickRelationshipLink();
+        testName = SetupTestsAsync("Create New Tests");
 
         listPage = new RelationshipListPage(Page);
-        listPage.ClickCreateNewRelationship();
+        await listPage.ClickCreateNewRelationship();
 
         createPage = new CreateAndEditPage(Page);
 
@@ -39,7 +33,7 @@ public class CreateNew_Tests : PageTest
     [Test]
     public async Task BackToListOnCreateNewPage()
     {
-        createPage.ClickBackToList();
+        await createPage.ClickBackToList();
         await Expect(Page).ToHaveTitleAsync(new Regex("Relationships"));
     }
 
@@ -66,8 +60,18 @@ public class CreateNew_Tests : PageTest
         await createPage.SetApperance(new RandomAppearance().GetRandomAppearance());
 
         await createPage.ClickCreate();
-        await Screenshots.TakeScreenshot(Page);
 
         new API().DeletRelationship(Request, newName);
     }
+
+    [TearDown]
+    public async Task CloseTest()
+    {
+        string name = await testName;
+        await Context.Tracing.StopAsync(new TracingStopOptions
+        {
+            Path = $"../../../Traces/{name}.zip"
+        });
+    }
+
 }

@@ -1,14 +1,16 @@
 ﻿using Bogus;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Newtonsoft.Json;
 using ScoobTestPlaywright.Extensions;
 using ScoobTestPlaywright.Model;
 using ScoobTestPlaywright.Pages;
-using System.Diagnostics;
 
 namespace ScoobTestPlaywright.Tests;
 
-public class Details_Tests : PageTest
+[Parallelizable(ParallelScope.Self)]
+[TestFixture]
+public class Details_Tests : TestSetup
 {
     private SharedPage sharedPage;
     private RelationshipListPage listPage;
@@ -16,19 +18,15 @@ public class Details_Tests : PageTest
     private DetailAndDeletePage detailPage;
     private IAPIRequestContext? Request = null;
     private const string baseUrl = "http://localhost:5003";
+    private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        await Page.GotoAsync("http://localhost:5002/");
-
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
-
-        sharedPage = new SharedPage(Page);
-        await sharedPage.ClickRelationshipLink();
+        testName = SetupTestsAsync("Details Tests");
 
         listPage = new RelationshipListPage(Page);
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
             BaseURL = baseUrl
@@ -104,7 +102,7 @@ public class Details_Tests : PageTest
 
             GangMember gangG = (GangMember)Enum.Parse(typeof(GangMember), createPage.GetGang().InputValueAsync().Result, true);
             gangG.ToString().Should().Be(newGang);
-            
+
             createPage.GetApperance().InputValueAsync().Result.Should().NotBeNullOrEmpty();
         }
         finally
@@ -144,5 +142,15 @@ public class Details_Tests : PageTest
         {
             await new API().DeletRelationship(Request, newName);
         }
+    }
+
+    [TearDown]
+    public async Task CloseTest()
+    {
+        string name = await testName;
+        await Context.Tracing.StopAsync(new TracingStopOptions
+        {
+            Path = $"../../../Traces/{name}.zip"
+        });
     }
 }
