@@ -11,13 +11,14 @@ public class CreateNew_Tests : TestSetup
     private RelationshipListPage listPage;
     private CreateAndEditPage createPage;
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
     private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsAsync("Create New Tests");
+        TestSettings testSettings = TestSettings.ReadConfig();
+
+        testName = SetupTestsAsync();
 
         listPage = new RelationshipListPage(Page);
         await listPage.ClickCreateNewRelationship();
@@ -26,7 +27,7 @@ public class CreateNew_Tests : TestSetup
 
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 

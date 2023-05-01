@@ -14,7 +14,7 @@ public class RelationshipList_Tests : TestSetup
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsAsync("Details Tests");
+        testName = SetupTestsAsync();
 
         listPage = new RelationshipListPage(Page);
 

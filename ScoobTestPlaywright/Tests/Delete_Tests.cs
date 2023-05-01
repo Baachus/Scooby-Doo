@@ -15,19 +15,20 @@ public class Delete_Tests : TestSetup
     private CreateAndEditPage? createPage;
     private DetailAndDeletePage? deletePage;
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
     private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsAsync("Delete Tests");
+        TestSettings testSettings = TestSettings.ReadConfig();
+
+        testName = SetupTestsAsync();
 
         listPage = new RelationshipListPage(Page);
 
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 

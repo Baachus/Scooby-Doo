@@ -10,21 +10,23 @@ namespace ScoobTestPlaywright.Tests;
 public class CreateNewAPI_Tests : PlaywrightTest
 {
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
 
     [SetUp]
     public async Task SetupRequests()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
 
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 
     [Test]
     public async Task CreateRelationship()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
+
         Faker fake = new Faker("en");
         var relationship = new ScoobModel
         {
@@ -35,7 +37,7 @@ public class CreateNewAPI_Tests : PlaywrightTest
         };
         var serializedRelation = JsonSerializer.Serialize(relationship);
 
-        IAPIResponse newRequest = await Request.PostAsync($"{baseUrl}/Relationship/AddScoobyRelation",
+        IAPIResponse newRequest = await Request.PostAsync($"{testSettings.APIUrl}Relationship/AddScoobyRelation",
             new() { DataObject = serializedRelation });
 
         Assert.True(newRequest.Ok);

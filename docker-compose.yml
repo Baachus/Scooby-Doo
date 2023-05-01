@@ -64,6 +64,16 @@ services:
     networks:
       - scooby_network
 
+  scooby_playwright_test:
+    image: scooby_playwright_test
+    container_name: scoobyplaywrighttest
+    build:
+      context: .
+      dockerfile: ScoobTestPlaywright/Dockerfile
+    networks:
+      - scooby_network
+
+
   chrome:
     image: selenium/node-chrome:4.8.1-20230221
     shm_size: 2gb

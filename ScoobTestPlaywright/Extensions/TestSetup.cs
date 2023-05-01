@@ -1,4 +1,5 @@
 ﻿using ScoobTestPlaywright.Pages;
+using System.Security.Authentication.ExtendedProtection;
 
 namespace ScoobTestPlaywright.Extensions;
 
@@ -25,10 +26,9 @@ public class TestSetup : PageTest
         return new BrowserNewContextOptions();
     }
 
-    public async Task<string> SetupTestsAsync(string testName)
+    public async Task<string> SetupTestsAsync()
     {
-        Guid guid = Guid.NewGuid();
-        testName = $"{testName} - {guid}";
+        var testName = TestContext.CurrentContext.Test.Name;
         await Context.Tracing.StartAsync(new TracingStartOptions
         {
             Title = testName,
@@ -37,15 +37,13 @@ public class TestSetup : PageTest
             Sources = true
         });
 
-        await Page.GotoAsync("http://localhost:5002/");
+        var testSettings = TestSettings.ReadConfig();
 
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
+        await Page.GotoAsync(testSettings.ApplicationUrl.ToString());
 
         SharedPage sharedPage;
         sharedPage = new SharedPage(Page);
 
-        var testSettings = TestSettings.ReadConfig();
         if (testSettings.Mobile)
             await sharedPage.ClickToggle();
 
@@ -54,10 +52,9 @@ public class TestSetup : PageTest
         return testName;
     }
 
-    public async Task<string> SetupTestsNoNavigationAsync(string testName)
+    public async Task<string> SetupTestsNoNavigationAsync()
     {
-        Guid guid = Guid.NewGuid();
-        testName = $"{testName} - {guid}";
+        var testName = TestContext.CurrentContext.Test.Name;
         await Context.Tracing.StartAsync(new TracingStartOptions
         {
             Title = testName,
@@ -66,10 +63,7 @@ public class TestSetup : PageTest
             Sources = true
         });
 
-        await Page.GotoAsync("http://localhost:5002/");
-
-        //Expect a title to contain a substring of Home Page
-        await Expect(Page).ToHaveTitleAsync(new Regex("Home Page"));
+        await Page.GotoAsync(testSettings.ApplicationUrl.ToString());
 
         return testName;
     }

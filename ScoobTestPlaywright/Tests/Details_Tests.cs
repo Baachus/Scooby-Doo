@@ -1,6 +1,5 @@
 ﻿using Bogus;
 using FluentAssertions;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using Newtonsoft.Json;
 using ScoobTestPlaywright.Extensions;
 using ScoobTestPlaywright.Model;
@@ -12,24 +11,24 @@ namespace ScoobTestPlaywright.Tests;
 [TestFixture]
 public class Details_Tests : TestSetup
 {
-    private SharedPage sharedPage;
     private RelationshipListPage listPage;
     private CreateAndEditPage createPage;
     private DetailAndDeletePage detailPage;
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
     private Task<string>? testName;
 
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsAsync("Details Tests");
+        TestSettings testSettings = TestSettings.ReadConfig();
+
+        testName = SetupTestsAsync();
 
         listPage = new RelationshipListPage(Page);
 
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 

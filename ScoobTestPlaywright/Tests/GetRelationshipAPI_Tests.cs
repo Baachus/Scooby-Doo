@@ -1,4 +1,5 @@
-﻿using ScoobTestPlaywright.Model;
+﻿using ScoobTestPlaywright.Extensions;
+using ScoobTestPlaywright.Model;
 using System.Text.Json;
 
 namespace ScoobTestPlaywright.Tests;
@@ -8,21 +9,23 @@ namespace ScoobTestPlaywright.Tests;
 public class GetRelationshipAPI_Tests : PlaywrightTest
 {
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
 
     [SetUp]
     public async Task SetupRequests()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 
     [Test]
     public async Task GetSpecificRelationshipById()
     {
-        IAPIResponse newRequest = await Request.GetAsync($"{baseUrl}/Relationship/GetScoobyRelationById/3");
+        TestSettings testSettings = TestSettings.ReadConfig();
+        IAPIResponse newRequest = await Request.GetAsync($"{testSettings.APIUrl}Relationship/GetScoobyRelationById/3");
         Assert.True(newRequest.Ok);
 
         string body = await newRequest.TextAsync();
@@ -41,7 +44,8 @@ public class GetRelationshipAPI_Tests : PlaywrightTest
     [Test]
     public async Task GetAllRelationships()
     {
-        IAPIResponse newRequest = await Request.GetAsync($"{baseUrl}/Relationship/GetScoobyRelations");
+        TestSettings testSettings = TestSettings.ReadConfig();
+        IAPIResponse newRequest = await Request.GetAsync($"{testSettings.APIUrl}Relationship/GetScoobyRelations");
         Assert.True(newRequest.Ok);
 
         string body = await newRequest.TextAsync();
@@ -67,8 +71,9 @@ public class GetRelationshipAPI_Tests : PlaywrightTest
     [Test]
     public async Task GetSpecificRelationshipByName()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
         string name = "John Maxwell";
-        IAPIResponse newRequest = await Request.GetAsync($"{baseUrl}/Relationship/GetScoobyRelationByName/{name}");
+        IAPIResponse newRequest = await Request.GetAsync($"{testSettings.APIUrl}Relationship/GetScoobyRelationByName/{name}");
         Assert.True(newRequest.Ok);
 
         string body = await newRequest.TextAsync();

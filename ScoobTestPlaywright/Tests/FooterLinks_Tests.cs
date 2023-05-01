@@ -14,7 +14,7 @@ public class FooterLinks_Tests : TestSetup
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsNoNavigationAsync("Footer Links Tests");
+        testName = SetupTestsNoNavigationAsync();
         testSettings = TestSettings.ReadConfig();
         sharedPage = new SharedPage(Page);
     }

@@ -1,4 +1,3 @@
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 using ScoobTestPlaywright.Extensions;
 using ScoobTestPlaywright.Pages;
 
@@ -15,7 +14,7 @@ public class HeaderLinks_Tests : TestSetup
     [SetUp]
     public async Task Setup()
     {
-        testName = SetupTestsNoNavigationAsync("Header Links Tests");
+        testName = SetupTestsNoNavigationAsync();
         testSettings = TestSettings.ReadConfig();
         sharedPage = new SharedPage(Page);
     }

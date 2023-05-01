@@ -7,23 +7,26 @@ namespace ScoobTestPlaywright.Tests;
 public class DeleteAPI_Tests : PlaywrightTest
 {
     private IAPIRequestContext? Request = null;
-    private const string baseUrl = "http://localhost:5003";
 
     [SetUp]
     public async Task SetupRequests()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
+
         Request = await this.Playwright.APIRequest.NewContextAsync(new()
         {
-            BaseURL = baseUrl
+            BaseURL = testSettings.APIUrl.ToString()
         });
     }
 
     [Test]
     public async Task DeleteRelationship()
     {
+        TestSettings testSettings = TestSettings.ReadConfig();
+
         var api = new API();
         int id = (await api.CreateRandomRelationship(Request)).Id;
-        IAPIResponse newRequest = await Request.DeleteAsync($"{baseUrl}/Relationship/DeleteScoobyRelationById/{id}");
+        IAPIResponse newRequest = await Request.DeleteAsync($"{testSettings.APIUrl}Relationship/DeleteScoobyRelationById/{id}");
         Assert.True(newRequest.Ok);
     }
 }
