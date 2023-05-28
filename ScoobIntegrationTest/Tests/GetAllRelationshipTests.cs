@@ -36,6 +36,7 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
     [InlineData("Olivia Dervy")]
     [InlineData("Skip Jones")]
     [InlineData("Margaret 'Maggie' Rogers")]
+    [InlineData("Shannon Blake")]
     public async Task VerifyNamesInSeedDataFromGetAllRelationships(string name)
     {
         var webClient = customWebApplicationFactory.CreateDefaultClient();
@@ -85,6 +86,7 @@ public class GetAllRelationshipTests : IClassFixture<CustomWebApplicationFactory
                 "Father",
                 "Younger Sister",
                 "Nephew",
+                "Cousin",
                 null);
         }
     }

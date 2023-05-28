@@ -5,7 +5,7 @@
     <LaunchOptions>
       <Headless>false</Headless>
       <Channel>chrome</Channel>
-      <SlowMo>300</SlowMo>
+      <SlowMo>0</SlowMo>
     </LaunchOptions>
   </Playwright>
 	

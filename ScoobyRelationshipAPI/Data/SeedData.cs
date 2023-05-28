@@ -60,6 +60,13 @@ namespace ScoobyRelationshipAPI.Data
                         Gang = GangMember.Shaggy,
                         Relationship = "Younger Sister"
                     },
+                    new ScoobRelation()
+                    {
+                        Name = "Shannon Blake",
+                        Appearance = "{\"TV\":[{}],\"Movie\":[{\"NAME\":\"Scoob-Doo! and the Loch Ness Monster\", \"RELEASE_YEAR\":2004}],\"APPEARED\":true}",
+                        Gang = GangMember.Daphne,
+                        Relationship = "Cousin"
+                    }
                 };
 
                 context.ScoobRelations.AddRange(relationships);
